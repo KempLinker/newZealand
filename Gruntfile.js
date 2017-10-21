@@ -48,19 +48,19 @@ module.exports = function(grunt) {
         },
         watch: {
             newZealandScss: {
-                files: ['newZealand/web/sass/*.scss'],
+                files: ['web/sass/*.scss'],
                 tasks: ['sass:newZealandScss']
             }
         },
         sass: {
-            bdpSyncScss: {
+            newZealandScss: {
                 options: {
                     style: 'expanded',
                     sourcemap: 'none'
                 },
                 files: [
                     {
-                        'newZealand/web/sass/release/release.css': 'newZealand/web/sass/init.scss'
+                        'web/sass/release/release.css': 'web/sass/init.scss'
                     }
                 ]
             }
