@@ -48,7 +48,7 @@ module.exports = function(grunt) {
         },
         watch: {
             newZealandScss: {
-                files: ['web/sass/*.scss'],
+                files: ['newZealand/sass/*.scss'],
                 tasks: ['sass:newZealandScss']
             }
         },
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
                 },
                 files: [
                     {
-                        'web/sass/release/release.css': 'web/sass/init.scss'
+                        'newZealand/sass/release/release.css': 'newZealand/sass/release/release.scss'
                     }
                 ]
             }
