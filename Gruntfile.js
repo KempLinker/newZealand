@@ -21,14 +21,14 @@ module.exports = function(grunt) {
                     }
                 ]
             },
-            newZealand: {
+            iJasmine: {
                 options: {
                     port: 9999,
                     protocol: "http",
                     middleware: function(connect) {
                         return [
                             require('grunt-connect-proxy/lib/utils').proxyRequest,
-                            connect.static('newZealand')
+                            connect.static('iJasmine')
                         ];
                     }
                 }
@@ -47,20 +47,20 @@ module.exports = function(grunt) {
 
         },
         watch: {
-            newZealandScss: {
-                files: ['newZealand/sass/*.scss'],
-                tasks: ['sass:newZealandScss']
+            iJasmineScss: {
+                files: ['iJasmine/sass/*.scss'],
+                tasks: ['sass:iJasmineScss']
             }
         },
         sass: {
-            newZealandScss: {
+            iJasmineScss: {
                 options: {
                     style: 'expanded',
                     sourcemap: 'none'
                 },
                 files: [
                     {
-                        'newZealand/sass/release/release.css': 'newZealand/sass/release/release.scss'
+                        'iJasmine/sass/release/release.css': 'iJasmine/sass/release/release.scss'
                     }
                 ]
             }
@@ -86,7 +86,7 @@ module.exports = function(grunt) {
     grunt.registerTask('web',
         [
             'configureProxies:web',
-            'connect:newZealand',
+            'connect:iJasmine',
             'watch'
         ]
     );

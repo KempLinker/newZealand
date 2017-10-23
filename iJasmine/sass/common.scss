@@ -1,0 +1,38 @@
+html{
+    height: 100%;
+}
+body{
+    font-family: 'PingFang SC','Helvetica Neue',Helvetica,STHeitiSC-Light,WOL_SB,'Segoe UI Semibold','Segoe UI',Tahoma,Helvetica,'Microsoft Yahei',sans-serif;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.nowrap{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.clearfix {
+    zoom: 1;
+    &::before,
+    &::after{
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+}
+.text-underline{
+    text-decoration: underline;
+}
+.text-center{
+    text-align: center;
+}
+.word-break-all{
+    word-break: break-all;
+}
+.word-break-normal{
+    word-break: normal;
+}

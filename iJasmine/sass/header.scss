@@ -75,15 +75,25 @@ header{
     top: 56px;
     left: -56px;
     width: 1028px;
-    height: 200px;
+    height: auto;
     display: none;
     padding: 16px 24px;
     line-height: normal;
-    background-color: $bgColBaseDarkOpacity;
+    overflow: hidden;
+    cursor: default;
+    background-color: $bgColBaseDark;
+    .city-part{
+        float: left;
+        display: inline-block;
+        width: 30%;
+    }
     .city-box{
+        width: 70%;
+        margin: 8px 0 24px;
         overflow: hidden;
         .city-area{
             margin-bottom: 8px;
+            color: $fontColLight;
         }
         .city-name{
             margin-right: 8px;
