@@ -446,7 +446,7 @@ template {
     display: none;
 }
 
-div,p{
+html, body, div, p{
     box-sizing: border-box;
 }
 p{
@@ -457,4 +457,18 @@ ul {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+button{
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    font-weight: normal;
+    letter-spacing: 0;
+    border-radius: 0;
+    box-sizing: content-box;
+    cursor: pointer;
+    outline: none;
 }
