@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    handleScrollFunc();
     var $destinationNavList = $('.sub-nav-list.destination');
     $('.nav-item.destination').on('mouseover',function(){
         $destinationNavList.slideDown(200);
@@ -9,6 +10,10 @@ $(document).ready(function(){
 });
 
 $(window).on('scroll',function(){
+    handleScrollFunc()
+});
+
+function handleScrollFunc(){
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var $header = $('header');
     if( scrollTop > 100 ){
@@ -17,4 +22,4 @@ $(window).on('scroll',function(){
     } else{
         $header.removeClass('scroll-header');
     }
-});
+}
