@@ -1144,6 +1144,12 @@ header.scroll-header .sub-nav-list {
   color: rgba(255, 255, 255, 0.7);
 }
 
+footer {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(63, 63, 60, 0.9);
+}
+
 .home-body .first-screen {
   position: relative;
   width: 100%;
