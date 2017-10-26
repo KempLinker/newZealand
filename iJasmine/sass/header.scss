@@ -6,6 +6,8 @@ header{
     right: 0;
     width: 100%;
     height: 56px;
+    box-shadow: 0 -1px 0 0 rgba(63, 63, 60,.1) inset;
+    background-color: $bgColBaseLight;
     transition: .2s all 0s ease-in-out;
     z-index: 2000;
 }
@@ -13,16 +15,16 @@ header{
     float: right;
     display: inline-block;
     overflow: hidden;
-    img{
-        height: 32px;
-        margin-top: 12px;
+    .logo-name{
+        float: left;
+        margin-right: 16px;
+        line-height: 56px;
+        color: $fontColBase;
+    }
+    .logo-img{
+        height: 48px;
+        margin-top: 4px;
         opacity: 0.8;
-    }
-    img.light-logo{
-        display: block;
-    }
-    img.dark-logo{
-        display: none;
     }
 }
 .main-nav{
@@ -42,10 +44,10 @@ header{
         padding: 0 16px;
         margin-right: 8px;
         cursor: pointer;
-        color: $fontColLightOpacity;
+        color: $fontColBaseOpacity;
         transition: .2s all 0s ease-in-out;
         &:hover{
-            color: #fff;
+            color: $fontColBase;
             transition: .2s all 0s ease-in-out;
             .sub-nav-list{
                 color: $fontColLightOpacity;
@@ -58,13 +60,13 @@ header{
             top: 46px;
             width: calc( 100% - 32px );
             height: 2px;
-            background-color: rgba(255,255,255,.6);
+            background-color: $bgColBaseDarkOpacity;
             opacity: 0;
             transition: .2s all 0s ease-in-out;
         }
         &:hover::before{
             top: 54px;
-            background-color: rgba(255,255,255,.9);
+            background-color: $bgColBaseDark;
             opacity: 1;
             transition: .2s all 0s ease-in-out;
         }
@@ -77,10 +79,11 @@ header{
     width: 1028px;
     height: auto;
     display: none;
-    padding: 16px 24px;
+    padding: 16px 32px;
     line-height: normal;
     overflow: hidden;
     cursor: default;
+    color: $fontColLightOpacity;
     background-color: $bgColBaseDark;
     .city-part{
         float: left;
@@ -104,39 +107,5 @@ header{
             color: $fontColLight;
             text-decoration: underline;
         }
-    }
-}
-header.scroll-header {
-    box-shadow: 0 -1px 0 0 rgba(63, 63, 60,.1) inset;
-    background-color: $bgColBaseLight;
-    transition: .2s all 0s ease-in-out;
-    .logo {
-        img.light-logo {
-            display: none;
-        }
-        img.dark-logo {
-            display: block;
-        }
-    }
-    .nav-list {
-        .nav-item {
-            color: $fontColBaseOpacity;
-            transition: .2s all 0s ease-in-out;
-            &:hover {
-                color: $fontColBase;
-                transition: .2s all 0s ease-in-out;
-            }
-            &::before {
-                background-color: $bgColBaseDarkOpacity;
-                transition: .2s all 0s ease-in-out;
-            }
-            &:hover::before {
-                background-color: $bgColBaseDark;
-                transition: .2s all 0s ease-in-out;
-            }
-        }
-    }
-    .sub-nav-list{
-        color: $fontColLightOpacity;
     }
 }
