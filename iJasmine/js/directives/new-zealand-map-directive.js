@@ -30,7 +30,7 @@
                             itemStyle: {
                                 normal: {
                                     label: {
-                                        show: true
+                                        show: false
                                     },
                                     borderWidth: 1,
                                     borderColor: '#999',
@@ -40,7 +40,8 @@
                                 },
                                 emphasis: {
                                     label: {
-                                        show: true
+                                        show: true,
+                                        color: '#3f3f3c'
                                     },
                                     borderWidth: 1,
                                     borderColor: '#f76459',

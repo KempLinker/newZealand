@@ -21,7 +21,7 @@ $(document).ready(function(){
                 itemStyle: {
                     normal: {
                         label: {
-                            show: true
+                            show: false
                         },
                         borderWidth: 1,
                         borderColor: '#999',

@@ -35,34 +35,54 @@
             z-index: 10;
         }
         .go{
-            position: absolute;
-            top: 65%;
-            left: 50%;
             display: block;
-            width: 156px;
-            height: 42px;
-            margin: 0 0 0 -78px;
-            line-height: 32px;
-            font-size: 16px;
-            color: $fontColLight;
+            width: 144px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            color: $fontColBaseOpacity;
             letter-spacing: 2px;
             text-align: center;
-            border: 1px solid $borderColLight;
+            border: 1px solid $borderColDarkOpacity;
             z-index: 10;
             transition: .2s all 0s ease-in-out;
             &:hover{
+                color: $fontColLight;
                 border: 1px solid $bgColOrange;
                 background-color: $bgColOrange;
                 transition: .2s all 0s ease-in-out;
             }
         }
     }
-    .home-map{
+    .home-info{
+        position: relative;
         width: 960px;
         height: calc( 100% - 64px );
         margin: 64px auto 0;
+    }
+    .home-map{
+        width: 100%;
+        height: 100%;
         padding-left: 250px;
-        background-color: $bgColOrange;
+    }
+    .geo-info{
+        position: absolute;
+        top: 30%;
+        left: 100px;
+        .geo-name{
+            width: 100%;
+            color: $fontColBaseOpacity;
+            font-size: 28px;
+            letter-spacing: 4px;
+            text-align: left;
+        }
+        .geo-sub-name{
+            width: 100%;
+            color: $fontColBaseOpacity;
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-align: left;
+        }
     }
     .main-body{
         position: relative;
