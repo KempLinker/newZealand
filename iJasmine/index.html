@@ -7,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="/sass/release/release.css"/>
 
 </head>
-<body class="home-body" ng-controller="baseCtrl">
+<body class="home-body" ng-controller="iJasmineCtrl">
     <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
 
     <div class="first-screen">
-        <div id="home-map" class="home-map"></div>
+        <div class="home-map" new-zealand-map></div>
     </div>
     <div class="main-body">
         <div class="main-title">南途奇异</div>
@@ -24,6 +24,7 @@
     <script type="text/javascript" src="/js/lib/eCharts/echarts-all.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/header.js"></script>
-    <script type="text/javascript" src="/js/homeMap.js"></script>
+    <script type="text/javascript" src="/js/directives/new-zealand-map-directive.js"></script>
+
 </body>
 </html>

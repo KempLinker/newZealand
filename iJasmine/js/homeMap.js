@@ -82,14 +82,11 @@ $(document).ready(function(){
             }
         ]
     };
-    homeMap.on(echarts.config.EVENT.CLICK, clickArea);
+    window.newZealandMap = homeMap;
     $(window).on('resize.homeMap', function(){
         homeMap.resize();
     });
     homeMap.setOption(options);
-    function clickArea(data){
-        console.log(data)
-    }
 
     var geoAve = function ( list ){
         var a = 0, b = 0, index = 0;
