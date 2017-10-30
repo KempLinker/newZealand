@@ -1,14 +1,16 @@
 (function() {
     angular.module('iJasmine').directive('newZealandMap', newZealandMapDirective);
 
-    newZealandMapDirective.$inject = ['$rootScope'];
+    newZealandMapDirective.$inject = ['$http'];
 
-    function newZealandMapDirective($rootScope) {
+    function newZealandMapDirective($http) {
         return {
             restrict: 'A',
             replace: true,
             template: '<div id="home-map"></div>',
-            scope: true,
+            scope: {
+                viewData: '='
+            },
             link: function ($scope, element, attr) {
 
                 var newZealandMap = echarts.init(document.getElementById('home-map'));
@@ -21,6 +23,7 @@
                     series : [
                         {
                             type: 'map',
+                            selectedMode: 'single',
                             mapType: 'NewZealand',
                             mapLocation: {
                                 x : 'center',
@@ -100,7 +103,13 @@
                 });
                 newZealandMap.setOption(options);
                 function clickArea(data){
-                    console.log(data)
+                    var geoData = $scope.viewData.geoData;
+                    geoData.forEach(function (geo) {
+                        if( geo.geoName == data.name ){
+                            $scope.viewData.geoInfo = geo;
+                        }
+                    });
+                    console.log($scope.viewData.geoInfo)
                 }
 
 

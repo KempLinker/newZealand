@@ -12,11 +12,11 @@
 
     <div class="first-screen">
         <div class="home-info">
-            <div class="home-map" new-zealand-map></div>
+            <div class="home-map" new-zealand-map view-data="viewData"></div>
 
             <div class="geo-info">
-                <p class="geo-name" ng-bind="viewData.geoInfo.geoName"></p>
-                <p class="geo-sub-name mt-8" ng-bind="viewData.geoInfo.geoKey"></p>
+                <p class="geo-name">{{viewData.geoInfo.geoName}}</p>
+                <p class="geo-sub-name mt-8">{{viewData.geoInfo.geoKey}}</p>
                 <button class="go mt-32">进入目的地</button>
             </div>
         </div>
