@@ -50,7 +50,9 @@
                                     }
                                 }
                             },
-                            data:[],
+                            data:[
+                                { name: 'Northland', selected: true }
+                            ],
                             nameMap:{
                                 "Northland": '北部地区',
                                 "Auckland": '奥克兰',
@@ -71,23 +73,23 @@
                                 "The Snares": '斯奈尔斯群岛'
                             },
                             geoCoord:{
-                                "Northland": [3020, 8870],
-                                "Auckland": [3630, 7810],
-                                "Waikato": [3960, 6930],
-                                "Bay of Plenty": [4960, 6740],
-                                "Gisborne District": [6000, 6450],
-                                "Taranaki": [3300, 5910],
-                                "Manawatu-Wanganui": [4070, 5100],
-                                "Hawke's Bay": [4860, 5750],
-                                "Wellington": [3950, 4500],
-                                "Tasman District": [2200, 4200],
-                                "Marlborough District": [3110, 4000],
-                                "Nelson City": [2740, 4750],
-                                "Canterbury": [2050, 2730],
-                                "West Coast":  [1310, 3220],
-                                "Otago": [900, 1250],
-                                "Southland": [-550, 720],
-                                "The Snares": [-550, -800]
+                                "Northland": [1800, 8500],
+                                "Auckland": [2400, 7800],
+                                "Waikato": [2600, 7000],
+                                "Bay of Plenty": [5100, 7400],
+                                "Gisborne District": [6800, 6600],
+                                "Taranaki": [2000, 5900],
+                                "Manawatu-Wanganui": [2200, 5200],
+                                "Hawke's Bay": [5800, 5500],
+                                "Wellington": [4800, 4200],
+                                "Tasman District": [1600, 5000],
+                                "Marlborough District": [3900, 3900],
+                                "Nelson City": [3000, 4900],
+                                "Canterbury": [3400, 2700],
+                                "West Coast":  [800, 3300],
+                                "Otago": [2200, 1100],
+                                "Southland": [-1800, 800],
+                                "The Snares": [-550, -750]
                             }
                         }
                     ]
