@@ -20,6 +20,12 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
 
     };
 
+    $scope.$on('emitUpdateGeoInfo',function(e, data){
+        $scope.viewData.geoInfo = data;
+        console.log($scope.viewData)
+        $scope.$apply();
+    });
+
     $http.get('src/jsonData/geoData.json').then(function (result) {
         $scope.viewData.geoData = result.data;
     });

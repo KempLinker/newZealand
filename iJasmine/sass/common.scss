@@ -70,3 +70,16 @@ body{
         background-color: $bgColOrange;
     }
 }
+.main-sub-title{
+    font-size: 24px;
+    color: $fontColBaseOpacity;
+    font-weight: normal;
+    letter-spacing: 0;
+    text-align: center;
+}
+.info-list{
+    .info-box{
+        float: left;
+        display: inline-block;
+    }
+}

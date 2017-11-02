@@ -1,9 +1,9 @@
 (function() {
     angular.module('iJasmine').directive('newZealandMap', newZealandMapDirective);
 
-    newZealandMapDirective.$inject = ['$http'];
+    newZealandMapDirective.$inject = ['$timeout'];
 
-    function newZealandMapDirective($http) {
+    function newZealandMapDirective($timeout) {
         return {
             restrict: 'A',
             replace: true,
@@ -33,7 +33,10 @@
                             itemStyle: {
                                 normal: {
                                     label: {
-                                        show: false
+                                        show: true,
+                                        textStyle: {
+                                            color: 'rgba(63, 63, 60, .7)'
+                                        }
                                     },
                                     borderWidth: 1,
                                     borderColor: '#999',
@@ -44,7 +47,9 @@
                                 emphasis: {
                                     label: {
                                         show: true,
-                                        color: '#3f3f3c'
+                                        textStyle: {
+                                            color: '#f76459'
+                                        }
                                     },
                                     borderWidth: 1,
                                     borderColor: '#f76459',
@@ -53,9 +58,7 @@
                                     }
                                 }
                             },
-                            data:[
-                                { name: 'Northland', selected: true }
-                            ],
+                            data:[],
                             nameMap:{
                                 "Northland": '北部地区',
                                 "Auckland": '奥克兰',
@@ -85,7 +88,7 @@
                                 "Manawatu-Wanganui": [2200, 5200],
                                 "Hawke's Bay": [5800, 5500],
                                 "Wellington": [4800, 4200],
-                                "Tasman District": [1600, 5000],
+                                "Tasman District": [1600, 4900],
                                 "Marlborough District": [3900, 3900],
                                 "Nelson City": [3000, 4900],
                                 "Canterbury": [3400, 2700],
@@ -103,13 +106,17 @@
                 });
                 newZealandMap.setOption(options);
                 function clickArea(data){
+                    var newGeo = null;
                     var geoData = $scope.viewData.geoData;
                     geoData.forEach(function (geo) {
                         if( geo.geoName == data.name ){
-                            $scope.viewData.geoInfo = geo;
+                            newGeo = geo;
                         }
                     });
-                    console.log($scope.viewData.geoInfo)
+                    $timeout(function(){
+                        $scope.viewData.geoInfo = newGeo;
+                    });
+
                 }
 
 
