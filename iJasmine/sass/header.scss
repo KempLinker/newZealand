@@ -14,6 +14,7 @@ header{
 .logo{
     float: right;
     display: inline-block;
+    height: 56px;
     overflow: hidden;
     cursor: pointer;
     .logo-name{
@@ -26,15 +27,15 @@ header{
     .logo-img{
         height: 48px;
         margin-top: 4px;
-        opacity: 0.6;
+        opacity: 0.8;
         transition: .2s all 0s ease-in-out;
     }
     &:hover .logo-name{
         color: $fontColBase;
         transition: .2s all 0s ease-in-out;
     }
-    &:hover .logo-img{
-        opacity: 0.8;
+    &:hover .logo-img {
+
         transition: .2s all 0s ease-in-out;
     }
 }
@@ -57,6 +58,10 @@ header{
         cursor: pointer;
         color: $fontColBaseOpacity;
         transition: .2s all 0s ease-in-out;
+        &:first-child{
+            margin-left: -16px;
+        }
+        &.active,
         &:hover{
             color: $fontColBase;
             transition: .2s all 0s ease-in-out;
@@ -75,6 +80,7 @@ header{
             opacity: 0;
             transition: .2s all 0s ease-in-out;
         }
+        &.active::before,
         &:hover::before{
             top: 54px;
             background-color: $bgColBaseDark;

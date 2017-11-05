@@ -1074,12 +1074,14 @@ body {
   display: inline-block;
   font-size: 32px;
   color: #3f3f3c;
+  letter-spacing: 2px;
 }
 
 .block-sub-title {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   color: rgba(63, 63, 60, 0.7);
+  letter-spacing: 0px;
 }
 
 header {
@@ -1098,6 +1100,7 @@ header {
 .logo {
   float: right;
   display: inline-block;
+  height: 56px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -1111,7 +1114,7 @@ header {
 .logo .logo-img {
   height: 48px;
   margin-top: 4px;
-  opacity: 0.6;
+  opacity: 0.8;
   transition: .2s all 0s ease-in-out;
 }
 .logo:hover .logo-name {
@@ -1119,7 +1122,6 @@ header {
   transition: .2s all 0s ease-in-out;
 }
 .logo:hover .logo-img {
-  opacity: 0.8;
   transition: .2s all 0s ease-in-out;
 }
 
@@ -1145,11 +1147,14 @@ header {
   color: rgba(63, 63, 60, 0.7);
   transition: .2s all 0s ease-in-out;
 }
-.nav-list .nav-item:hover {
+.nav-list .nav-item:first-child {
+  margin-left: -16px;
+}
+.nav-list .nav-item.active, .nav-list .nav-item:hover {
   color: #3f3f3c;
   transition: .2s all 0s ease-in-out;
 }
-.nav-list .nav-item:hover .sub-nav-list {
+.nav-list .nav-item.active .sub-nav-list, .nav-list .nav-item:hover .sub-nav-list {
   color: rgba(255, 255, 255, 0.7);
 }
 .nav-list .nav-item::before {
@@ -1163,7 +1168,7 @@ header {
   opacity: 0;
   transition: .2s all 0s ease-in-out;
 }
-.nav-list .nav-item:hover::before {
+.nav-list .nav-item.active::before, .nav-list .nav-item:hover::before {
   top: 54px;
   background-color: rgba(63, 63, 60, 0.9);
   opacity: 1;
@@ -1359,6 +1364,131 @@ footer {
   margin-top: 42px;
 }
 .home-body .info-list .info-box {
+  width: 240px;
+  height: 180px;
+  line-height: 180px;
+  margin: 0 24px;
+  color: rgba(63, 63, 60, 0.7);
+  border: 1px solid rgba(63, 63, 60, 0.7);
+}
+
+.destination-body .first-screen {
+  position: relative;
+  width: 100%;
+}
+.destination-body .first-screen .scroll-banner {
+  margin: 0 auto;
+}
+.destination-body .home-info {
+  position: relative;
+  width: 960px;
+  height: calc( 100% - 64px );
+  margin: 64px auto 0;
+}
+.destination-body .home-map {
+  width: 100%;
+  height: 100%;
+  padding-left: 250px;
+}
+.destination-body .geo-info {
+  position: absolute;
+  top: 30%;
+  left: 100px;
+}
+.destination-body .geo-info .geo-name {
+  width: 100%;
+  color: rgba(63, 63, 60, 0.7);
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-align: left;
+}
+.destination-body .geo-info .geo-sub-name {
+  width: 100%;
+  color: rgba(63, 63, 60, 0.7);
+  font-size: 18px;
+  letter-spacing: 4px;
+  text-align: left;
+}
+.destination-body .main-body {
+  position: relative;
+  width: 100%;
+  margin-top: 32px;
+}
+.destination-body .main-title {
+  margin-top: 56px;
+  font-size: 36px;
+  letter-spacing: 12px;
+}
+.destination-body .main-block {
+  overflow: hidden;
+}
+.destination-body .main-block.block-one {
+  padding-top: 0;
+  box-shadow: 0 1px 0 0 rgba(63, 63, 60, 0.1) inset;
+}
+.destination-body .main-block.block-two, .destination-body .main-block.block-three, .destination-body .main-block.block-four {
+  height: 640px;
+}
+.destination-body .main-block .block-img,
+.destination-body .main-block .block-text {
+  position: relative;
+  width: 50%;
+  height: 100%;
+}
+.destination-body .main-block .block-img img {
+  position: absolute;
+}
+.destination-body .main-block .block-img img.block-img-bottom {
+  top: 120px;
+  height: 480px;
+  opacity: 0.6;
+}
+.destination-body .main-block .block-img img.block-img-top {
+  top: 200px;
+  width: 480px;
+  box-shadow: 0 0 24px 4px rgba(63, 63, 60, 0.3);
+}
+.destination-body .main-block .block-img.fl .block-img-bottom {
+  right: 150px;
+}
+.destination-body .main-block .block-img.fl .block-img-top {
+  right: -30px;
+}
+.destination-body .main-block .block-img.fr .block-img-bottom {
+  left: 150px;
+}
+.destination-body .main-block .block-img.fr .block-img-top {
+  left: -30px;
+}
+.destination-body .main-block.block-four .block-img.fl .block-img-bottom {
+  height: 480px;
+  right: 240px;
+}
+.destination-body .main-block.block-four .block-img.fl .block-img-top {
+  width: 360px;
+  right: -30px;
+}
+.destination-body .main-block .block-text .block-title {
+  width: 420px;
+}
+.destination-body .main-block .block-text .go {
+  width: 160px;
+  height: 48px;
+  line-height: 48px;
+  font-size: 16px;
+}
+.destination-body .main-block .block-text.fr {
+  padding-left: 120px;
+  text-align: left;
+}
+.destination-body .main-block .block-text.fl {
+  padding-right: 120px;
+  text-align: right;
+}
+.destination-body .info-list {
+  margin-top: 42px;
+}
+.destination-body .info-list .info-box {
   width: 240px;
   height: 180px;
   line-height: 180px;

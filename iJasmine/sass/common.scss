@@ -127,9 +127,11 @@ body{
     display: inline-block;
     font-size: 32px;
     color: $fontColBase;
+    letter-spacing: 2px;
 }
 .block-sub-title{
     display: inline-block;
-    font-size: 20px;
+    font-size: 18px;
     color: $fontColBaseOpacity;
+    letter-spacing: 0px;
 }

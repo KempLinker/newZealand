@@ -1,0 +1,141 @@
+.destination-body{
+    .first-screen{
+        position: relative;
+        width: 100%;
+        .scroll-banner{
+            margin: 0 auto;
+        }
+    }
+    .home-info{
+        position: relative;
+        width: 960px;
+        height: calc( 100% - 64px );
+        margin: 64px auto 0;
+    }
+    .home-map{
+        width: 100%;
+        height: 100%;
+        padding-left: 250px;
+    }
+    .geo-info{
+        position: absolute;
+        top: 30%;
+        left: 100px;
+        .geo-name{
+            width: 100%;
+            color: $fontColBaseOpacity;
+            font-size: 28px;
+            letter-spacing: 4px;
+            text-align: left;
+        }
+        .geo-sub-name{
+            width: 100%;
+            color: $fontColBaseOpacity;
+            font-size: 18px;
+            letter-spacing: 4px;
+            text-align: left;
+        }
+    }
+    .main-body{
+        position: relative;
+        width: 100%;
+        margin-top: 32px;
+    }
+    .main-title{
+        margin-top: 56px;
+        font-size: 36px;
+        letter-spacing: 12px;
+    }
+    .main-sub-title{
+
+    }
+    .main-block{
+        overflow: hidden;
+        &.block-one{
+            padding-top: 0;
+            box-shadow: 0 1px 0 0 rgba(63, 63, 60, .1) inset;
+        }
+        &.block-two,
+        &.block-three,
+        &.block-four {
+            height: 640px;
+        }
+        .block-img,
+        .block-text{
+            position: relative;
+            width: 50%;
+            height: 100%;
+        }
+        .block-img img{
+            position: absolute;
+            &.block-img-bottom{
+                top: 120px;
+                height: 480px;
+                opacity: 0.6;
+            }
+            &.block-img-top{
+                top: 200px;
+                width: 480px;
+                box-shadow: 0 0 24px 4px rgba(63, 63, 60, .3);
+            }
+        }
+        .block-img.fl{
+            .block-img-bottom{
+                right: 150px;
+            }
+            .block-img-top{
+                right: -30px;
+            }
+        }
+        .block-img.fr{
+            .block-img-bottom{
+                left: 150px;
+            }
+            .block-img-top{
+                left: -30px;
+            }
+        }
+        &.block-four .block-img.fl{
+            .block-img-bottom{
+                height: 480px;
+                right: 240px;
+            }
+            .block-img-top{
+                width: 360px;
+                right: -30px;
+            }
+        }
+        .block-text{
+            .block-title{
+                width: 420px;
+            }
+            .go{
+                width: 160px;
+                height: 48px;
+                line-height: 48px;
+                font-size: 16px;
+            }
+        }
+        .block-text.fr{
+            padding-left: 120px;
+            text-align: left;
+        }
+        .block-text.fl {
+            padding-right: 120px;
+            text-align: right;
+        }
+
+    }
+    .info-list {
+        margin-top: 42px;
+        .info-box{
+            width: 240px;
+            height: 180px;
+            line-height: 180px;
+            margin: 0 24px;
+            color: $fontColBaseOpacity;
+            border: 1px solid $borderColDarkOpacity;
+        }
+    }
+
+}
