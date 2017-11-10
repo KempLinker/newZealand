@@ -6,7 +6,7 @@ header{
     right: 0;
     width: 100%;
     height: 56px;
-    box-shadow: 0 -1px 0 0 rgba(63, 63, 60, .1) inset;
+    box-shadow: 0 -1px 0 0 $borderColDarkOpacity2 inset;
     background-color: $bgColBaseLight;
     transition: .2s all 0s ease-in-out;
     z-index: 2000;

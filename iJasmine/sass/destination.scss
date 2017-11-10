@@ -6,39 +6,32 @@
             margin: 0 auto;
         }
     }
-    .home-info{
-        position: relative;
-        width: 960px;
-        height: calc( 100% - 64px );
-        margin: 64px auto 0;
-    }
-    .home-map{
-        width: 100%;
-        height: 100%;
-        padding-left: 250px;
-    }
-    .geo-info{
-        position: absolute;
-        top: 30%;
-        left: 100px;
-        .geo-name{
-            width: 100%;
-            color: $fontColBaseOpacity;
-            font-size: 28px;
-            letter-spacing: 4px;
-            text-align: left;
-        }
-        .geo-sub-name{
-            width: 100%;
-            color: $fontColBaseOpacity;
+    .destination-info{
+        width: 1080px;
+        margin: 0 auto;
+        .destination-name{
+            color: $fontColLight;
             font-size: 18px;
-            letter-spacing: 4px;
-            text-align: left;
+            span{
+                display: inline-block;
+                padding: 8px 16px;
+                background-color: $bgColOrange;
+            }
+        }
+        .destination-desc{
+            width: 100%;
+            height: auto;
+            padding: 16px 24px;
+            line-height: normal;
+            color: $fontColBaseOpacity;
+            box-shadow: 0 0 1px 1px $borderColDarkOpacity2 inset;
         }
     }
+
     .main-body{
         position: relative;
         width: 100%;
+        min-height: 500px;
         margin-top: 32px;
     }
     .main-title{
