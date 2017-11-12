@@ -5,6 +5,7 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
 
     $scope.viewData = {
         view: 'home',
+        destination: '123',
         geoData: null,
         geoInfo: {
             geoKey: "New Zealand",
@@ -19,6 +20,10 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
     };
 
     $scope.footerLoadReady = function(){
+
+    };
+
+    $scope.contactLoadReady = function(){
 
     };
 

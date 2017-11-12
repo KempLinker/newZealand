@@ -1,0 +1,54 @@
+.contact-layer{
+    position: fixed;
+    right: 0;
+    bottom: 56px;
+    z-index: 1000;
+    .contact-list{
+        width: 56px;
+    }
+    .contact-item{
+        position: relative;
+        float: left;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        margin-bottom: 8px;
+        border-radius: 2px;
+        background-color: $bgColBaseDark;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: .2s all 0s ease-in-out;
+    }
+    img{
+        width: 32px;
+        margin: 8px;
+    }
+    .contact-type{
+        position: absolute;
+        right: 56px;
+        top: 0;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 24px;
+        border-radius: 2px;
+        color: $fontColLight;
+        background-color: $bgColBaseDark;
+        display: none;
+    }
+    .contact-type:before{
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: -6px;
+        border-bottom: 6px solid transparent;
+        border-top: 6px solid transparent;
+        border-left: 6px solid $bgColBaseDark;
+    }
+    .contact-item:hover{
+        opacity: 1;
+        transition: .2s all 0s ease-in-out;
+        .contact-type{
+            display: block;
+        }
+    }
+}

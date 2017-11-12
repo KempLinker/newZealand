@@ -1228,6 +1228,61 @@ footer {
   background-color: rgba(63, 63, 60, 0.9);
 }
 
+.contact-layer {
+  position: fixed;
+  right: 0;
+  bottom: 56px;
+  z-index: 1000;
+}
+.contact-layer .contact-list {
+  width: 56px;
+}
+.contact-layer .contact-item {
+  position: relative;
+  float: left;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+  background-color: rgba(63, 63, 60, 0.9);
+  cursor: pointer;
+  opacity: 0.7;
+  transition: .2s all 0s ease-in-out;
+}
+.contact-layer img {
+  width: 32px;
+  margin: 8px;
+}
+.contact-layer .contact-type {
+  position: absolute;
+  right: 56px;
+  top: 0;
+  height: 48px;
+  line-height: 48px;
+  padding: 0 24px;
+  border-radius: 2px;
+  color: rgba(255, 255, 255, 0.98);
+  background-color: rgba(63, 63, 60, 0.9);
+  display: none;
+}
+.contact-layer .contact-type:before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: -6px;
+  border-bottom: 6px solid transparent;
+  border-top: 6px solid transparent;
+  border-left: 6px solid rgba(63, 63, 60, 0.9);
+}
+.contact-layer .contact-item:hover {
+  opacity: 1;
+  transition: .2s all 0s ease-in-out;
+}
+.contact-layer .contact-item:hover .contact-type {
+  display: block;
+}
+
 .home-body .first-screen {
   position: relative;
   width: 100%;
@@ -1396,6 +1451,28 @@ footer {
   margin: 32px auto;
   overflow: unset;
 }
+.destination-body .destination-map-layer {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  width: 240px;
+  height: 320px;
+  overflow: hidden;
+  box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
+}
+.destination-body .destination-map-layer .destination-map {
+  width: 300%;
+  height: 300%;
+  margin: -450px 0 0 -200px;
+}
+.destination-body .destination-map-layer .destination-map-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 .destination-body .destination-info {
   width: 1080px;
   margin: 0 auto;
@@ -1410,14 +1487,14 @@ footer {
   background-color: #f76459;
 }
 .destination-body .destination-info .destination-desc {
-  width: 100%;
+  width: 800px;
   height: auto;
   padding: 24px 32px;
   line-height: normal;
   text-indent: 28px;
   background-color: rgba(255, 255, 255, 0.98);
   color: rgba(63, 63, 60, 0.7);
-  box-shadow: 0 0 4px 1px rgba(63, 63, 60, 0.15);
+  box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
 }
 .destination-body .destination-city-info {
   margin-top: 56px;
@@ -1428,14 +1505,19 @@ footer {
 }
 .destination-body .destination-city-info .city-item {
   position: relative;
-  width: 100%;
-  height: auto;
-  height: 200px;
+  width: 800px;
+  min-height: 160px;
   margin-top: 32px;
   line-height: normal;
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.98);
   color: rgba(63, 63, 60, 0.7);
-  box-shadow: 0 0 4px 1px rgba(63, 63, 60, 0.15);
+  box-shadow: 0 0 1px 1px rgba(63, 63, 60, 0.15);
+  transition: .2s all 0s ease-in-out;
+}
+.destination-body .destination-city-info .city-item:hover {
+  box-shadow: 0 0 8px 2px rgba(247, 100, 89, 0.5);
+  transition: .2s all 0s ease-in-out;
 }
 .destination-body .destination-city-info .city-name {
   position: absolute;
@@ -1471,7 +1553,6 @@ footer {
   text-indent: 28px;
 }
 .destination-body .destination-city-info .city-img {
-  position: relative;
   display: inline-block;
   width: 30%;
   height: 100%;
@@ -1479,16 +1560,18 @@ footer {
 .destination-body .destination-city-info .city-img img {
   position: absolute;
   top: 50%;
-  left: 50%;
   width: 240px;
   height: 160px;
-  margin: -80px 0 0 -120px;
+  margin: -80px 0 0 0;
 }
 .destination-body .destination-city-info .city-item:nth-child(odd) .city-desc {
   float: left;
 }
 .destination-body .destination-city-info .city-item:nth-child(odd) .city-img {
   float: right;
+}
+.destination-body .destination-city-info .city-item:nth-child(odd) .city-img img {
+  right: 0;
 }
 .destination-body .destination-city-info .city-item:nth-child(even) .city-name {
   left: auto;
@@ -1508,6 +1591,9 @@ footer {
 }
 .destination-body .destination-city-info .city-item:nth-child(even) .city-img {
   float: left;
+}
+.destination-body .destination-city-info .city-item:nth-child(even) .city-img img {
+  left: 0;
 }
 .destination-body .main-title {
   margin-top: 56px;

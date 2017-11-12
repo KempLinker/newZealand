@@ -104,7 +104,34 @@
                 $(window).on('resize.homeMap', function(){
                     newZealandMap.resize();
                 });
-                newZealandMap.setOption(options);
+                if( $scope.viewData.destination ){
+                    options.backgroundColor = '#fff'
+                    options.series[0].itemStyle = {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            borderWidth: 1,
+                            borderColor: '#999',
+                            areaStyle: {
+                                color: 'transparent'
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: false
+                            },
+                            areaStyle: {
+                                color: 'transparent'
+                            }
+                        }
+                    };
+                    newZealandMap.setOption(options);
+
+                } else {
+                    newZealandMap.setOption(options);
+                }
+
                 function clickArea(data){
                     var newGeo = null;
                     var geoData = $scope.viewData.geoData;

@@ -13,6 +13,29 @@
         margin: 32px auto;
         overflow: unset;
     }
+    .destination-map-layer{
+        position: absolute;
+        top: 36px;
+        right: 0;
+        width: 240px;
+        height: 320px;
+        overflow: hidden;
+        box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
+        .destination-map{
+            width: 300%;
+            height: 300%;
+            margin: -450px 0 0 -200px;
+        }
+        .destination-map-cover{
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,.1);
+        }
+    }
+
     .destination-info{
         width: 1080px;
         margin: 0 auto;
@@ -26,14 +49,14 @@
             }
         }
         .destination-desc{
-            width: 100%;
+            width: 800px;
             height: auto;
             padding: 24px 32px;
             line-height: normal;
             text-indent: 28px;
             background-color: $bgColBaseLight;
             color: $fontColBaseOpacity;
-            box-shadow: 0 0 4px 1px $borderColDarkOpacity2;
+            box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         }
     }
     .destination-city-info{
@@ -44,14 +67,19 @@
         }
         .city-item{
             position: relative;
-            width: 100%;
-            height: auto;
-            height: 200px;
+            width: 800px;
+            min-height: 160px;
             margin-top: 32px;
             line-height: normal;
+            cursor: pointer;
             background-color: $bgColBaseLight;
             color: $fontColBaseOpacity;
-            box-shadow: 0 0 4px 1px $borderColDarkOpacity2;
+            box-shadow: 0 0 1px 1px $borderColDarkOpacity2;
+            transition: .2s all 0s ease-in-out;
+        }
+        .city-item:hover {
+            box-shadow: 0 0 8px 2px rgba(247,100,89,0.5);
+            transition: .2s all 0s ease-in-out;
         }
         .city-name{
             position: absolute;
@@ -87,17 +115,15 @@
             text-indent: 28px;
         }
         .city-img{
-            position: relative;
             display: inline-block;
             width: 30%;
             height: 100%;
             img{
                 position: absolute;
                 top: 50%;
-                left: 50%;
                 width: 240px;
                 height: 160px;
-                margin: -80px 0 0 -120px;
+                margin: -80px 0 0 0;
             }
         }
         .city-item:nth-child(odd){
@@ -106,6 +132,9 @@
             }
             .city-img{
                 float: right;
+                img{
+                    right: 0;
+                }
             }
         }
         .city-item:nth-child(even){
@@ -127,6 +156,9 @@
             }
             .city-img{
                 float: left;
+                img{
+                    left: 0;
+                }
             }
         }
 
