@@ -1,5 +1,5 @@
 
-$(window).on('scroll',function(){
+$(window).on('scroll.header',function(){
     handleScrollFunc()
 });
 

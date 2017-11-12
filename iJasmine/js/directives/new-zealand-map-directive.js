@@ -7,13 +7,13 @@
         return {
             restrict: 'A',
             replace: true,
-            template: '<div id="home-map"></div>',
+            template: '<div id="new-zealand-map"></div>',
             scope: {
                 viewData: '='
             },
             link: function ($scope, element, attr) {
 
-                var newZealandMap = echarts.init(document.getElementById('home-map'));
+                var newZealandMap = echarts.init(document.getElementById('new-zealand-map'));
                 echarts.util.mapData.params.params.NewZealand = {
                     getGeoJson: function (callback) {
                         $.getJSON('/js/lib/eCharts/newZealand.geo.json', callback);

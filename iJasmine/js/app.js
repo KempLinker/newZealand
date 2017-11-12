@@ -53,6 +53,10 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
         });
     }
 
+    $(window).on('scroll.destination',function(){
+        handleScrollDestinationFunc();
+    });
+
 
 
 });
