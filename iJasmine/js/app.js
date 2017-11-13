@@ -76,6 +76,9 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
 
     }
 
+    $scope.toggleDetail = function( event ){
+        toggleDetail(event);
+    }
 
 
 

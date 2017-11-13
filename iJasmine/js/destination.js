@@ -5,7 +5,7 @@ function handleScrollDestinationFunc() {
     var $destinationInfo = $('.destination-info');
     var containerTop = $destinationInfo.offset().top;
     var footerTop = $('.footer').length > 0 && $('.footer').offset().top;
-   
+
     var diffTop = 0;
     if( scrollTop > containerTop - 56 ){
 
