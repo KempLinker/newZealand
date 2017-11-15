@@ -1689,7 +1689,6 @@ footer {
   color: rgba(255, 255, 255, 0.98);
 }
 .custom-body .main-body {
-  min-height: 600px;
   margin: 32px auto;
 }
 .custom-body .custom-step-list {
@@ -1698,7 +1697,7 @@ footer {
 }
 .custom-body .custom-step-item {
   position: relative;
-  margin-bottom: 48px;
+  margin: 24px 0;
   background-color: rgba(255, 255, 255, 0.98);
   color: rgba(63, 63, 60, 0.7);
   box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
@@ -1710,15 +1709,27 @@ footer {
   box-shadow: 0 0 8px 2px rgba(247, 100, 89, 0.5);
   transition: .2s all 0s ease-in-out;
 }
+.custom-body .custom-step-item:first-child .step-detail {
+  display: block;
+}
+.custom-body .custom-step-arrow {
+  width: 100%;
+  height: 48px;
+  text-align: center;
+}
+.custom-body .custom-step-arrow img {
+  height: 48px;
+  opacity: 0.2;
+}
 .custom-body .step-num {
   position: absolute;
-  top: -16px;
-  left: -16px;
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
+  top: -20px;
+  left: -20px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  font-size: 20px;
   text-align: center;
-  font-size: 24px;
   background-color: #f76459;
   color: rgba(255, 255, 255, 0.98);
   box-shadow: 1px 2px 6px 0px rgba(0, 0, 0, 0.4);
@@ -1740,10 +1751,10 @@ footer {
 .custom-body .step-show {
   float: right;
   width: 56px;
-  height: 28px;
+  height: 24px;
   font-size: 12px;
   letter-spacing: 0px;
   text-indent: 2px;
-  line-height: 28px;
-  margin: 8px 16px 0 0;
+  line-height: 24px;
+  margin: 12px 16px 0 0;
 }
