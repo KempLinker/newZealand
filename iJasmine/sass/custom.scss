@@ -1,15 +1,27 @@
 .custom-body{
     .first-screen{
-        height: 240px;
+        position: relative;
+        height: 300px;
         overflow: hidden;
-        background-color: $bgColBaseDark;
+        background-image: url(/src/imgs/10.jpg);
+        background-size: cover;
+        background-position: center center;
         .slogan{
+            position: relative;
             width: 100%;
-            margin-top: 120px;
+            margin-top: 150px;
             font-size: 28px;
-            letter-spacing: 2px;
+            letter-spacing: 4px;
             text-align: center;
+            z-index: 10;
             color: $fontColLight;
+        }
+        .cover{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.3);
         }
     }
     .main-body{
@@ -34,7 +46,7 @@
         transition: .2s all 0s ease-in-out;
     }
     .custom-step-item:first-child{
-        .step-detail{
+        .step-info{
             display: block;
         }
     }
@@ -67,12 +79,25 @@
         padding-left: 56px;
         font-size: 16px;
     }
+    .step-info{
+        display: none;
+        box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1) inset;
+    }
     .step-detail{
         padding: 24px 32px;
         line-height: normal;
         text-indent: 28px;
-        display: none;
-        box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1) inset;
+    }
+    .step-img{
+        padding: 0 32px 24px;
+        img{
+            width: 180px;
+            height: 120px;
+            margin-right: 24px;
+            box-sizing: border-box;
+            border: 1px solid $borderColDarkOpacity2;
+            box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        }
     }
     .step-show{
         float: right;
