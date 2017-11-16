@@ -1,7 +1,7 @@
 .contact-layer{
     position: fixed;
     right: 0;
-    bottom: 56px;
+    bottom: 120px;
     z-index: 1000;
     .contact-list{
         width: 56px;
@@ -38,7 +38,7 @@
     .contact-type:before{
         content: "";
         position: absolute;
-        top: 20px;
+        top: 18px;
         right: -6px;
         border-bottom: 6px solid transparent;
         border-top: 6px solid transparent;
@@ -50,5 +50,22 @@
         .contact-type{
             display: block;
         }
+    }
+    .contact-item.wechat .contact-type{
+        top: -56px;
+        height: 160px;
+        p{
+            text-align: center;
+            line-height: normal;
+            margin: 16px 0 8px 0;
+        }
+        img{
+            width: 96px;
+            height: 96px;
+        }
+        &:before{
+            top: 74px;
+        }
+
     }
 }
