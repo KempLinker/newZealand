@@ -7,11 +7,72 @@
     <link rel="stylesheet" type="text/css" href="/sass/release/release.css"/>
 
 </head>
-<body class="home-body" ng-controller="iJasmineCtrl">
+<body class="home-body" ng-controller="homeCtrl">
     <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
-    <div ui-view></div>
+    <div class="first-screen">
+        <div class="home-info">
+            <div class="home-map" new-zealand-map view-data="viewData"></div>
+
+            <div class="geo-info">
+                <p class="geo-name">{{viewData.geoInfo.geoName}}</p>
+                <p class="geo-sub-name mt-8">{{viewData.geoInfo.geoKey}}</p>
+                <button class="go mt-32">进入目的地</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-body">
+        <div class="main-block block-one">
+            <div class="main-title">爱茉莉旅游</div>
+            <div class="info-list mt-32">
+                <div class="info-box">图片或文字</div>
+                <div class="info-box">图片或文字</div>
+                <div class="info-box">图片或文字</div>
+            </div>
+        </div>
+        <div class="main-block block-two gray-bg-col">
+            <div class="block-img fl">
+                <img class="block-img-bottom" src="src/imgs/7.jpg" >
+                <img class="block-img-top" src="src/imgs/9.jpg" >
+            </div>
+            <div class="block-text fr">
+                <span class="block-title mt-240">游记</span>
+                <span class="block-title block-sub-title mt-24">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</span>
+                <div class="btb-wrap">
+                    <button class="go mt-40">了解更多</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-block block-three">
+            <div class="block-img fr">
+                <img class="block-img-bottom" src="src/imgs/4.jpg" >
+                <img class="block-img-top" src="src/imgs/3.jpg" >
+            </div>
+            <div class="block-text fl">
+                <span class="block-title mt-240">定制流程</span>
+                <span class="block-title block-sub-title mt-24">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</span>
+                <div class="btb-wrap">
+                    <button class="go mt-40">了解更多</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-block block-four gray-bg-col pb-64">
+            <div class="block-img fl">
+                <img class="block-img-bottom" src="src/imgs/2.jpg" >
+                <img class="block-img-top" src="src/imgs/1.jpg" >
+            </div>
+            <div class="block-text fr">
+                <span class="block-title mt-240">关于爱茉莉旅游</span>
+                <span class="block-title block-sub-title mt-24">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</span>
+                <div class="btb-wrap">
+                    <button class="go mt-40">了解更多</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <div ng-include="'/component/footer.html'" onload="footerLoadReady()"></div>
+    <div ng-include="'/component/contact.html'" onload="contactLoadReady()"></div>
 
     <script type="text/javascript" src="/js/lib/jquery/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="/js/lib/angular-1.3.0/angular.min.js"></script>
@@ -19,7 +80,6 @@
     <script type="text/javascript" src="/js/lib/eCharts/echarts-all.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/home-ctrl.js"></script>
-    <script type="text/javascript" src="/js/header.js"></script>
     <script type="text/javascript" src="/js/directives/new-zealand-map-directive.js"></script>
 
 </body>

@@ -7,79 +7,76 @@
     <link rel="stylesheet" type="text/css" href="/sass/release/release.css"/>
 
 </head>
-<body class="destination-body gray-bg-col" ng-controller="iJasmineCtrl">
-<div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
+<body class="destination-body gray-bg-col" ng-controller="destinationCtrl">
+    <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
 
-<div class="first-screen">
-    <div class="scroll-banner" id="scroll_banner"></div>
-</div>
-<div class="main-body">
-    <div class="destination-map-layer" id="destination-map-layer">
-        <div class="destination-map" new-zealand-map view-data="viewData"></div>
-        <div class="destination-map-cover">
-
-        </div>
+    <div class="first-screen">
+        <div class="scroll-banner" id="scroll_banner"></div>
     </div>
-    <div class="destination-info">
-        <p class="destination-name">
-            <span>坎特伯雷(Canterbury)</span>
-        </p>
-        <div class="destination-desc">
-            从银色沙滩到南阿尔卑斯山峰，新西兰的坎特伯雷地区是不可忽略的重要旅游目的地。坎特伯雷地区人口50余万，面积42,200km2。最重要的景点依次为：海洋全景、山脉、美丽的牧场和湛蓝的天空。该地区的最高点也就是新西兰的最高点。库克山海拔3754米，毛利语称为奥拉基，含义是“穿云破雾”。与之相比的，在凯库拉有数千米深的海水，这里为鲸鱼、海豚和海豹提供了理想的生存环境，他们常年栖息于此。
-            从银色沙滩到南阿尔卑斯山峰，新西兰的坎特伯雷地区是不可忽略的重要旅游目的地。坎特伯雷地区人口50余万，面积42,200km2。最重要的景点依次为：海洋全景、山脉、美丽的牧场和湛蓝的天空。该地区的最高点也就是新西兰的最高点。库克山海拔3754米，毛利语称为奥拉基，含义是“穿云破雾”。与之相比的，在凯库拉有数千米深的海水，这里为鲸鱼、海豚和海豹提供了理想的生存环境，他们常年栖息于此。
+    <div class="main-body">
+        <div class="destination-map-layer" id="destination-map-layer">
+            <div class="destination-map" new-zealand-map view-data="viewData"></div>
+            <div class="destination-map-cover"></div>
         </div>
-    </div>
-    <div class="destination-city-info">
-        <ul class="city-list">
-            <li class="city-item">
-                <span class="city-name">亚瑟通道</span>
-                <div class="city-info">
-                    <div class="city-desc">
-                    新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。
-                    </div>
-                    <div class="city-img">
-                        <img src="src/imgs/5.jpg" >
-                    </div>
-                </div>
-            </li>
-            <li class="city-item">
-                <span class="city-name">亚瑟通道</span>
-                <div class="city-info">
-                    <div class="city-desc">
-                        新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。在17世纪中叶，第一批欧洲放牧者为了寻找坎特伯雷大平原以外的牧场，来到崎岖不平的亚瑟隘口国家公园。在欧洲移民到来之前，毛利旅游者和商人也曾从此经过，到达西海岸的庞纳姆河。直到1860年在西海岸发现了黄金，于是亚瑟隘口才逐步地开始修路。
-                    </div>
-                    <div class="city-img">
-                        <img src="src/imgs/5.jpg" >
-                    </div>
-                </div>
-            </li>
-            <li class="city-item">
-                <span class="city-name">亚瑟通道</span>
-                <div class="city-info">
-                    <div class="city-desc">
+        <div class="destination-info">
+            <p class="destination-name">
+                <span>坎特伯雷(Canterbury)</span>
+            </p>
+            <div class="destination-desc">
+                从银色沙滩到南阿尔卑斯山峰，新西兰的坎特伯雷地区是不可忽略的重要旅游目的地。坎特伯雷地区人口50余万，面积42,200km2。最重要的景点依次为：海洋全景、山脉、美丽的牧场和湛蓝的天空。该地区的最高点也就是新西兰的最高点。库克山海拔3754米，毛利语称为奥拉基，含义是“穿云破雾”。与之相比的，在凯库拉有数千米深的海水，这里为鲸鱼、海豚和海豹提供了理想的生存环境，他们常年栖息于此。
+                从银色沙滩到南阿尔卑斯山峰，新西兰的坎特伯雷地区是不可忽略的重要旅游目的地。坎特伯雷地区人口50余万，面积42,200km2。最重要的景点依次为：海洋全景、山脉、美丽的牧场和湛蓝的天空。该地区的最高点也就是新西兰的最高点。库克山海拔3754米，毛利语称为奥拉基，含义是“穿云破雾”。与之相比的，在凯库拉有数千米深的海水，这里为鲸鱼、海豚和海豹提供了理想的生存环境，他们常年栖息于此。
+            </div>
+        </div>
+        <div class="destination-city-info">
+            <ul class="city-list">
+                <li class="city-item">
+                    <span class="city-name">亚瑟通道</span>
+                    <div class="city-info">
+                        <div class="city-desc">
                         新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。
+                        </div>
+                        <div class="city-img">
+                            <img src="src/imgs/5.jpg" >
+                        </div>
                     </div>
-                    <div class="city-img">
-                        <img src="src/imgs/5.jpg" >
+                </li>
+                <li class="city-item">
+                    <span class="city-name">亚瑟通道</span>
+                    <div class="city-info">
+                        <div class="city-desc">
+                            新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。在17世纪中叶，第一批欧洲放牧者为了寻找坎特伯雷大平原以外的牧场，来到崎岖不平的亚瑟隘口国家公园。在欧洲移民到来之前，毛利旅游者和商人也曾从此经过，到达西海岸的庞纳姆河。直到1860年在西海岸发现了黄金，于是亚瑟隘口才逐步地开始修路。
+                        </div>
+                        <div class="city-img">
+                            <img src="src/imgs/5.jpg" >
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+                <li class="city-item">
+                    <span class="city-name">亚瑟通道</span>
+                    <div class="city-info">
+                        <div class="city-desc">
+                            新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。
+                        </div>
+                        <div class="city-img">
+                            <img src="src/imgs/5.jpg" >
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<div ng-include="'/component/footer.html'" onload="footerLoadReady()"></div>
-<div ng-include="'/component/contact.html'" onload="contactLoadReady()"></div>
+    <div ng-include="'/component/footer.html'" onload="footerLoadReady()"></div>
+    <div ng-include="'/component/contact.html'" onload="contactLoadReady()"></div>
 
-<script type="text/javascript" src="/js/lib/jquery/jquery-3.2.1.js"></script>
-<script type="text/javascript" src="/js/lib/jquery/jquery-scroll-banner.js"></script>
-<script type="text/javascript" src="/js/lib/angular-1.3.0/angular.min.js"></script>
-<script type="text/javascript" src="/js/lib/eCharts/echarts-all.js"></script>
-<script type="text/javascript" src="/js/app.js"></script>
-<script type="text/javascript" src="/js/header.js"></script>
-<script type="text/javascript" src="/js/contact.js"></script>
-<script type="text/javascript" src="/js/destination.js"></script>
-<script type="text/javascript" src="/js/directives/new-zealand-map-directive.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="/js/lib/jquery/jquery-scroll-banner.js"></script>
+    <script type="text/javascript" src="/js/lib/angular-1.3.0/angular.min.js"></script>
+    <script type="text/javascript" src="/js/lib/angular-1.3.0/angular-ui-router.js"></script>
+    <script type="text/javascript" src="/js/lib/eCharts/echarts-all.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/controllers/destination-ctrl.js"></script>
+    <script type="text/javascript" src="/js/directives/new-zealand-map-directive.js"></script>
 
 </body>
 </html>

@@ -1,9 +1,9 @@
 (function() {
     angular.module('iJasmine').directive('newZealandMap', newZealandMapDirective);
 
-    newZealandMapDirective.$inject = ['$timeout'];
+    newZealandMapDirective.$inject = ['$rootScope', '$timeout'];
 
-    function newZealandMapDirective($timeout) {
+    function newZealandMapDirective($rootScope, $timeout) {
         return {
             restrict: 'A',
             replace: true,
@@ -100,12 +100,12 @@
                         }
                     ]
                 };
-                newZealandMap.on(echarts.config.EVENT.CLICK, clickArea);
+
                 $(window).on('resize.homeMap', function(){
                     newZealandMap.resize();
                 });
-                if( $scope.viewData.destination ){
-                    options.backgroundColor = '#fff'
+                if( $rootScope.view == 'destination' ){
+                    options.backgroundColor = '#fff';
                     options.series[0].itemStyle = {
                         normal: {
                             label: {
@@ -129,6 +129,7 @@
                     newZealandMap.setOption(options);
 
                 } else {
+                    newZealandMap.on(echarts.config.EVENT.CLICK, clickArea);
                     newZealandMap.setOption(options);
                 }
 
@@ -145,7 +146,6 @@
                     });
 
                 }
-
 
             }
         }
