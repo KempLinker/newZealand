@@ -25,10 +25,14 @@ header{
         transition: .2s all 0s ease-in-out;
     }
     .logo-img{
+        display: block;
         height: 48px;
         margin-top: 4px;
         opacity: 0.8;
         transition: .2s all 0s ease-in-out;
+        &.transparent{
+            display: none;
+        }
     }
     &:hover .logo-name{
         color: $fontColBase;
@@ -123,6 +127,41 @@ header{
         .city-name:hover{
             color: $fontColLight;
             text-decoration: underline;
+        }
+    }
+}
+
+.transparent-header header{
+    background: transparent;
+    .logo {
+        .logo-name {
+            color: $fontColLightOpacity;
+        }
+        &:hover .logo-name {
+            color: $fontColLight;
+        }
+        .logo-img.transparent{
+            display: block;
+        }
+        .logo-img.normal {
+            display: none;
+        }
+    }
+    .nav-list {
+        .nav-item {
+            color: $fontColLightOpacity;
+            &.active,
+            &:hover{
+                color: $fontColLight;
+            }
+            &::before{
+                background-color: $bgColBaseLight;
+            }
+            &.active::before,
+            &:hover::before{
+                color: $fontColLight;
+                background-color: $bgColBaseLight;
+            }
         }
     }
 }

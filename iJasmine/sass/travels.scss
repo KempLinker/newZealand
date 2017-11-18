@@ -49,18 +49,34 @@
                 text-decoration: none;
                 color: $fontColOrange;
             }
+            .ico-sort-asc:before{
+                border-top: 8px solid $bgColOrange;
+            }
+            .ico-sort-desc:before{
+                border-bottom: 8px solid $bgColOrange;
+            }
         }
 
-        .ico-sort-asc{
-            background-color: red;
+        .ico-sort-asc:before{
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            border: 6px solid transparent;
+            border-top: 8px solid $bgColBaseDark;
         }
-        .ico-sort-desc{
-            background-color: red;
+        .ico-sort-desc:before{
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+            border: 6px solid transparent;
+            border-bottom: 8px solid $bgColBaseDark;
         }
     }
     .travels-list{
         width: 960px;
-        margin: 32px auto;
+        margin: 16px auto 32px;
     }
     .travels-item{
         position: relative;
@@ -68,6 +84,7 @@
         background-color: $bgColBaseLight;
         color: $fontColBaseOpacity;
         box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        overflow: hidden;
         transition: .2s all 0s ease-in-out;
     }
     .travels-item:hover {
@@ -75,68 +92,61 @@
         box-shadow: 0 0 8px 2px rgba(247,100,89,0.5);
         transition: .2s all 0s ease-in-out;
     }
-    .custom-step-item:first-child{
-        .step-info{
+    .travels-img{
+        position: relative;
+        float: left;
+        width: 300px;
+        height: 200px;
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
             display: block;
+            width: 240px;
+            height: 160px;
+            margin: -80px 0 0 -120px;
         }
     }
-    .custom-step-arrow{
-        width: 100%;
-        height: 48px;
-        text-align: center;
-        img{
-            height: 48px;
-            opacity: 0.2;
-        }
+    .travels-info{
+        padding: 16px 24px 8px;
+        margin-left: 300px;
     }
-    .step-num{
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        width: 42px;
-        height: 42px;
-        line-height: 42px;
-        font-size: 20px;
-        text-align: center;
-        background-color: $bgColOrange;
-        color: $fontColLight;
-        box-shadow: 1px 2px 6px 0px rgba(0,0,0,0.4);
+    .travels-note{
+        line-height: 32px;
+        font-size: 18px;
+        color: $fontColBase;
     }
-    .step-content{
-        width: 100%;
-        height: 48px;
-        line-height: 48px;
-        padding-left: 56px;
-        font-size: 16px;
-    }
-    .step-info{
-        display: none;
-        box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.1) inset;
-    }
-    .step-detail{
-        padding: 24px 32px;
+    .travels-summery{
+        margin-top: 8px;
         line-height: normal;
-        text-indent: 28px;
+        font-size: 14px;
+        color: $fontColBaseOpacity;
     }
-    .step-img{
-        padding: 0 32px 24px;
-        img{
-            width: 180px;
-            height: 120px;
-            margin-right: 24px;
-            box-sizing: border-box;
-            border: 1px solid $borderColDarkOpacity2;
-            box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+    .travels-msg{
+        margin: 16px 0 0 0;
+        padding: 4px 0;
+        line-height: 32px;
+        box-shadow: 0 1px 0 0 $borderColDarkOpacity2 inset;
+        .writer,
+        .date{
+            margin-right: 16px;
+            color: $fontColBaseOpacity;
         }
     }
-    .step-show{
+    .read-detail{
         float: right;
         width: 56px;
         height: 24px;
         font-size: 12px;
-        letter-spacing: 0px;
+        letter-spacing: 0;
         text-indent: 2px;
         line-height: 24px;
-        margin: 12px 16px 0 0;
+        margin: 4px 0 0 0;
+    }
+    .ico-user{
+        background-image: url("/src/imgs/icon-user.png");
+    }
+    .ico-date{
+        background-image: url("/src/imgs/icon-date.png");
     }
 }

@@ -1,16 +1,14 @@
 
-$(window).on('scroll.header',function(){
-    handleScrollFunc()
-});
 
 function handleScrollFunc(){
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
     var $header = $('header');
-    if( scrollTop > 100 ){
-        $header.addClass('scroll-header');
+    var $headerParent = $header.parent();
+    if( scrollTop > 30 ){
+        $headerParent.removeClass('transparent-header');
 
     } else{
-        $header.removeClass('scroll-header');
+        $headerParent.addClass('transparent-header');
     }
 }
 function initHeaderEvent(){

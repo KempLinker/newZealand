@@ -22,10 +22,19 @@ iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
 
     } else if( path.indexOf('custom') >= 0 ) {
         $scope.viewData.view = 'custom';
+
+    } else if( path.indexOf('travels') >= 0 ) {
+        $scope.viewData.view = 'travels';
     }
 
     $scope.headerLoadReady = function(){
-        handleScrollFunc();
+
+        if( $scope.viewData.view == 'custom' || $scope.viewData.view == 'travels' ) {
+            $(window).on('scroll.header', function () {
+                handleScrollFunc()
+            });
+            handleScrollFunc();
+        }
         initHeaderEvent();
 
     };
