@@ -1,4 +1,50 @@
-var iJasmineApp = angular.module('iJasmine', []);
+var iJasmineApp = angular.module('iJasmine', ['ui.router']);
+
+iJasmineApp.config(['$stateProvider', '$urlRouterProvider',
+    function ($stateProvider, $urlRouterProvider) {
+
+        // 配置路由
+        $urlRouterProvider.otherwise('/home');
+
+        $stateProvider.state('home', {
+            url: '/home',
+            templateUrl: '/component/home.html',
+            controller: 'homeCtrl'
+
+        }).state('sync_record', {
+            url: '/sync_record',
+            templateUrl: '/static/view/sync_record.html',
+            controller: 'syncRecordCtrl'
+
+        }).state('system_update', {
+            url: '/system_update',
+            templateUrl: '/static/view/system_update.html',
+            controller: 'systemUpdateCtrl'
+
+        }).state('ds_config', {
+            url: '/ds_config',
+            templateUrl: '/static/view/ds_config.html',
+            controller: 'dsConfigCtrl'
+
+        }).state('ds_config_edit', {
+            url: '/ds_config/:connectId',
+            templateUrl: '/static/view/ds_config.html',
+            controller: 'dsConfigCtrl'
+        });
+    }
+]);
+
+iJasmineApp.run(['$rootScope',
+    function($rootScope){
+
+        $rootScope.global = {
+
+        };
+
+        $rootScope.routeView = 'dataSource';
+
+    }
+]);
 
 iJasmineApp.controller('iJasmineCtrl', function($scope,$http) {
 
