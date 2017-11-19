@@ -2,27 +2,40 @@
 
     angular.module("iJasmine").controller('destinationCtrl', destinationCtrl);
 
-    destinationCtrl.$inject = ['$rootScope','$scope', '$http'];
+    destinationCtrl.$inject = ['$timeout','$scope', '$http'];
 
-    function destinationCtrl($rootScope, $scope, $http) {
+    function destinationCtrl($timeout, $scope, $http) {
 
-        $("#scroll_banner").scrollBanner({
-            images : [
-                {src:"src/imgs/6.jpg",title:"banner1"},
-                {src:"src/imgs/7.jpg",title:"banner2"},
-                {src:"src/imgs/8.jpg",title:"banner3"},
-                {src:"src/imgs/9.jpg",title:"banner4"}
-            ],
-            scrollTime: 4000,
-            bannerWidth:"1080px",
-            bannerHeight:"500px",
-            iconColor: "#FFFFFF",
-            iconHoverColor : "#f76459",
-            iconPosition : "center"
+        $scope.viewData = {
+            init: false,
+            banner: {
+                src: [],
+                time: 1000,
+            },
+            destinationInfo: {}
+        };
+
+        $http.get('src/jsonData/destinationData.json').then(function (result) {
+            handleData(result.data);
+            $scope.viewData.init = true;
         });
-        $(window).on('scroll.destination',function(){
-            handleScrollDestinationFunc();
-        });
+
+        function handleData(data){
+            $scope.viewData.banner = data.banner;
+            $scope.viewData.destinationInfo = data.info;
+            $("#scroll_banner").scrollBanner({
+                images: $scope.viewData.banner.src,
+                scrollTime: $scope.viewData.banner.time,
+                bannerWidth: "1080px",
+                bannerHeight:"500px",
+                iconColor: "#FFFFFF",
+                iconHoverColor : "#f76459",
+                iconPosition : "center"
+            });
+            $(window).on('scroll.destination',function(){
+                handleScrollDestinationFunc();
+            });
+        }
 
         function handleScrollDestinationFunc() {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
