@@ -432,7 +432,7 @@ template {
   display: none;
 }
 
-html, body, div, p, li {
+html, body, div, p, li, ul {
   box-sizing: border-box;
 }
 
@@ -447,7 +447,11 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: none !important;
   outline: none !important;
 }
 
@@ -900,7 +904,7 @@ template {
   display: none;
 }
 
-html, body, div, p, li {
+html, body, div, p, li, ul {
   box-sizing: border-box;
 }
 
@@ -915,7 +919,11 @@ ul {
   list-style: none;
 }
 
-a {
+a,
+a:focus,
+a:hover {
+  color: inherit;
+  text-decoration: none !important;
   outline: none !important;
 }
 
@@ -1187,6 +1195,9 @@ header {
   color: rgba(63, 63, 60, 0.7);
   transition: .2s all 0s ease-in-out;
 }
+.nav-list .nav-item > a {
+  display: inline-block;
+}
 .nav-list .nav-item:first-child {
   margin-left: -16px;
 }
@@ -1219,7 +1230,7 @@ header {
   position: absolute;
   top: 56px;
   left: -52px;
-  width: 1020px;
+  width: 1080px;
   height: auto;
   display: none;
   padding: 16px 32px;
@@ -1248,9 +1259,10 @@ header {
   font-size: 13px;
   cursor: pointer;
 }
+.sub-nav-list .city-box .city-area > a:hover,
 .sub-nav-list .city-box .city-name:hover {
   color: rgba(255, 255, 255, 0.98);
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 .transparent-header header {

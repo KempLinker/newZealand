@@ -16,8 +16,7 @@ iJasmineApp.config(['$stateProvider', '$urlRouterProvider',
     }
 ]);
 
-iJasmineApp.run(['$rootScope',
-    function($rootScope){
+iJasmineApp.run(['$rootScope','$http', function($rootScope,$http){
 
         var path = window.location.href;
         if( path.indexOf('index') >= 0 ){
@@ -37,7 +36,9 @@ iJasmineApp.run(['$rootScope',
         }
 
         $rootScope.headerLoadReady = function(){
-
+            $http.get('src/jsonData/headerData.json').then(function (result) {
+                $rootScope.areaList = result.data.areaList;
+            });
             if( $rootScope.view == 'custom' || $rootScope.view == 'travels' ) {
                 $(window).on('scroll.header', function () {
                     handleScrollFunc()
