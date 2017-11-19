@@ -4,15 +4,6 @@ var iJasmineApp = angular.module('iJasmine', ['ui.router']);
 iJasmineApp.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
 
-        // 配置路由
-        $urlRouterProvider.otherwise('/home');
-
-        $stateProvider.state('home', {
-            url: '/home',
-            templateUrl: '/component/home.html',
-            controller: 'homeCtrl'
-
-        })
     }
 ]);
 

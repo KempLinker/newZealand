@@ -6,12 +6,15 @@
 
     function destinationCtrl($timeout, $scope, $http) {
 
+        var urlObj = new urlParam();
         $scope.viewData = {
             init: false,
             banner: {
                 src: [],
                 time: 1000,
             },
+            curArea: '',
+            areaList: [],
             destinationInfo: {}
         };
 
@@ -22,12 +25,25 @@
 
         function handleData(data){
             $scope.viewData.banner = data.banner;
-            $scope.viewData.destinationInfo = data.info;
+            $scope.viewData.areaList = data.areaList;
+            if( urlObj && urlObj.area ) {
+                $scope.viewData.areaList.map(function (area) {
+                    if (area.areaId.toLocaleLowerCase() == urlObj.area.toLocaleLowerCase()) {
+                        $scope.viewData.destinationInfo = area;
+                        $scope.viewData.curArea = area.areaId;
+                    }
+                });
+            }
+            if( $.isEmptyObject($scope.viewData.destinationInfo) ){
+                $scope.viewData.destinationInfo = $scope.viewData.areaList[0];
+                $scope.viewData.curArea = $scope.viewData.destinationInfo.areaId;
+            }
+
             $("#scroll_banner").scrollBanner({
                 images: $scope.viewData.banner.src,
                 scrollTime: $scope.viewData.banner.time,
                 bannerWidth: "1080px",
-                bannerHeight:"500px",
+                bannerHeight: "400px",
                 iconColor: "#FFFFFF",
                 iconHoverColor : "#f76459",
                 iconPosition : "center"
@@ -39,16 +55,14 @@
 
         function handleScrollDestinationFunc() {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
             var $destinationMapLayer = $('#destination-map-layer');
             var $destinationInfo = $('.destination-info');
             var containerTop = $destinationInfo.offset().top;
-            var footerTop = $('.footer').length > 0 && $('.footer').offset().top;
+            var containerHeight = $('.main-body').height() + 64;
 
             var diffTop = 0;
             if( scrollTop > containerTop - 56 ){
-
-                if( footerTop - 4 <= scrollTop + clientHeight ){
+                if( containerHeight <= scrollTop + 36 ){
                     return false;
                 }
                 diffTop = scrollTop - containerTop + 56;
@@ -65,6 +79,22 @@
                     });
                 }
 
+            }
+        }
+
+        function urlParam() {
+            var name = '', value = '';
+            var str = window.location.href;
+            var num = str.indexOf("?")
+            str = str.substr( num + 1 );
+            var arr = str.split("&");
+            for( var i = 0; i < arr.length; i ++ ){
+                num = arr[i].indexOf("=");
+                if( num > 0 ){
+                    name = arr[i].substring( 0, num );
+                    value = arr[i].substr( num + 1 );
+                    this[name] = value;
+                }
             }
         }
 

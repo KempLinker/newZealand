@@ -2,6 +2,7 @@
   "areaList": {
     "first": [
       {
+        "areaId": "Canterbury",
         "name": "坎特伯雷(Canterbury)",
         "scene": [
           { "name": "基督城" },
@@ -11,6 +12,17 @@
           { "name": "凯库拉" },
           { "name": "蒂卡普湖" },
           { "name": "库克山" }
+        ]
+      },
+      {
+        "areaId": "Nelson",
+        "name": "尼尔森(Nelson)",
+        "scene": [
+          { "name": "尼尔森市中心" },
+          { "name": "黄金湾" },
+          { "name": "凯特里特里" },
+          { "name": "莫图依卡" },
+          { "name": "塔卡卡" }
         ]
       }
     ]

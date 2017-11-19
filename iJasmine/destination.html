@@ -9,7 +9,6 @@
 </head>
 <body class="destination-body gray-bg-col" ng-controller="destinationCtrl">
     <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
-
     <div class="first-screen">
         <div class="scroll-banner" id="scroll_banner"></div>
     </div>
@@ -24,7 +23,7 @@
             </p>
             <div class="destination-desc" ng-bind="viewData.destinationInfo.desc"></div>
         </div>
-        <div class="destination-city-info"
+        <div class="destination-city-info">
             <ul class="city-list">
                 <li class="city-item" ng-repeat="city in viewData.destinationInfo.scene">
                     <span class="city-name" ng-bind="city.name"></span>
