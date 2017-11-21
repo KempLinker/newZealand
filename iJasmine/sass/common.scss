@@ -147,7 +147,8 @@ body{
     display: inline-block;
     font-size: 18px;
     color: $fontColBaseOpacity;
-    letter-spacing: 0px;
+    letter-spacing: 0;
+    line-height: normal;
 }
 
 .base-icon{
@@ -161,4 +162,21 @@ body{
     background-position: 0 0;
     background-repeat: no-repeat;
     opacity: 0.7;
+}
+
+@media screen and (min-width: 360px) and (max-width: 459px) {
+    .block-title{
+        font-size: 28px;
+    }
+    .block-sub-title{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 359px) {
+    .block-title{
+        font-size: 24px;
+    }
+    .block-sub-title{
+        font-size: 14px;
+    }
 }
