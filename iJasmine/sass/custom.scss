@@ -89,11 +89,12 @@
         text-indent: 28px;
     }
     .step-img{
-        padding: 0 32px 24px;
+        padding: 0 32px;
+        overflow: hidden;
         img{
             width: 180px;
             height: 120px;
-            margin-right: 24px;
+            margin: 0 24px 24px 0;
             box-sizing: border-box;
             border: 1px solid $borderColDarkOpacity2;
             box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
@@ -108,5 +109,98 @@
         text-indent: 2px;
         line-height: 24px;
         margin: 12px 16px 0 0;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .custom-body{
+        .custom-step-list{
+            width: 700px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .custom-body{
+        .custom-step-list{
+            width: 100%;
+        }
+        .custom-step-item,
+        .custom-step-item.active,
+        .custom-step-item:hover {
+            box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        }
+        .step-content{
+            padding-left: 64px;
+        }
+        .step-num{
+            top: 0;
+            left: 0;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            box-shadow: none;
+        }
+        .step-img{
+            padding: 0 24px;
+            img{
+                margin: 0 16px 16px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width: 459px) {
+    .custom-body{
+        .custom-step-item{
+            margin: 16px 0;
+        }
+        .step-content{
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+        }
+        .step-num{
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+        }
+        .step-show{
+            height: 36px;
+            line-height: 36px;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+            border-left: 1px solid rgba(63, 63, 60, 0.7);
+        }
+        .step-detail{
+            padding: 16px 24px;
+            font-size: 12px;
+        }
+        .step-img img{
+            width: 240px;
+            height: 180px;
+            display: block;
+            margin: 0 auto 24px;
+        }
+        .custom-step-arrow img{
+            width: 42px;
+        }
+        .go:hover{
+            background: transparent;
+            color: $fontColBase;
+        }
+    }
+}
+@media screen and (max-width: 359px) {
+    .custom-body{
+        .go.step-show{
+            position: absolute;
+            top: 0;
+            left: 36px;
+            right: 0;
+            width: calc( 100% - 36px );
+            border: none !important;
+            background: transparent;
+            color: transparent;
+        }
     }
 }
