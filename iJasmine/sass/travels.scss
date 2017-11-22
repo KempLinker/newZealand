@@ -124,6 +124,7 @@
         line-height: normal;
         font-size: 14px;
         color: $fontColBaseOpacity;
+        word-break: break-all;
     }
     .travels-msg{
         margin: 16px 0 0 0;
@@ -145,11 +146,133 @@
         text-indent: 2px;
         line-height: 24px;
         margin: 4px 0 0 0;
+        cursor: pointer;
     }
     .ico-user{
         background-image: url("/src/imgs/icon-user.png");
     }
     .ico-date{
         background-image: url("/src/imgs/icon-date.png");
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .travels-body{
+        .travels-title,
+        .travels-list{
+            width: 720px;
+        }
+        .travels-img{
+            width: 280px;
+            height: 200px;
+        }
+        .travels-info{
+            padding: 16px 24px 8px 0;
+            margin-left: 280px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .travels-body{
+        .first-screen{
+            height: 200px;
+            .slogan{
+                margin-top: 100px;
+                font-size: 20px;
+            }
+        }
+        .main-body{
+            margin-top: 16px;
+        }
+        .travels-title,
+        .travels-list{
+            width: 100%;
+        }
+        .travels-title{
+            padding: 0 16px;
+        }
+        .travels-item:first-child{
+            margin-top: 0 ;
+        }
+        .travels-item:hover {
+            box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        }
+        .travels-img{
+            width: 220px;
+            img{
+                width: 200px;
+                height: 120px;
+                margin: -60px 0 0 -100px;
+            }
+        }
+        .travels-info{
+            padding: 16px 24px 8px 16px;
+            margin-left: 220px;
+        }
+    }
+}
+@media screen and (min-width: 460px) and (max-width: 767px) {
+    .travels-body{
+        .travels-summery{
+            max-height: 100px;
+            overflow-y: auto;
+        }
+    }
+}
+@media screen and (max-width: 459px) {
+    .travels-body{
+        .travels-title{
+            font-size: 16px;
+        }
+        .travels-list{
+            margin-top: 8px;
+        }
+        .travels-img{
+            position: absolute;
+            top: 56px;
+            left: 24px;
+            width: 100%;
+            height: 120px;
+            img{
+                top: 0;
+                left: 0;
+                margin: 0;
+            }
+        }
+        .travels-info{
+            padding: 8px 16px;
+            margin-left: 0;
+        }
+        .travels-note{
+            font-size: 16px;
+        }
+        .travels-summery{
+            margin-top: 160px;
+            font-size: 13px;
+        }
+        .travels-msg{
+            .writer,
+            .date{
+                font-size: 12px;
+            }
+        }
+
+    }
+}
+@media screen and (max-width: 359px) {
+    .travels-body{
+        .read-detail{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            border: none !important;
+            background: transparent;
+            color: transparent;
+            z-index: 100;
+        }
     }
 }

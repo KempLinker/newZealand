@@ -121,6 +121,16 @@
 
 @media screen and (max-width: 767px) {
     .custom-body{
+        .first-screen{
+            height: 200px;
+            .slogan{
+                margin-top: 100px;
+                font-size: 20px;
+            }
+        }
+        .main-body{
+            margin-top: 0;
+        }
         .custom-step-list{
             width: 100%;
         }
@@ -201,6 +211,7 @@
             border: none !important;
             background: transparent;
             color: transparent;
+            z-index: 100;
         }
     }
 }
