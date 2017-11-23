@@ -260,5 +260,32 @@
             border: 1px solid $borderColDarkOpacity;
         }
     }
+}
+@media screen and (min-width: 960px) and (max-width: 1100px) {
+    .destination-body {
+        .first-screen {
+              margin: 0 auto;
+        }
+        .main-body {
+            width: 900px;
+        }
+        .destination-map-layer{
+            right: -16px;
+        }
+        .destination-info {
+            width: 900px;
+            .destination-desc{
+                width: 640px;
+            }
+        }
+        .destination-city-info {
+            .city-list{
+                width: 900px;
+            }
+            .city-item{
+                width: 640px;
+            }
+        }
 
+    }
 }
