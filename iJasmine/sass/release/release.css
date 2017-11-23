@@ -1941,6 +1941,29 @@ footer {
   border: 1px solid rgba(63, 63, 60, 0.7);
 }
 
+@media screen and (min-width: 960px) and (max-width: 1100px) {
+  .destination-body .first-screen {
+    margin: 0 auto;
+  }
+  .destination-body .main-body {
+    width: 900px;
+  }
+  .destination-body .destination-map-layer {
+    right: -16px;
+  }
+  .destination-body .destination-info {
+    width: 900px;
+  }
+  .destination-body .destination-info .destination-desc {
+    width: 640px;
+  }
+  .destination-body .destination-city-info .city-list {
+    width: 900px;
+  }
+  .destination-body .destination-city-info .city-item {
+    width: 640px;
+  }
+}
 .custom-body .first-screen {
   position: relative;
   height: 300px;
