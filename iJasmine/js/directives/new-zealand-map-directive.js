@@ -16,7 +16,7 @@
                 var newZealandMap = echarts.init(document.getElementById('new-zealand-map'));
                 echarts.util.mapData.params.params.NewZealand = {
                     getGeoJson: function (callback) {
-                        $.getJSON('src/jsonData/newZealand.geo.json', callback);
+                        $.getJSON('/js/lib/eCharts/newZealand.geo.json', callback);
                     }
                 };
                 var options = {
