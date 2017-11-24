@@ -1,11 +1,5 @@
-var iJasmineApp = angular.module('iJasmine', ['ui.router']);
+var iJasmineApp = angular.module('iJasmine', []);
 
-
-iJasmineApp.config(['$stateProvider', '$urlRouterProvider',
-    function ($stateProvider, $urlRouterProvider) {
-
-    }
-]);
 
 iJasmineApp.run(['$rootScope','$http', function($rootScope,$http){
 
