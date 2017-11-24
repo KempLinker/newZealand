@@ -39,10 +39,16 @@
                 $scope.viewData.curArea = $scope.viewData.destinationInfo.areaId;
             }
 
+            var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            var scrollBannerWidth = 1080;
+            if( windowWidth <= 1100 && windowWidth > 960 ){
+                scrollBannerWidth = 900;
+            }
+
             $("#scroll_banner").scrollBanner({
                 images: $scope.viewData.banner.src,
                 scrollTime: $scope.viewData.banner.time,
-                bannerWidth: "1080px",
+                bannerWidth: scrollBannerWidth + 'px',
                 bannerHeight: "400px",
                 iconColor: "#FFFFFF",
                 iconHoverColor : "#f76459",
