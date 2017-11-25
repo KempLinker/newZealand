@@ -9,6 +9,9 @@
     "days": "17 天",
     "others": "家庭出游"
   },
+  "banner": {
+    "src": "/src/imgs/article/4e375b9ed94f5692/banner.jpeg",
+  },
   "content": [
     {
       "type": "p", "text": "从大纽村回来一个月了，一直懒懒懒，今天终于下了决心要为这次震撼之旅写点东西！"
