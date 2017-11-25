@@ -1156,7 +1156,6 @@ header {
   height: 56px;
   box-shadow: 0 -1px 0 0 rgba(63, 63, 60, 0.15) inset;
   background-color: rgba(255, 255, 255, 0.98);
-  transition: .2s all 0s ease-in-out;
   z-index: 2000;
 }
 
@@ -1167,13 +1166,6 @@ header {
   overflow: hidden;
   cursor: pointer;
 }
-.logo .logo-name {
-  float: left;
-  margin-right: 16px;
-  line-height: 56px;
-  color: rgba(63, 63, 60, 0.7);
-  transition: .2s all 0s ease-in-out;
-}
 .logo .logo-img {
   display: block;
   height: 48px;
@@ -1183,10 +1175,6 @@ header {
 }
 .logo .logo-img.transparent {
   display: none;
-}
-.logo:hover .logo-name {
-  color: #3f3f3c;
-  transition: .2s all 0s ease-in-out;
 }
 .logo:hover .logo-img {
   transition: .2s all 0s ease-in-out;
@@ -1286,12 +1274,6 @@ header {
 
 .transparent-header header {
   background: transparent;
-}
-.transparent-header header .logo .logo-name {
-  color: rgba(255, 255, 255, 0.7);
-}
-.transparent-header header .logo:hover .logo-name {
-  color: rgba(255, 255, 255, 0.98);
 }
 .transparent-header header .logo .logo-img.transparent {
   display: block;

@@ -50,7 +50,7 @@
                 scrollBannerHeight = 350;
 
             } else if (  windowWidth >= 460 && windowWidth < 768 ){
-                scrollBannerWidth = windowWidth - 16;
+                scrollBannerWidth = windowWidth;
                 scrollBannerHeight = 300;
 
             } else if ( windowWidth < 460 ){

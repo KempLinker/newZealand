@@ -8,7 +8,6 @@ header{
     height: 56px;
     box-shadow: 0 -1px 0 0 $borderColDarkOpacity2 inset;
     background-color: $bgColBaseLight;
-    transition: .2s all 0s ease-in-out;
     z-index: 2000;
 }
 .logo{
@@ -17,13 +16,6 @@ header{
     height: 56px;
     overflow: hidden;
     cursor: pointer;
-    .logo-name{
-        float: left;
-        margin-right: 16px;
-        line-height: 56px;
-        color: $fontColBaseOpacity;
-        transition: .2s all 0s ease-in-out;
-    }
     .logo-img{
         display: block;
         height: 48px;
@@ -33,10 +25,6 @@ header{
         &.transparent{
             display: none;
         }
-    }
-    &:hover .logo-name{
-        color: $fontColBase;
-        transition: .2s all 0s ease-in-out;
     }
     &:hover .logo-img {
 
@@ -138,12 +126,6 @@ header{
 .transparent-header header{
     background: transparent;
     .logo {
-        .logo-name {
-            color: $fontColLightOpacity;
-        }
-        &:hover .logo-name {
-            color: $fontColLight;
-        }
         .logo-img.transparent{
             display: block;
         }
