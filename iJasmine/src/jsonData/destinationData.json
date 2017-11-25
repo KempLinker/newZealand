@@ -4,23 +4,23 @@
     "time": 4000,
     "src": [
       {
-        "src": "src/imgs/6.jpg",
+        "src": "/src/imgs/6.jpg",
         "title": "banner1"
       },
       {
-        "src": "src/imgs/9.jpg",
+        "src": "/src/imgs/9.jpg",
         "title": "banner2"
       },
       {
-        "src": "src/imgs/8.jpg",
+        "src": "/src/imgs/8.jpg",
         "title": "banner3"
       },
       {
-        "src": "src/imgs/7.jpg",
+        "src": "/src/imgs/7.jpg",
         "title": "banner4"
       },
       {
-        "src": "src/imgs/9.jpg",
+        "src": "/src/imgs/9.jpg",
         "title": "banner5"
       }
     ]
@@ -34,17 +34,17 @@
         {
           "name": "亚瑟通道",
           "desc": "新西兰一山口。位于南岛中部南阿尔卑斯山区，通过奥蒂拉峡谷隧道横贯东西，海拔923米，建有亚瑟隘口国家公园（Arthur’s Pass National Park），面积944.4平方公里，为旅游胜地。",
-          "img": "src/imgs/5.jpg"
+          "img": "/src/imgs/5.jpg"
         },
         {
           "name": "待补充",
           "desc": "待补充",
-          "img": "src/imgs/5.jpg"
+          "img": "/src/imgs/5.jpg"
         },
         {
           "name": "待补充",
           "desc": "待补充",
-          "img": "src/imgs/5.jpg"
+          "img": "/src/imgs/5.jpg"
         }
       ]
     },
@@ -56,12 +56,12 @@
         {
           "name": "塔卡卡",
           "desc": "在具有传奇色彩的塔卡卡山寻找塔卡卡镇，这里是金湾的中心地带。在友好的咖啡馆进餐并逛艺术品商店。",
-          "img": "src/imgs/5.jpg"
+          "img": "/src/imgs/5.jpg"
         },
         {
           "name": "待补充",
           "desc": "待补充",
-          "img": "src/imgs/5.jpg"
+          "img": "/src/imgs/5.jpg"
         }
       ]
     }

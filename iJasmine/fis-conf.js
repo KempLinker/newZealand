@@ -36,10 +36,6 @@ fis.config.merge({
             {
                 reg : '*.html',
                 release: '/$&'
-            },
-            {
-                reg: '/sass/release/*',
-                release: '/$&'
             }
         ]
 
@@ -50,6 +46,7 @@ fis.config.merge({
 });
 
 //开启自动合并将会把每一个html页面中的零散(即没有在pack中定义的文件)静态文件合并成一个文件，
-
+/*
 fis.config.set('settings.postpackager.simple.autoCombine', true);
 fis.config.set('settings.postpackager.simple.output', 'pkg/auto_combine_${hash}'); //设置自动合并文件目录
+*/

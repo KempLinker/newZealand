@@ -39,7 +39,7 @@ module.exports = function(grunt) {
                     middleware: function (connect) {
                         return [
                             require('grunt-connect-proxy/lib/utils').proxyRequest,
-                            connect.static('build')
+                            connect.static('iJasmine/build')
                         ];
                     }
                 }
