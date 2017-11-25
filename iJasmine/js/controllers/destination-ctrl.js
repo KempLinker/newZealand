@@ -38,7 +38,18 @@
                 $scope.viewData.destinationInfo = $scope.viewData.areaList[0];
                 $scope.viewData.curArea = $scope.viewData.destinationInfo.areaId;
             }
+            initScrollBanner();
 
+            $(window).on('scroll.destination',function(){
+                handleScrollDestinationFunc();
+
+            });
+            $(window).on('resize.destination',function(){
+                initScrollBanner();
+            });
+        }
+
+        function initScrollBanner(){
             var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
             var scrollBannerWidth = 1080;
             var scrollBannerHeight = 400;
@@ -66,9 +77,6 @@
                 iconColor: "#FFFFFF",
                 iconHoverColor : "#f76459",
                 iconPosition : "center"
-            });
-            $(window).on('scroll.destination',function(){
-                handleScrollDestinationFunc();
             });
         }
 

@@ -56,12 +56,22 @@
             </li>
             <li class="nav-item" ng-class="{'active': view == 'custom'}"><a href="/custom.html">专属定制</a></li>
             <li class="nav-item" ng-class="{'active': view == 'travels'}"><a href="/travels.html">南途游记</a></li>
-            <li class="nav-item" ng-class="{'active': view == 'about'}"><a href="/destination.html">联系我们</a></li>
+            <li class="nav-item" ng-class="{'active': view == 'about'}"><a href="javascript:;">免费咨询</a></li>
         </ul>
         <div class="logo">
             <img class="logo-img transparent" src="/src/imgs/logo-transparent.png" />
             <img class="logo-img normal" src="/src/imgs/logo.jpg" />
         </div>
+        <div class="mobile-btn" onclick="toggleMobileList()">
+            <span class="base-icon ico-list"></span>
+        </div>
     </div>
+    <ul class="nav-list-mobile">
+        <li class="nav-list-mobile-item" ><a href="/index.html">首页</a></li>
+        <li class="nav-list-mobile-item destination"><a href="/destination.html">目的地</a> </li>
+        <li class="nav-list-mobile-item" ><a href="/custom.html">专属定制</a></li>
+        <li class="nav-list-mobile-item" ><a href="/travels.html">南途游记</a></li>
+        <li class="nav-list-mobile-item" ><a href="/destination.html">免费咨询</a></li>
+    </ul>
 
 </header>

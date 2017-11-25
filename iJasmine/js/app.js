@@ -65,3 +65,27 @@ function initHeaderEvent(){
         $destinationNavList.slideUp(200);
     });
 }
+function toggleMobileList(){
+    var $body = $('body');
+    var $header = $('header');
+    var $headerParent = $header.parent();
+    if( $headerParent.hasClass('mobile-header') ){
+        $headerParent.removeClass('mobile-header');
+        $header.animate({
+            height: '56px'
+        }, 400);
+        $body.css({
+            'overflow-y': 'auto'
+        })
+
+    } else{
+        $headerParent.addClass('mobile-header');
+        $header.animate({
+            height: '100%'
+        }, 400);
+        $body.css({
+            'overflow-y': 'hidden'
+        })
+    }
+
+}
