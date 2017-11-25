@@ -99,16 +99,6 @@
                 left: -30px;
             }
         }
-        &.block-four .block-img{
-            .block-img-bottom{
-                height: 480px;
-                right: 240px;
-            }
-            .block-img-top{
-                width: 360px;
-                right: -30px;
-            }
-        }
         .block-text{
             .block-title{
                 width: 100%;
@@ -161,12 +151,6 @@
                 .block-img-bottom{
                     left: 100px;
                 }
-            }
-            &.block-four .block-img {
-                .block-img-bottom{
-                    right: 160px;
-                }
-
             }
             .block-text{
                 .block-title{
@@ -222,11 +206,6 @@
                     z-index: 10;
                 }
             }
-            &.block-four .block-img{
-                .block-img-bottom{
-                    height: 420px !important;
-                }
-            }
             .block-text{
                 padding: 48px 0 !important;
                 text-align: center !important;
@@ -258,11 +237,6 @@
                 }
 
             }
-            &.block-four .block-img{
-                .block-img-bottom{
-                    height: 360px !important;
-                }
-            }
         }
     }
 }
@@ -277,14 +251,6 @@
                 &.block-img-top{
                     width: 320px;
                     margin-top: -120px;
-                }
-            }
-            &.block-four .block-img{
-                .block-img-bottom{
-                    height: 280px !important;
-                }
-                .block-img-top{
-                    width: 320px !important;;
                 }
             }
             .block-text{
@@ -313,14 +279,6 @@
                     margin-top: -120px;
                 }
 
-            }
-            &.block-four .block-img{
-                .block-img-bottom{
-                    height: 240px !important;
-                }
-                .block-img-top{
-                    width: 280px !important;
-                }
             }
             .block-text{
                 .block-title{

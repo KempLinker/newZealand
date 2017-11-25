@@ -19,7 +19,8 @@ fis.config.merge({
     pack: {
         'pkg/jquery-angular-lib.js': [
             '/js/lib/jquery/jquery-3.2.1.min.js',
-            '/js/lib/angular-1.3.0/angular.min.js'
+            '/js/lib/angular-1.3.0/angular.min.js',
+            '/js/lib/jquery/jquery-scroll-banner.js'
         ],
         'pkg/app.js': [
             '/js/app.js',
@@ -35,6 +36,11 @@ fis.config.merge({
         path: [
             {
                 reg : '*.html',
+                release: '/$&'
+            },
+            {
+                reg: '/src/imgs/**',
+                useHash: false,
                 release: '/$&'
             }
         ]

@@ -1419,7 +1419,8 @@ footer {
 }
 .contact-layer .contact-item.wechat .contact-type {
   top: -56px;
-  height: 160px;
+  width: 150px;
+  height: 180px;
 }
 .contact-layer .contact-item.wechat .contact-type p {
   text-align: center;
@@ -1427,8 +1428,10 @@ footer {
   margin: 12px 0 6px 0;
 }
 .contact-layer .contact-item.wechat .contact-type img {
+  display: block;
   width: 96px;
   height: 96px;
+  margin: 16px auto;
 }
 .contact-layer .contact-item.wechat .contact-type:before {
   top: 74px;
@@ -1524,14 +1527,6 @@ footer {
 .home-body .main-block .block-img.fr .block-img-top {
   left: -30px;
 }
-.home-body .main-block.block-four .block-img .block-img-bottom {
-  height: 480px;
-  right: 240px;
-}
-.home-body .main-block.block-four .block-img .block-img-top {
-  width: 360px;
-  right: -30px;
-}
 .home-body .main-block .block-text .block-title {
   width: 100%;
   max-width: 420px;
@@ -1572,9 +1567,6 @@ footer {
   }
   .home-body .main-block .block-img.fr .block-img-bottom {
     left: 100px;
-  }
-  .home-body .main-block.block-four .block-img .block-img-bottom {
-    right: 160px;
   }
   .home-body .main-block .block-text .block-title {
     max-width: 360px;
@@ -1623,9 +1615,6 @@ footer {
   .home-body .main-block .block-img img.block-img-top {
     z-index: 10;
   }
-  .home-body .main-block.block-four .block-img .block-img-bottom {
-    height: 420px !important;
-  }
   .home-body .main-block .block-text {
     padding: 48px 0 !important;
     text-align: center !important;
@@ -1649,9 +1638,6 @@ footer {
     width: 420px;
     margin-top: -200px;
   }
-  .home-body .main-block.block-four .block-img .block-img-bottom {
-    height: 360px !important;
-  }
 }
 @media screen and (min-width: 360px) and (max-width: 459px) {
   .home-body .main-block .block-img img.block-img-bottom {
@@ -1660,12 +1646,6 @@ footer {
   .home-body .main-block .block-img img.block-img-top {
     width: 320px;
     margin-top: -120px;
-  }
-  .home-body .main-block.block-four .block-img .block-img-bottom {
-    height: 280px !important;
-  }
-  .home-body .main-block.block-four .block-img .block-img-top {
-    width: 320px !important;
   }
   .home-body .main-block .block-text .block-title {
     max-width: 320px;
@@ -1684,12 +1664,6 @@ footer {
   .home-body .main-block .block-img img.block-img-top {
     width: 280px;
     margin-top: -120px;
-  }
-  .home-body .main-block.block-four .block-img .block-img-bottom {
-    height: 240px !important;
-  }
-  .home-body .main-block.block-four .block-img .block-img-top {
-    width: 280px !important;
   }
   .home-body .main-block .block-text .block-title {
     max-width: 320px;

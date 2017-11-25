@@ -53,15 +53,18 @@
     }
     .contact-item.wechat .contact-type{
         top: -56px;
-        height: 160px;
+        width: 150px;
+        height: 180px;
         p{
             text-align: center;
             line-height: normal;
             margin: 12px 0 6px 0;
         }
         img{
+            display: block;
             width: 96px;
             height: 96px;
+            margin: 16px auto;
         }
         &:before{
             top: 74px;
