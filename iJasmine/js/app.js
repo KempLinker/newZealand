@@ -13,7 +13,7 @@ iJasmineApp.run(['$rootScope','$http', function($rootScope,$http){
         } else if( path.indexOf('custom') >= 0 ) {
             $rootScope.view= 'custom';
 
-        } else if( path.indexOf('travels') >= 0 ) {
+        } else if( path.indexOf('travels') >= 0 || path.indexOf('article') >= 0 ) {
             $rootScope.view = 'travels';
 
         } else {
@@ -88,4 +88,10 @@ function toggleMobileList(){
         })
     }
 
+}
+function getUniqId(){
+    function func(){
+        return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+    }
+    return (func() + func() + "-" + func() + "-" + func() + "-" + func() + "-" + func() + func() + func());
 }
