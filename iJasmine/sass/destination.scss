@@ -285,3 +285,116 @@
         }
     }
 }
+@media screen and (max-width: 959px){
+    .destination-body {
+        .destination-map-layer {
+            display: none;
+        }
+        .destination-info {
+            .destination-desc {
+                width: 100%;
+            }
+        }
+        .destination-city-info {
+            .city-item {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .destination-body {
+        .first-screen {
+            height: 350px;
+            margin: 0 auto;
+        }
+        .main-body {
+            width: 700px;
+        }
+        .destination-info {
+            width: 700px;
+        }
+        .destination-city-info {
+            .city-list{
+                width: 700px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .destination-body {
+        .first-screen {
+            height: 300px;
+            margin: 56px auto 0;
+        }
+        .main-body {
+            width: 100%;
+        }
+        .destination-info {
+            width: 100%;
+        }
+        .destination-city-info {
+            .city-name{
+                left: 0;
+                &:before{
+                    display: none;
+                }
+            }
+            .city-item:nth-child(even) .city-name{
+                left: 0;
+                right: auto;
+            }
+            .city-list{
+                width: 100%;
+            }
+            .city-desc{
+                width: 100%;
+                margin-bottom: 0;
+            }
+            .city-img {
+                clear: both !important;
+                width: 100%;
+                text-align: center;
+                img{
+                    position: relative;
+                    width: 240px;
+                    height: 160px;
+                    margin: 0 0 16px 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 460px){
+    .destination-body {
+        .first-screen {
+            height: 200px;
+            margin: 56px auto 0;
+            .scrollBanner-icons{
+                bottom: 24px !important;
+            }
+        }
+        .destination-info {
+            .destination-name span{
+                font-size: 16px;
+            }
+            .destination-desc{
+                padding: 16px 24px;
+                font-size: 13px;
+            }
+        }
+        .destination-city-info {
+            margin-top: 42px;
+            .city-name{
+                padding: 0 24px;
+            }
+            .city-desc{
+                padding: 16px 24px;
+                font-size: 13px;
+            }
+        }
+    }
+}

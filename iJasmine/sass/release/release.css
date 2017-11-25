@@ -1437,6 +1437,11 @@ footer {
   top: 74px;
 }
 
+@media screen and (max-width: 767px) {
+  .contact-layer {
+    display: none;
+  }
+}
 .home-body .first-screen {
   position: relative;
   width: 100%;
@@ -1933,6 +1938,98 @@ footer {
   }
   .destination-body .destination-city-info .city-item {
     width: 640px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .destination-body .destination-map-layer {
+    display: none;
+  }
+  .destination-body .destination-info .destination-desc {
+    width: 100%;
+  }
+  .destination-body .destination-city-info .city-item {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .destination-body .first-screen {
+    height: 350px;
+    margin: 0 auto;
+  }
+  .destination-body .main-body {
+    width: 700px;
+  }
+  .destination-body .destination-info {
+    width: 700px;
+  }
+  .destination-body .destination-city-info .city-list {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .destination-body .first-screen {
+    height: 300px;
+    margin: 56px auto 0;
+  }
+  .destination-body .main-body {
+    width: 100%;
+  }
+  .destination-body .destination-info {
+    width: 100%;
+  }
+  .destination-body .destination-city-info .city-name {
+    left: 0;
+  }
+  .destination-body .destination-city-info .city-name:before {
+    display: none;
+  }
+  .destination-body .destination-city-info .city-item:nth-child(even) .city-name {
+    left: 0;
+    right: auto;
+  }
+  .destination-body .destination-city-info .city-list {
+    width: 100%;
+  }
+  .destination-body .destination-city-info .city-desc {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .destination-body .destination-city-info .city-img {
+    clear: both !important;
+    width: 100%;
+    text-align: center;
+  }
+  .destination-body .destination-city-info .city-img img {
+    position: relative;
+    width: 240px;
+    height: 160px;
+    margin: 0 0 16px 0;
+  }
+}
+@media screen and (max-width: 460px) {
+  .destination-body .first-screen {
+    height: 200px;
+    margin: 56px auto 0;
+  }
+  .destination-body .first-screen .scrollBanner-icons {
+    bottom: 24px !important;
+  }
+  .destination-body .destination-info .destination-name span {
+    font-size: 16px;
+  }
+  .destination-body .destination-info .destination-desc {
+    padding: 16px 24px;
+    font-size: 13px;
+  }
+  .destination-body .destination-city-info {
+    margin-top: 42px;
+  }
+  .destination-body .destination-city-info .city-name {
+    padding: 0 24px;
+  }
+  .destination-body .destination-city-info .city-desc {
+    padding: 16px 24px;
+    font-size: 13px;
   }
 }
 .custom-body .first-screen {

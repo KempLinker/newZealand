@@ -41,15 +41,28 @@
 
             var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
             var scrollBannerWidth = 1080;
-            if( windowWidth <= 1100 && windowWidth > 960 ){
+            var scrollBannerHeight = 400;
+            if( windowWidth <= 1100 && windowWidth >= 960 ){
                 scrollBannerWidth = 900;
+
+            } else if( windowWidth >= 768 && windowWidth < 960 ){
+                scrollBannerWidth = 700;
+                scrollBannerHeight = 350;
+
+            } else if (  windowWidth >= 460 && windowWidth < 768 ){
+                scrollBannerWidth = windowWidth - 16;
+                scrollBannerHeight = 300;
+
+            } else if ( windowWidth < 460 ){
+                scrollBannerWidth = windowWidth;
+                scrollBannerHeight = 200;
             }
 
             $("#scroll_banner").scrollBanner({
                 images: $scope.viewData.banner.src,
                 scrollTime: $scope.viewData.banner.time,
                 bannerWidth: scrollBannerWidth + 'px',
-                bannerHeight: "400px",
+                bannerHeight: scrollBannerHeight + 'px',
                 iconColor: "#FFFFFF",
                 iconHoverColor : "#f76459",
                 iconPosition : "center"

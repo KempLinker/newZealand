@@ -4,7 +4,8 @@
 
 karma.conf.js
 
-bdp-sync/build/
+iJasmine/build/
+iJasmine/iJasmine/
 build/
 
 .idea/
