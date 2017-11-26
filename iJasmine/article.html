@@ -9,16 +9,40 @@
 
 </head>
 <body class="article-body gray-bg-col" ng-controller="articleCtrl">
-<div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
-<div class="first-screen">
+    <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
+    <div class="first-screen" ng-style="viewData.firstScreenStyle">
+        <div class="cover"></div>
+        <p class="slogan" ng-bind="viewData.title"></p>
+    </div>
+    <div class="main-body" ng-show="viewData.init">
+        <div class="article-info">
+            <div class="article-info-item">
+                <span class="article-info-label">作者</span><span ng-bind="viewData.user"></span>
+                <span class="article-info-label">时间</span><span ng-bind="viewData.ctime"></span>
+            </div>
+            <div class="article-info-item">
+                <span class="article-info-label">花费</span><span ng-bind="viewData.tip.cost"></span>
+                <span class="article-info-label">天数</span><span ng-bind="viewData.tip.days"></span>
+                <span class="article-info-label">其他</span><span ng-bind="viewData.tip.others"></span>
+            </div>
+        </div>
+        <div class="article-container">
+            <div class="article-content" ng-repeat="item in viewData.content">
+                <div class="article-h" ng-if="item.type == 'h'" ng-bind="item.text"></div>
+                <p class="article-p" ng-if="item.type == 'p'" ng-bind="item.text"></p>
+                <ul class="article-ul" ng-if="item.type == 'ul'">
+                    <li ng-repeat="val in item.list track by $index" ng-bind="val"></li>
+                </ul>
+                <div class="article-img" ng-if="item.type == 'img'">
+                    <img ng-src="{{item.src}}" />
+                    <span ng-bind="item.loc"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-</div>
-<div class="main-body" ng-show="viewData.init">
-
-</div>
-
-<div ng-include="'/component/footer.html'" onload="footerLoadReady()"></div>
-<div ng-include="'/component/contact.html'" onload="contactLoadReady()"></div>
+    <div ng-include="'/component/footer.html'" onload="footerLoadReady()"></div>
+    <div ng-include="'/component/contact.html'" onload="contactLoadReady()"></div>
 
 <script type="text/javascript" src="/js/lib/jquery/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="/js/lib/angular-1.3.0/angular.min.js"></script>

@@ -10,7 +10,7 @@
     "others": "家庭出游"
   },
   "banner": {
-    "src": "/src/imgs/article/4e375b9ed94f5692/banner.jpeg",
+    "src": "/src/imgs/article/4e375b9ed94f5692/banner.jpeg"
   },
   "content": [
     {
@@ -20,10 +20,7 @@
       "type": "p", "text": "首先，介绍一下此次行程最重要的一个人物！"
     },
     {
-      "type": "img",
-      "info": {
-        "src": "/src/imgs/article/4e375b9ed94f5692/i.jpeg", "width": "", "height": "", "loc": "凯库拉"
-      }
+      "type": "img", "src": "/src/imgs/article/4e375b9ed94f5692/1.jpeg", "loc": "凯库拉"
     },
     {
       "type": "p", "text": "当然了，不是那头又胖又懒的海豹，是它看着的那个人——新西兰“爱茉莉旅游”的老板——盖老板——一个在新西兰生活了15年的“当地人”！！他为我们这次为期17天的自驾游定制了非常完美的行程，吃穿住行安排的样样周到。有兴趣的盆友可以请盖老板为你定制专属自己的新西兰自驾之旅，他微信：chen235650（据说报我的蚂蜂窝网名有折扣哟）。费劲问他要来的微信二维码！"
@@ -78,10 +75,7 @@
       "type": "p", "text": "拿上车，这次十几天的某位司机先生就带着我们三个迷迷糊糊的人上路赶往酒店了。酒店在最市中心的地方，checkin后，下午两点后才可以入住（大纽村全境皆如此），只好存了行李去吃午饭。去了路书上推荐的牛排馆，我倒是第一次见分量这么足的Steak，怎么可能吃得完！而且，我还那么困....吃完时间还早，在市中心丧尸一样（困的）的溜达，走到天空塔下面真没上去的心思，拿着gopro随便捏了一张，撤！睡觉要紧！"
     },
     {
-      "type": "img",
-      "info": {
-        "src": "/src/imgs/article/4e375b9ed94f5692/2.jpeg", "width": "", "height": "", "loc": "天空塔"
-      }
+      "type": "img", "src": "/src/imgs/article/4e375b9ed94f5692/2.jpeg", "loc": "天空塔"
     },
     {
       "type": "p", "text": "接下来入住酒店，碎觉！盖老板路书上推荐了各种景点和餐馆此时此刻都是浮云！浮云！于是，第二天就这样被我们浪费掉了。"
@@ -90,22 +84,64 @@
       "type": "p", "text": "PS，千万别高估自己的体力，晚上到比早上到明智多了。"
     },
     {
-      "type": "", "text": ""
+      "type": "h", "text": "DAY 3 奥克兰-玛塔玛塔-罗托鲁瓦"
     },
     {
-      "type": "", "text": ""
+      "type": "p", "text": "早上从奥克兰出发，3个多小时到达玛塔玛塔（Matamata）。要单说这个地儿，估计没啥人知道，但是一说这里的景点，那就无人不晓啊！中土世界——霍比屯！！没错，《魔戒》取景地，霍比特人的故乡。"
     },
     {
-      "type": "", "text": ""
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/3.jpeg", "loc": "霍比特人小镇"
     },
     {
-      "type": "", "text": ""
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/4.jpeg", "loc": "霍比特人小镇"
     },
     {
-      "type": "", "text": ""
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/5.jpeg", "loc": "霍比特人小镇"
     },
     {
-      "type": "", "text": ""
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/6.jpeg", "loc": "霍比特人小镇"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/7.jpeg", "loc": "霍比特人小镇"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/8.jpeg", "loc": "霍比特人小镇"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/9.jpeg", "loc": "霍比特人小镇"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/10.jpeg", "loc": "霍比特人小镇"
+    },
+    {
+      "type": "p", "text": "当天一直阴雨，春天花花尚未盛开，夏天来的话应该更美吧~"
+    },
+    {
+      "type": "p", "text": "霍比屯儿出来以后，继续去往下一个目的地，罗托鲁瓦（Rotorua）。"
+    },
+    {
+      "type": "p", "text": "用盖老板的话说，这个小镇的“味儿”是唯一的。基本上刚进地界，我们心里就了然了——硫磺味！这里有丰富的地热资源，当然也少不了温泉咯~ 镇子很小，找了家中餐馆大快朵颐之后，去了市政花园和罗托鲁瓦湖畔。越靠近湖畔硫磺味越重。但是饭后消食，在湖边散步超惬意。好多水鸟，还有下午5点天还大亮就睡觉的湖上的野鸭子。"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/11.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/12.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/13.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/14.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/15.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/16.jpeg", "loc": "罗托鲁瓦湖"
+    },
+    {
+      "type": "img",  "src": "/src/imgs/article/4e375b9ed94f5692/17.jpeg", "loc": "罗托鲁瓦湖"
     },
     {
       "type": "", "text": ""
@@ -197,7 +233,6 @@
     {
       "type": "", "text": ""
     }
-
 
 
   ]

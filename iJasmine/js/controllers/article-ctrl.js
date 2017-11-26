@@ -9,13 +9,13 @@
         var urlObj = new urlParam();
         $scope.viewData = {
             init: false,
+            title: '',
             banner: {
                 src: [],
                 time: 1000,
             },
-            curArea: '',
-            areaList: [],
-            destinationInfo: {}
+            firstScreenStyle: {},
+            content: []
         };
 
         $http.get('src/article/'+urlObj.article+'.json').then(function (result) {
@@ -24,7 +24,15 @@
         });
 
         function handleData(data){
-            console.log(data);
+            $scope.viewData.title = data.title;
+            $scope.viewData.banner = data.banner;
+            $scope.viewData.user = data.user;
+            $scope.viewData.ctime = data.ctime;
+            $scope.viewData.firstScreenStyle = {
+                'background-image': 'url('+data.banner.src+')'
+            };
+            $scope.viewData.tip = data.tip || {};
+            $scope.viewData.content = data.content || [];
         }
 
         function urlParam() {
