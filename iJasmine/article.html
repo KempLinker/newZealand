@@ -17,13 +17,12 @@
     <div class="main-body" ng-show="viewData.init">
         <div class="article-info">
             <div class="article-info-item">
-                <span class="article-info-label">作者</span><span ng-bind="viewData.user"></span>
-                <span class="article-info-label">时间</span><span ng-bind="viewData.ctime"></span>
+                <span class="article-info-label">作者</span><span ng-bind="viewData.info.user"></span>
+                <span class="article-info-label">时间</span><span ng-bind="viewData.info.ctime"></span>
             </div>
             <div class="article-info-item">
-                <span class="article-info-label">花费</span><span ng-bind="viewData.tip.cost"></span>
-                <span class="article-info-label">天数</span><span ng-bind="viewData.tip.days"></span>
-                <span class="article-info-label">其他</span><span ng-bind="viewData.tip.others"></span>
+                <span class="article-info-label">天数</span><span ng-bind="viewData.info.days"></span>
+                <span class="article-info-label">形式</span><span ng-bind="viewData.info.type"></span>
             </div>
         </div>
         <div class="article-container">

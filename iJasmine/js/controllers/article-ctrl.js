@@ -26,12 +26,10 @@
         function handleData(data){
             $scope.viewData.title = data.title;
             $scope.viewData.banner = data.banner;
-            $scope.viewData.user = data.user;
-            $scope.viewData.ctime = data.ctime;
+            $scope.viewData.info = data.info || {};
             $scope.viewData.firstScreenStyle = {
                 'background-image': 'url('+data.banner.src+')'
             };
-            $scope.viewData.tip = data.tip || {};
             $scope.viewData.content = data.content || [];
         }
 
