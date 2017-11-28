@@ -1,0 +1,59 @@
+.ngdialog.consult-dialog {
+    overflow: hidden;
+    .ngdialog-overlay{
+        background-color: $bgColBaseDark;
+    }
+    .ngdialog-content{
+        width: 600px;
+        border-radius: 2px;
+        color: $fontColBase;
+        background-color: $bgColGray;
+    }
+    .ngdialog-message{
+        width: 100%;
+        height: 250px;
+    }
+    .ngdialog-buttons{
+        text-align: center;
+        margin: 32px 0 16px;
+    }
+    .consult-title{
+        width: 100%;
+        margin-top: 16px;
+        line-height: 32px;
+        text-align: center;
+        color: $fontColOrange;
+    }
+    .consult-detail{
+        height: 200px;
+        margin: 16px 0;
+        text-align: center;
+    }
+    .consult-detail-item{
+        display: inline-block;
+        width: calc( 33% - 16px );
+        height: 100%;
+        margin: 0 4px;
+        text-align: center;
+        vertical-align: middle;
+        color: $fontColBaseOpacity;
+        background-color: $bgColBaseLight;
+        box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        & > img{
+            height: 42px;
+        }
+        &.qq .consult-val,
+        &.email .consult-val{
+            line-height: 144px;
+        }
+        &.wechat .consult-val{
+            p{
+                font-size: 12px;
+            }
+            img{
+                width: 110px;
+                margin-top: 4px;
+            }
+        }
+    }
+}

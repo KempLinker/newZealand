@@ -1,5 +1,8 @@
 
-@import "reset.scss";
+
+@import "../dialog/ngDialog.min.css";
+@import "../dialog/ngDialog-theme-default.min.css";
+@import "../dialog/ngDialog-theme-plain.min.css";
 @import "reset.scss";
 @import "common.scss";
 @import "header.scss";
@@ -10,3 +13,4 @@
 @import "custom.scss";
 @import "travels.scss";
 @import "article.scss";
+@import "consult.scss";

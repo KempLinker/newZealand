@@ -1,7 +1,17 @@
-var iJasmineApp = angular.module('iJasmine', []);
+var iJasmineApp = angular.module('iJasmine', ['ngDialog']);
 
+iJasmineApp.config(['ngDialogProvider', function (ngDialogProvider) {
+    ngDialogProvider.setDefaults({
+        className: 'ngdialog-theme-default',
+        plain: false,
+        showClose: false,
+        closeByDocument: true,
+        closeByEscape: true,
+        appendTo: false
+    });
+}]);
 
-iJasmineApp.run(['$rootScope','$http', function($rootScope,$http){
+iJasmineApp.run(['$rootScope', '$http', 'ngDialog', function($rootScope, $http, ngDialog){
 
         var path = window.location.href;
         if( path.indexOf('index') >= 0 ){
@@ -40,6 +50,13 @@ iJasmineApp.run(['$rootScope','$http', function($rootScope,$http){
 
         $rootScope.contactLoadReady = function(){
 
+        };
+
+        $rootScope.openHeaderDialog = function(){
+            ngDialog.open({
+                template: '/component/consultDialog.html',
+                className: 'ngdialog-theme-default consult-dialog'
+            });
         };
 
     }
