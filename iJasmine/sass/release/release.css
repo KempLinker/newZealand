@@ -996,6 +996,10 @@ body {
   margin-right: 4px;
 }
 
+.mr-8 {
+  margin-right: 8px;
+}
+
 .mt-8 {
   margin-top: 8px;
 }
@@ -1216,6 +1220,9 @@ header {
 .nav-list .nav-item.active .sub-nav-list, .nav-list .nav-item:hover .sub-nav-list {
   color: rgba(255, 255, 255, 0.7);
 }
+.nav-list .nav-item.active .base-icon, .nav-list .nav-item:hover .base-icon {
+  opacity: 1;
+}
 .nav-list .nav-item::before {
   content: '';
   display: block;
@@ -1399,8 +1406,16 @@ header {
   background-image: url("/src/imgs/icon-list.png");
 }
 
+.ico-contact {
+  background-image: url("/src/imgs/icon-contact.png");
+}
+
 .transparent-header .ico-list {
-  background-image: url("/src/imgs/icon-list-transparent.png");
+  background-image: url("/src/imgs/icon-list-light.png");
+}
+
+.transparent-header .ico-contact {
+  background-image: url("/src/imgs/icon-contact-light.png");
 }
 
 .mobile-header .ico-list {

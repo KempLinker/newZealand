@@ -62,6 +62,9 @@ header{
             .sub-nav-list{
                 color: $fontColLightOpacity;
             }
+            .base-icon{
+                opacity: 1;
+            }
         }
         &::before{
             content: '';
@@ -247,8 +250,14 @@ header{
 .ico-list{
     background-image: url("/src/imgs/icon-list.png");
 }
+.ico-contact{
+    background-image: url("/src/imgs/icon-contact.png");
+}
 .transparent-header .ico-list{
-    background-image: url("/src/imgs/icon-list-transparent.png");
+    background-image: url("/src/imgs/icon-list-light.png");
+}
+.transparent-header .ico-contact{
+    background-image: url("/src/imgs/icon-contact-light.png");
 }
 .mobile-header .ico-list{
     background-image: url("/src/imgs/icon-list.png") !important;
