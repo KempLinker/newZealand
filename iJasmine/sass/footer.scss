@@ -1,5 +1,31 @@
 footer{
     width: 100%;
-    height: 200px;
     background-color: $bgColBaseDark;
+    ul.footer-list{
+        width: 1080px;
+        height: 160px;
+        margin: 32px auto 0;
+        li{
+            float: left;
+            height: 120px;
+            display: inline-block;
+            border-right: 1px solid $borderColLightOpacity;
+            &:last-child{
+                border: none;
+            }
+        }
+        .footer-logo{
+            padding-right: 48px;
+        }
+        .footer-cooperator{
+            padding: 0 48px;
+        }
+        .logo-img{
+            width: 200px;
+            margin-top: 40px;
+        }
+    }
+    .copy-right-box{
+
+    }
 }
