@@ -523,6 +523,14 @@ body {
   word-break: normal;
 }
 
+.display-block {
+  display: block;
+}
+
+.ml-16 {
+  margin-left: 16px;
+}
+
 .mr-4 {
   margin-right: 4px;
 }
@@ -955,33 +963,159 @@ header .logo:hover .logo-img {
 
 footer {
   width: 100%;
+  overflow: hidden;
+  line-height: normal;
   background-color: rgba(63, 63, 60, 0.9);
 }
 footer ul.footer-list {
   width: 1080px;
-  height: 160px;
+  height: 120px;
   margin: 32px auto 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 footer ul.footer-list li {
   float: left;
   height: 120px;
   display: inline-block;
-  border-right: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0 48px;
 }
 footer ul.footer-list li:last-child {
   border: none;
 }
+footer ul.footer-list .footer-title {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+footer ul.footer-list .footer-item {
+  display: block;
+  margin-bottom: 8px;
+}
 footer ul.footer-list .footer-logo {
+  padding-left: 0;
   padding-right: 48px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
 }
-footer ul.footer-list .footer-cooperator {
-  padding: 0 48px;
-}
-footer ul.footer-list .logo-img {
+footer ul.footer-list .footer-logo .logo-img {
   width: 200px;
   margin-top: 40px;
 }
+footer ul.footer-list .footer-cooperator a {
+  cursor: pointer;
+}
+footer ul.footer-list .footer-wechat .footer-title {
+  margin-top: 0;
+}
+footer ul.footer-list .footer-wechat img {
+  margin: 0 auto;
+  height: 84px;
+  display: block;
+}
+footer .copy-right-box {
+  width: 1080px;
+  margin: 8px auto 32px;
+  padding-left: 300px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+}
 
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+  footer ul.footer-list,
+  footer .copy-right-box {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  footer ul.footer-list {
+    max-width: 768px;
+  }
+  footer ul.footer-list li {
+    padding: 0 36px;
+  }
+  footer ul.footer-list .footer-title {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  footer ul.footer-list .footer-item {
+    display: block;
+    margin-bottom: 8px;
+  }
+  footer ul.footer-list .footer-logo {
+    padding-right: 36px;
+  }
+  footer ul.footer-list .footer-logo .logo-img {
+    width: 160px;
+    margin-top: 40px;
+  }
+  footer ul.footer-list .footer-wechat {
+    padding: 0;
+  }
+  footer .copy-right-box {
+    max-width: 768px;
+    padding-left: 234px;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer ul.footer-list {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    overflow: hidden;
+  }
+  footer ul.footer-list li {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  footer ul.footer-list .footer-title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  footer ul.footer-list .footer-item {
+    display: block;
+    margin-bottom: 8px;
+  }
+  footer ul.footer-list .footer-logo {
+    display: none;
+  }
+  footer ul.footer-list .footer-wechat {
+    margin-top: 24px;
+    padding: 0 48px;
+  }
+  footer ul.footer-list .footer-wechat img {
+    margin: 0;
+  }
+  footer .copy-right-box {
+    width: 100%;
+    padding-left: 48px;
+    margin-top: 24px;
+  }
+}
+@media screen and (max-width: 460px) {
+  footer ul.footer-list li {
+    padding: 0 16px;
+  }
+  footer ul.footer-list .footer-title {
+    margin-top: 24px;
+    margin-bottom: 16px;
+  }
+  footer ul.footer-list .footer-item {
+    display: block;
+    margin-bottom: 8px;
+  }
+  footer ul.footer-list .footer-logo {
+    display: none;
+  }
+  footer ul.footer-list .footer-wechat {
+    margin-top: 24px;
+    padding: 0 16px;
+  }
+  footer ul.footer-list .footer-wechat img {
+    margin: 0;
+  }
+  footer .copy-right-box {
+    padding-left: 16px;
+  }
+}
 .contact-layer {
   position: fixed;
   right: 0;

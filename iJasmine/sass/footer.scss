@@ -1,31 +1,173 @@
 footer{
     width: 100%;
+    overflow: hidden;
+    line-height: normal;
     background-color: $bgColBaseDark;
     ul.footer-list{
         width: 1080px;
-        height: 160px;
+        height: 120px;
         margin: 32px auto 0;
+        color: $fontColLightOpacity;
         li{
             float: left;
             height: 120px;
             display: inline-block;
-            border-right: 1px solid $borderColLightOpacity;
+            padding: 0 48px;
             &:last-child{
                 border: none;
             }
         }
+        .footer-title{
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .footer-item{
+            display: block;
+            margin-bottom: 8px;
+        }
         .footer-logo{
+            padding-left: 0;
             padding-right: 48px;
+            border-right: 1px solid $borderColLightOpacity;
+            .logo-img{
+                width: 200px;
+                margin-top: 40px;
+            }
         }
         .footer-cooperator{
-            padding: 0 48px;
+            a{
+                cursor: pointer;
+            }
         }
-        .logo-img{
-            width: 200px;
-            margin-top: 40px;
+        .footer-wechat{
+            .footer-title{
+                margin-top: 0;
+            }
+            img{
+                margin: 0 auto;
+                height: 84px;
+                display: block;
+            }
         }
+
     }
     .copy-right-box{
+        width: 1080px;
+        margin: 8px auto 32px;
+        padding-left: 300px;
+        color: $fontColLightOpacity;
+        font-size: 12px;
+    }
+}
 
+@media screen and (min-width: 960px) and (max-width: 1280px) {
+    footer{
+        ul.footer-list,
+        .copy-right-box{
+            max-width: 960px;
+        }
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    footer{
+        ul.footer-list {
+            max-width: 768px;
+            li {
+                padding: 0 36px;
+            }
+            .footer-title {
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            .footer-item {
+                display: block;
+                margin-bottom: 8px;
+            }
+            .footer-logo {
+                padding-right: 36px;
+                .logo-img {
+                    width: 160px;
+                    margin-top: 40px;
+                }
+            }
+            .footer-wechat{
+                padding: 0;
+            }
+        }
+        .copy-right-box{
+            max-width: 768px;
+            padding-left: 234px;
+        }
+    }
+
+}
+@media screen and (max-width: 767px) {
+    footer{
+        ul.footer-list {
+            width: 100%;
+            height: auto;
+            margin: 0;
+            overflow: hidden;
+            li {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            .footer-title {
+                margin-top: 24px;
+                margin-bottom: 16px;
+            }
+            .footer-item {
+                display: block;
+                margin-bottom: 8px;
+            }
+            .footer-logo {
+                display: none;
+            }
+            .footer-wechat{
+                margin-top: 24px;
+                padding: 0 48px;
+                img{
+                    margin: 0;
+                }
+            }
+        }
+        .copy-right-box{
+            width: 100%;
+            padding-left: 48px;
+            margin-top: 24px;
+
+        }
+    }
+}
+@media screen and (max-width: 460px) {
+    footer{
+        ul.footer-list {
+            li {
+                padding: 0 16px;
+            }
+            .footer-title {
+                margin-top: 24px;
+                margin-bottom: 16px;
+            }
+            .footer-item {
+                display: block;
+                margin-bottom: 8px;
+            }
+            .footer-logo {
+                display: none;
+            }
+            .footer-wechat{
+                margin-top: 24px;
+                padding: 0 16px;
+                img{
+                    margin: 0;
+                }
+            }
+        }
+        .copy-right-box{
+            padding-left: 16px;
+        }
     }
 }
