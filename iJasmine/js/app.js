@@ -53,9 +53,26 @@ iJasmineApp.run(['$rootScope', '$http', 'ngDialog', function($rootScope, $http, 
         };
 
         $rootScope.openHeaderDialog = function(){
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            $('html,body').css({
+                position:'fixed',
+                top: - scrollTop + 'px',
+                left: 0,
+                right: 0
+            });
+            setTimeout(function(){
+                $('header').parent().removeClass('transparent-header');
+            }, 200);
+
             ngDialog.open({
                 template: '/component/consultDialog.html',
-                className: 'ngdialog-theme-default consult-dialog'
+                className: 'ngdialog-theme-default consult-dialog',
+                preCloseCallback: function () {
+                    $('html,body').css({
+                        position: 'static'
+                    });
+                    $(document).scrollTop(scrollTop);
+                }
             });
         };
 

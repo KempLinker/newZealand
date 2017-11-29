@@ -92,12 +92,21 @@
         padding: 0 32px;
         overflow: hidden;
         img{
+            float: left;
             width: 180px;
             height: 120px;
-            margin: 0 24px 24px 0;
+            margin: 0 16px 24px 0;
             box-sizing: border-box;
             border: 1px solid $borderColDarkOpacity2;
             box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
+        }
+        span{
+            float: left;
+            display: inline-block;
+            margin: 50px 24px 0 0;
+            text-decoration: underline;
+            cursor: pointer;
+            color: $fontColBaseOpacity;
         }
     }
     .step-show{

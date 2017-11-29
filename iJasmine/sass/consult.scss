@@ -1,3 +1,6 @@
+body.ngdialog-open, html.ngdialog-open{
+    overflow: inherit;
+}
 .ngdialog.consult-dialog {
     overflow: hidden;
     .ngdialog-overlay{
@@ -39,19 +42,18 @@
         background-color: $bgColBaseLight;
         box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         & > img{
-            height: 42px;
+            height: 36px;
+            margin-top: 16px;
+            opacity: 0.3;
         }
         &.qq .consult-val,
         &.email .consult-val{
             line-height: 144px;
         }
         &.wechat .consult-val{
-            p{
-                font-size: 12px;
-            }
             img{
                 width: 110px;
-                margin-top: 4px;
+                margin-top: 16px;
             }
         }
     }
