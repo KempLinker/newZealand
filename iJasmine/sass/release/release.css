@@ -885,6 +885,10 @@ header .logo:hover .logo-img {
     margin-left: 16px;
   }
 
+  .nav-list .nav-item {
+    margin-right: 0;
+  }
+
   .sub-nav-list {
     margin-left: 0;
     width: 720px;
@@ -971,10 +975,13 @@ footer {
   line-height: normal;
   background-color: rgba(63, 63, 60, 0.9);
 }
+footer .footer {
+  overflow: hidden;
+}
 footer ul.footer-list {
   width: 1080px;
   height: 120px;
-  margin: 32px auto 0;
+  margin: 56px auto 0;
   color: rgba(255, 255, 255, 0.7);
 }
 footer ul.footer-list li {
@@ -1016,7 +1023,7 @@ footer ul.footer-list .footer-wechat img {
 }
 footer .copy-right-box {
   width: 1080px;
-  margin: 8px auto 32px;
+  margin: 24px auto 32px;
   padding-left: 300px;
   color: rgba(255, 255, 255, 0.7);
   font-size: 12px;
