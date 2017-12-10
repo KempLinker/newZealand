@@ -18,7 +18,7 @@
             destinationInfo: {}
         };
 
-        $http.get('src/jsonData/destinationData.json').then(function (result) {
+        $http.get(__Public+'/jsonData/destinationData.json').then(function (result) {
             handleData(result.data);
             $scope.viewData.init = true;
         });

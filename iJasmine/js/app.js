@@ -13,71 +13,73 @@ iJasmineApp.config(['ngDialogProvider', function (ngDialogProvider) {
 
 iJasmineApp.run(['$rootScope', '$http', 'ngDialog', function($rootScope, $http, ngDialog){
 
-        var path = window.location.href;
-        if( path.indexOf('index') >= 0 ){
-            $rootScope.view = 'home';
+    window.__SRC = "__SRC__";
+    window.__Public = "src";
 
-        } else if( path.indexOf('destination') >= 0 ) {
-            $rootScope.view = 'destination';
+    var path = window.location.href;
+    if( path.indexOf('index') >= 0 ){
+        $rootScope.view = 'home';
 
-        } else if( path.indexOf('custom') >= 0 ) {
-            $rootScope.view= 'custom';
+    } else if( path.indexOf('destination') >= 0 ) {
+        $rootScope.view = 'destination';
 
-        } else if( path.indexOf('travels') >= 0 || path.indexOf('article') >= 0 ) {
-            $rootScope.view = 'travels';
+    } else if( path.indexOf('custom') >= 0 ) {
+        $rootScope.view= 'custom';
 
-        } else {
-            $rootScope.view = 'home';
-        }
+    } else if( path.indexOf('travels') >= 0 || path.indexOf('article') >= 0 ) {
+        $rootScope.view = 'travels';
 
-        $rootScope.headerLoadReady = function(){
-            $http.get('src/jsonData/headerData.json').then(function (result) {
-                $rootScope.areaList = result.data.areaList;
-            });
-            if( $rootScope.view == 'custom' || $rootScope.view == 'travels' ) {
-                $(window).on('scroll.header', function () {
-                    handleScrollFunc()
-                });
-                handleScrollFunc();
-            }
-            initHeaderEvent();
-
-        };
-
-        $rootScope.footerLoadReady = function(){
-
-        };
-
-        $rootScope.contactLoadReady = function(){
-
-        };
-
-        $rootScope.openHeaderDialog = function(){
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            $('html,body').css({
-                position:'fixed',
-                top: - scrollTop + 'px',
-                left: 0,
-                right: 0
-            });
-            setTimeout(function(){
-                $('header').parent().removeClass('transparent-header');
-            }, 200);
-
-            ngDialog.open({
-                template: '/component/consultDialog.html',
-                className: 'ngdialog-theme-default consult-dialog',
-                preCloseCallback: function () {
-                    $('html,body').css({
-                        position: 'static'
-                    });
-                    $(document).scrollTop(scrollTop);
-                }
-            });
-        };
-
+    } else {
+        $rootScope.view = 'home';
     }
-]);
+
+    $rootScope.headerLoadReady = function(){
+        $http.get(__Public+'/jsonData/headerData.json').then(function (result) {
+            $rootScope.areaList = result.data.areaList;
+        });
+        if( $rootScope.view == 'custom' || $rootScope.view == 'travels' ) {
+            $(window).on('scroll.header', function () {
+                handleScrollFunc()
+            });
+            handleScrollFunc();
+        }
+        initHeaderEvent();
+
+    };
+
+    $rootScope.footerLoadReady = function(){
+
+    };
+
+    $rootScope.contactLoadReady = function(){
+
+    };
+
+    $rootScope.openHeaderDialog = function(){
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        $('html,body').css({
+            position:'fixed',
+            top: - scrollTop + 'px',
+            left: 0,
+            right: 0
+        });
+        setTimeout(function(){
+            $('header').parent().removeClass('transparent-header');
+        }, 200);
+
+        ngDialog.open({
+            template: '/component/consultDialog.html',
+            className: 'ngdialog-theme-default consult-dialog',
+            preCloseCallback: function () {
+                $('html,body').css({
+                    position: 'static'
+                });
+                $(document).scrollTop(scrollTop);
+            }
+        });
+    };
+
+}]);
 
 function handleScrollFunc(){
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;

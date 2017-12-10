@@ -16,7 +16,7 @@
         };
 
         $scope.changeSort = changeSort;
-        $http.get('src/jsonData/travelsData.json').then(function (result) {
+        $http.get(__Public+'/jsonData/travelsData.json').then(function (result) {
             handleData(result.data);
             $scope.viewData.init = true;
         });

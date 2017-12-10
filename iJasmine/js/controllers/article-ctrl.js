@@ -18,7 +18,7 @@
             content: []
         };
 
-        $http.get('src/article/'+urlObj.article+'.json').then(function (result) {
+        $http.get(__Public+'/article/'+urlObj.article+'.json').then(function (result) {
             handleData(result.data);
             $scope.viewData.init = true;
         });

@@ -20,7 +20,7 @@
         });
 
 
-        $http.get('src/jsonData/geoData.json').then(function (result) {
+        $http.get(__Public+'/jsonData/geoData.json').then(function (result) {
             $scope.viewData.init = true;
             $scope.viewData.geoData = result.data;
         });
