@@ -12,6 +12,7 @@
             banner: {
                 src: [],
                 time: 1000,
+                img: null
             },
             curArea: '',
             areaList: [],
@@ -50,6 +51,14 @@
         }
 
         function initScrollBanner(){
+            if( !$scope.viewData.banner.src || $scope.viewData.banner.src.length < 1 ){
+                return false
+            }
+            if( $scope.viewData.banner.src.length == 1 ){
+                $scope.viewData.banner.img = $scope.viewData.banner.src[0].src;
+                return false
+            }
+
             var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
             var scrollBannerWidth = 1080;
             var scrollBannerHeight = 400;
@@ -88,8 +97,8 @@
             var containerHeight = $('.main-body').height() + 64;
 
             var diffTop = 0;
-            if( scrollTop > containerTop - 56 ){
-                if( containerHeight <= scrollTop + 36 ){
+            if( scrollTop > containerTop - 56 - 32 ){
+                if( containerHeight <= scrollTop ){
                     return false;
                 }
                 diffTop = scrollTop - containerTop + 56;
@@ -102,7 +111,7 @@
                 if( $destinationMapLayer.hasClass('scroll-layer') ){
                     $destinationMapLayer.removeClass('scroll-layer');
                     $destinationMapLayer.css({
-                        "top": "36px"
+                        "top": 0
                     });
                 }
 

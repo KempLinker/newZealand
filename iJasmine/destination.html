@@ -12,6 +12,7 @@
     <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
     <div class="first-screen">
         <div class="scroll-banner" id="scroll_banner"></div>
+        <img class="banner-img" ng-if="viewData.banner.img" ng-src="{{viewData.banner.img}}" />
     </div>
     <div class="main-body" ng-show="viewData.init">
         <div class="destination-map-layer" id="destination-map-layer">
@@ -22,7 +23,9 @@
             <p class="destination-name">
                 <span ng-bind="viewData.destinationInfo.name"></span>
             </p>
+            <!--
             <div class="destination-desc" ng-bind="viewData.destinationInfo.desc"></div>
+            -->
         </div>
         <div class="destination-city-info">
             <ul class="city-list">
