@@ -61,9 +61,10 @@
 
             var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
             var scrollBannerWidth = 1080;
-            var scrollBannerHeight = 400;
+            var scrollBannerHeight = 440;
             if( windowWidth <= 1100 && windowWidth >= 960 ){
                 scrollBannerWidth = 900;
+                scrollBannerHeight = 400;
 
             } else if( windowWidth >= 768 && windowWidth < 960 ){
                 scrollBannerWidth = 700;
