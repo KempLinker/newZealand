@@ -2407,6 +2407,42 @@ footer .copy-right-box {
   font-size: 12px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .article-body .first-screen .slogan {
+    width: 760px;
+  }
+  .article-body .article-info,
+  .article-body .article-info .article-info-item {
+    width: 760px;
+  }
+  .article-body .article-container {
+    width: 760px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .article-body .first-screen {
+    height: 220px;
+  }
+  .article-body .first-screen .slogan {
+    width: 100%;
+    top: 120px;
+  }
+  .article-body .article-info,
+  .article-body .article-info .article-info-item {
+    width: 100%;
+  }
+  .article-body .article-container {
+    width: 100%;
+  }
+  .article-body .article-container .article-img img {
+    width: 420px !important;
+  }
+}
+@media screen and (max-width: 459px) {
+  .article-body .article-container .article-img img {
+    width: 320px !important;
+  }
+}
 body.ngdialog-open, html.ngdialog-open {
   overflow: inherit;
 }
