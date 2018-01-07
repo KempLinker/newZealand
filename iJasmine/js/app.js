@@ -29,6 +29,9 @@ iJasmineApp.run(['$rootScope', '$http', 'ngDialog', function($rootScope, $http, 
     } else if( path.indexOf('travels') >= 0 || path.indexOf('article') >= 0 ) {
         $rootScope.view = 'travels';
 
+    } else if( path.indexOf('questionnaire') >= 0 ) {
+        $rootScope.view = 'questionnaire';
+
     } else {
         $rootScope.view = 'home';
     }
@@ -37,7 +40,7 @@ iJasmineApp.run(['$rootScope', '$http', 'ngDialog', function($rootScope, $http, 
         $http.get(__Public+'/jsonData/headerData.json').then(function (result) {
             $rootScope.areaList = result.data.areaList;
         });
-        if( $rootScope.view == 'custom' || $rootScope.view == 'travels' ) {
+        if( $rootScope.view == 'custom' || $rootScope.view == 'travels' || $rootScope.view == 'questionnaire' ) {
             $(window).on('scroll.header', function () {
                 handleScrollFunc()
             });

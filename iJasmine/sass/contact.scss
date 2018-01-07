@@ -34,6 +34,7 @@
         color: $fontColLight;
         background-color: $bgColBaseDark;
         display: none;
+        white-space: nowrap;
     }
     .contact-type:before{
         content: "";
