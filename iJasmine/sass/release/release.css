@@ -527,6 +527,10 @@ body {
   word-break: normal;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .display-block {
   display: block;
 }
@@ -537,6 +541,10 @@ body {
 
 .ml-16 {
   margin-left: 16px;
+}
+
+.ml-24 {
+  margin-left: 24px;
 }
 
 .ml-32 {
@@ -2567,7 +2575,7 @@ body.ngdialog-open, html.ngdialog-open {
   width: 960px;
   min-height: 300px;
   margin: 32px auto;
-  padding: 24px 32px;
+  padding: 32px;
   background-color: rgba(255, 255, 255, 0.98);
   box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
   color: rgba(63, 63, 60, 0.7);
@@ -2597,13 +2605,26 @@ body.ngdialog-open, html.ngdialog-open {
   line-height: 32px;
 }
 .questionnaire-body .questionnaire-container .item-title {
-  width: 72px;
+  min-width: 72px;
+}
+.questionnaire-body .questionnaire-container input[type='text'], .questionnaire-body .questionnaire-container input[type='number'] {
+  vertical-align: top;
 }
 .questionnaire-body .questionnaire-container input[type='text'] {
   width: 200px;
-  vertical-align: top;
 }
 .questionnaire-body .questionnaire-container input[type='number'] {
   width: 100px;
-  vertical-align: top;
+}
+.questionnaire-body .questionnaire-container input[type='text'].small {
+  width: 60px;
+}
+.questionnaire-body .questionnaire-container input[type='number'].small {
+  width: 60px;
+}
+.questionnaire-body .questionnaire-container .number-of-people label span {
+  width: 150px;
+}
+.questionnaire-body .questionnaire-container .number-of-people label span.item-title {
+  width: auto;
 }

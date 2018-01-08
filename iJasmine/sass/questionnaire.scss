@@ -39,10 +39,11 @@
         width: 960px;
         min-height: 300px;
         margin: 32px auto;
-        padding: 24px 32px;
+        padding: 32px;
         background-color: $bgColBaseLight;
         box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         color: $fontColBaseOpacity;
+
         .questionnaire-desc{
             color: $fontColBaseOpacity;
         }
@@ -68,15 +69,30 @@
             line-height: 32px;
         }
         .item-title{
-            width: 72px;
+            min-width: 72px;
+        }
+        input[type='text'],input[type='number']{
+            vertical-align: top;
         }
         input[type='text']{
             width: 200px;
-            vertical-align: top;
         }
         input[type='number']{
             width: 100px;
-            vertical-align: top;
         }
+        input[type='text'].small{
+            width: 60px;
+        }
+        input[type='number'].small{
+            width: 60px;
+        }
+        .number-of-people label span{
+            width: 150px;
+            &.item-title{
+                width: auto;
+            }
+        }
+
+
     }
 }

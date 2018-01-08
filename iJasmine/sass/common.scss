@@ -39,6 +39,9 @@ body{
     word-break: normal;
 }
 
+.cursor-pointer{
+    cursor: pointer;
+}
 .display-block{
     display: block;
 }
@@ -49,7 +52,9 @@ body{
 .ml-16{
     margin-left: 16px;
 }
-
+.ml-24{
+    margin-left: 24px;
+}
 .ml-32{
     margin-left: 32px;
 }
