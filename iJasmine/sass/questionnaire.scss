@@ -35,6 +35,17 @@
         border-radius: 0;
         color: $fontColBaseOpacity;
     }
+    textarea{
+        width: 640px;
+        min-width: 640px;
+        max-width: 640px;
+        height: 120px;
+        min-height: 120px;
+        max-height: 120px;
+        border: 1px solid $borderColDarkOpacity;
+        color: $fontColBaseOpacity;
+        resize: none;
+    }
     .questionnaire-container{
         width: 960px;
         min-height: 300px;
@@ -91,6 +102,10 @@
             &.item-title{
                 width: auto;
             }
+        }
+        .user .item-sub-title{
+            width: 56px;
+            text-align: right;
         }
 
 

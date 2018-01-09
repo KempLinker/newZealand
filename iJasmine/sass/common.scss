@@ -65,6 +65,9 @@ body{
 .mr-8{
     margin-right: 8px;
 }
+.mr-16{
+    margin-right: 16px;
+}
 .mr-32{
     margin-right: 32px;
 }
@@ -212,4 +215,7 @@ body{
     .block-sub-title{
         font-size: 14px;
     }
+}
+.ng-cloak{
+    display: none;
 }

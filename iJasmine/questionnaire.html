@@ -18,245 +18,214 @@
     <div class="questionnaire-container">
         <div class="questionnaire-desc">此处是问卷描述，此处是问卷描述，此处是问卷描述，此处是问卷描述，此处是问卷描述，此处是问卷描述，此处是问卷描述，此处是问卷描述</div>
         <div class="questionnaire-content">
-            <ul>
+            <ul ng-show="viewData.init">
                 <li class="mb-16 city">
                     <span class="item-num">1.</span>
                     <div class="item-detail">
-                        <label class="display-inline-block mr-32">
-                            <span class="item-title display-inline-block mr-8">出发地：</span>
-                            <input type="text" />
-                        </label>
-                        <label class="display-inline-block mr-32">
-                            <span class="item-title display-inline-block mr-8">目的地：</span>
-                            <input type="text" />
+                        <label class="display-inline-block mr-32" ng-repeat="item in viewData.list.city">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                            <input type="text" ng-model="item.val"/>
                         </label>
                     </div>
                 </li>
                 <li class="mb-16 number-of-people">
                     <span class="item-num">2.</span>
-                    <div class="item-detail">
+                    <div class="item-detail" ng-repeat="item in viewData.list.numberOfPeople">
                         <label class="display-inline-block">
-                            <span class="item-title display-inline-block mr-8">出行人数：</span>
-                            <input type="number" />
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                            <input type="number" ng-model="item.val"/>
                         </label>
                         <span class="ml-16">其中：</span>
                         <div>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">婴儿（24个月以下）：</span>
-                                <input type="number" />
-                            </label>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">儿童（2-12岁）：</span>
-                                <input type="number" />
-                            </label>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">成人（13-59岁）：</span>
-                                <input type="number" />
-                            </label>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">老人（60岁以上）：</span>
-                                <input type="number" />
+                            <label class="display-inline-block mr-48" ng-repeat="subItem in item.sub">
+                                <span class="display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                                <input type="number" ng-model="subItem.val"/>
                             </label>
                         </div>
                     </div>
                 </li>
                 <li class="mb-16 travel-time">
                     <span class="item-num">3.</span>
-                    <div class="item-detail">
+                    <div class="item-detail" ng-repeat="item in viewData.list.travelTime">
                         <label class="display-inline-block">
-                            <span class="item-title display-inline-block mr-8">旅行时间：</span>
-                            <input type="number" />
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                            <input type="number" ng-model="item.val"/>
                         </label>
-                        <div>
+                        <div ng-repeat="subItem in item.sub">
                             <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="radio" class="mr-8"/>
-                                <span class="display-inline-block mr-8">A 往返航班已定：</span>
+                                <input type="radio" class="mr-8" ng-model="subItem.val" name="travel_time"/>
+                                <span class="display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
                             </label>
-                        </div>
-                        <div class="ml-24">
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">航班日期：</span>
-                                <input type="text" />
-                            </label>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">航班号：</span>
-                                <input type="text" />
-                            </label>
-                        </div>
-                        <div>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="radio" class="mr-8"/>
-                                <span class="display-inline-block mr-8">B 往返航班未定：</span>
-                            </label>
-                        </div>
-                        <div class="ml-24">
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">预计抵达新西兰日期：</span>
-                                <input type="text" />
-                            </label>
-                            <label class="display-inline-block mr-48">
-                                <span class="display-inline-block mr-8">出行天数（不含国际航班时间）：</span>
-                                <input type="text" class="small"/>
-                            </label>
+                            <div class="ml-24">
+                                <label class="display-inline-block" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-48': !$last}">
+                                    <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}：</span>
+                                    <input type="text" ng-model="nextSubItem.val"/>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </li>
                 <li class="mb-16 travel-nature">
                     <span class="item-num">4.</span>
-                    <div class="item-detail">
+                    <div class="item-detail" ng-repeat="item in viewData.list.travelNature">
                         <label class="display-inline-block">
-                            <span class="item-title display-inline-block mr-8">旅行性质：</span>
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
                         </label>
                         <div>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">情侣或蜜月旅行</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">家庭或亲子出游</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">朋友结伴</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">公务会议</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">团队建设或奖励</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">款待客户</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="checkbox" class="mr-8"/>
-                                <span class="display-inline-block mr-8">探亲访友</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <span class="display-inline-block mr-8">其他：</span>
-                                <input type="text"/>
+                            <label class="display-inline-block cursor-pointer mr-48" ng-repeat="subItem in item.sub" ng-class="{'mr-48': !$last}">
+                                <input type="checkbox" ng-model="subItem.val" ng-if="subItem.key != 'others'"/>
+                                <span class="display-inline-block mr-8 ng-cloak">{{subItem.title}}</span>
+                                <input type="text" ng-if="subItem.key == 'others'" ng-model="subItem.val"/>
                             </label>
                         </div>
                     </div>
                 </li>
-                <li class="mb-16 sport">
+                <li class="mb-16 sceneSport">
                     <span class="item-num">5.</span>
-                    <div class="item-detail">
+                    <div class="item-detail" ng-repeat="item in viewData.list.sceneSport">
                         <label class="display-inline-block">
-                            <span class="item-title display-inline-block mr-8">景点和活动：</span>
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
                         </label>
-                        <span class="display-block">自然风光</span>
-                        <div>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">峡湾</span>
+                        <div ng-repeat="subItem in item.sub">
+                            <span class="display-block ng-cloak">{{subItem.title}}</span>
+                            <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
+                                <input type="checkbox" ng-model="nextSubItem.val" />
+                                <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                             </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">冰川</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">雪山</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">雨林</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">火山</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">地热</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">海景</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">湖景</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">魔戒</span>
-                            </label>
+                            <textarea ng-model="subItem.val" ng-if="subItem.key == 'others'"></textarea>
                         </div>
-                        <span class="display-block">野生动物</span>
-                        <div>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">观鲸</span>
+                    </div>
+                </li>
+                <li class="mb-16 stay">
+                    <span class="item-num">6.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.stay">
+                        <label class="display-inline-block">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <div ng-repeat="subItem in item.sub">
+                            <span class="display-block ng-cloak">{{subItem.title}}</span>
+                            <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
+                                <input type="checkbox" ng-model="nextSubItem.val" />
+                                <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                             </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">企鹅</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">海豚海狮</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">海豹</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">信天翁</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">萤火虫</span>
-                            </label>
-                        </div>
-                        <span class="display-block">户外运动</span>
-                        <div>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">短程徒步</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">冰川徒步</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">登山</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">高尔夫</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">骑马</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">山地车</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">滑雪</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">过夜徒步</span>
-                            </label>
-                        </div>
-                        <span class="display-block">水上活动</span>
-                        <div>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">帆船</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">皮划艇</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">潜水</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">漂流</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">喷射</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">快艇</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">淡水钓鱼</span>
-                            </label>
-                            <label class="display-inline-block cursor-pointer mr-16">
-                                <input type="checkbox" class="mr-8"/><span class="display-inline-block mr-8">海钓龙虾</span>
-                            </label>
+                            <textarea ng-model="subItem.val" ng-if="subItem.key == 'others'"></textarea>
                         </div>
 
                     </div>
                 </li>
+                <li class="mb-16 food">
+                    <span class="item-num">7.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.food">
+                        <label class="display-inline-block">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <div ng-repeat="subItem in item.sub" ng-if="subItem.key == 'breakfast'">
+                            <span class="mr-32 ng-cloak">{{subItem.title}}</span>
+                            <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
+                                <input type="radio" ng-model="nextSubItem.val" name="breakfast"/>
+                                <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
+                            </label>
+                        </div>
+                        <div ng-repeat="subItem in item.sub" ng-if="subItem.key == 'dinner'">
+                            <span class="display-block ng-cloak">{{subItem.title}}</span>
+                            <div ng-repeat="nextSubItem in subItem.sub">
+                                <label class="display-block cursor-pointer">
+                                    <input type="radio" ng-model="nextSubItem.val" name="dinner"/>
+                                    <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
+                                </label>
+                                <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub" ng-class="{'mr-16': !$last}">
+                                    <input type="checkbox" ng-model="deepSubItem.val"/>
+                                    <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-16 transportation">
+                    <span class="item-num">8.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.transportation">
+                        <label class="display-inline-block">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <div ng-repeat="subItem in item.sub">
+                            <label class="display-inline-block cursor-pointer">
+                                <input type="radio" class="mr-8" ng-model="subItem.val" name="type"/>
+                                <span class="item-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                            </label>
+                            <div ng-repeat="nextSubItem in subItem.sub">
+                                <label class="display-inline-block cursor-pointer mr-16">
+                                    <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
+                                </label>
+                                <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub"
+                                       ng-if="['gps','follow'].indexOf(nextSubItem.key) < 0" ng-class="{'mr-16': !$last}">
+                                    <input type="checkbox" ng-model="deepSubItem.val"/>
+                                    <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
+                                </label>
+                                <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub"
+                                       ng-if="['gps','follow'].indexOf(nextSubItem.key) >= 0" ng-class="{'mr-16': !$last}">
+                                    <input type="radio" ng-model="deepSubItem.val" name="{{nextSubItem.key}}"/>
+                                    <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-16 budget">
+                    <span class="item-num">9.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.budget">
+                        <label class="display-inline-block mr-32">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <span class="display-block">
+                            除机票签证外，您在新西兰旅游的人均预算约为人民币
+                            <input type="text" ng-model="item.val"/>
+                            元
+                        </span>
+                    </div>
+                </li>
+                <li class="mb-16 service">
+                    <span class="item-num">10.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.service">
+                        <label class="display-block mr-32">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <label class="display-inline-block cursor-pointer mr-16" ng-repeat="subItem in item.sub">
+                            <input type="checkbox" ng-model="subItem.val"/>
+                            <span class="display-inline-block ng-cloak">{{subItem.title}}</span>
+                        </label>
+                    </div>
+                </li>
+                <li class="mb-16 supplement">
+                    <span class="item-num">11.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.supplement">
+                        <label class="display-block mr-32">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <textarea ng-model="item.val"></textarea>
+                    </div>
+                </li>
+                <li class="mb-16 user">
+                    <span class="item-num">12.</span>
+                    <div class="item-detail" ng-repeat="item in viewData.list.user">
+                        <label class="display-block mr-32">
+                            <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
+                        </label>
+                        <div ng-repeat="subItem in item.sub">
+                            <label class="display-inline-block" ng-if="subItem.key != 'sex'">
+                                <span class="item-sub-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                                <input type="text" ng-model="subItem.val"/>
+                            </label>
+                            <label class="display-inline-block" ng-if="subItem.key == 'sex'">
+                                <span class="item-sub-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                                <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
+                                    <input type="radio" ng-model="nextSubItem.val" name="sex"/>
+                                    <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
+                                </label>
+                            </label>
+                        </div>
+                    </div>
+                </li>
+
             </ul>
         </div>
     </div>

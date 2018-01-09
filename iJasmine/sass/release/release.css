@@ -559,6 +559,10 @@ body {
   margin-right: 8px;
 }
 
+.mr-16 {
+  margin-right: 16px;
+}
+
 .mr-32 {
   margin-right: 32px;
 }
@@ -724,6 +728,10 @@ body {
     font-size: 14px;
   }
 }
+.ng-cloak {
+  display: none;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -2571,6 +2579,17 @@ body.ngdialog-open, html.ngdialog-open {
   border-radius: 0;
   color: rgba(63, 63, 60, 0.7);
 }
+.questionnaire-body textarea {
+  width: 640px;
+  min-width: 640px;
+  max-width: 640px;
+  height: 120px;
+  min-height: 120px;
+  max-height: 120px;
+  border: 1px solid rgba(63, 63, 60, 0.7);
+  color: rgba(63, 63, 60, 0.7);
+  resize: none;
+}
 .questionnaire-body .questionnaire-container {
   width: 960px;
   min-height: 300px;
@@ -2627,4 +2646,8 @@ body.ngdialog-open, html.ngdialog-open {
 }
 .questionnaire-body .questionnaire-container .number-of-people label span.item-title {
   width: auto;
+}
+.questionnaire-body .questionnaire-container .user .item-sub-title {
+  width: 56px;
+  text-align: right;
 }

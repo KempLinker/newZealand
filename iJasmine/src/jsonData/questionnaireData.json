@@ -1,31 +1,36 @@
 {
   "questionnaireList": {
-    "contact": [
+    "user": [
       {
-        "key": "name", "val": "", "title": "姓名"
-      },
-      {
-        "key": "sex", "val": "", "title": "性别",
+        "key": "contact", "val": "", "title": "联系人",
         "sub": [
           {
-            "key": "male", "val": "", "title": "男"
+            "key": "name", "val": "", "title": "姓名"
           },
           {
-            "key": "female", "val": "", "title": "女"
+            "key": "sex", "val": "", "title": "性别",
+            "sub": [
+              {
+                "key": "male", "val": "", "title": "男"
+              },
+              {
+                "key": "female", "val": "", "title": "女"
+              }
+            ]
+          },
+          {
+            "key": "mobile", "val": "", "title": "电话"
+          },
+          {
+            "key": "email", "val": "", "title": "Email"
+          },
+          {
+            "key": "qq", "val": "", "title": "QQ"
+          },
+          {
+            "key": "wechat", "val": "", "title": "微信"
           }
         ]
-      },
-      {
-        "key": "mobile", "val": "", "title": "电话"
-      },
-      {
-        "key": "email", "val": "", "title": "Email"
-      },
-      {
-        "key": "qq", "val": "", "title": "QQ"
-      },
-      {
-        "key": "wechat", "val": "", "title": "微信"
       }
     ],
     "city": [
@@ -60,7 +65,7 @@
         "key": "time", "val": "", "title": "旅行时间",
         "sub": [
           {
-            "key": "type", "val": "", "title": "A 往返航班已定",
+            "key": "typeA", "val": "", "title": "A 往返航班已定",
             "sub": [
               {
                 "key": "flightDate", "val": "", "title": "航班日期"
@@ -412,7 +417,7 @@
             "key": "dinner", "val": "", "title": "正餐",
             "sub": [
               {
-                "key": "包餐", "val": "", "title": "包餐",
+                "key": "A 包餐", "val": "", "title": "包餐",
                 "sub": [
                   {
                     "key": "中餐", "val": "", "title": "中餐"
@@ -439,7 +444,7 @@
                 ]
               },
               {
-                "key": "自理", "val": "", "title": "自理"
+                "key": "B 自理", "val": "", "title": "自理"
               }
             ]
           }
@@ -451,7 +456,7 @@
         "key": "transportation", "val": "", "title": "交通方式",
         "sub": [
           {
-            "key": "charter", "val": "", "title": "包车",
+            "key": "charter", "val": "", "title": "A 包车",
             "sub": [
               {
                 "key": "guide", "val": "", "title": "导游",
@@ -466,14 +471,11 @@
                     "key": "独立导游", "val": "", "title": "独立导游"
                   }
                 ]
-              },
-              {
-                "key": "self", "val": "", "title": "自驾"
               }
             ]
           },
           {
-            "key": "self", "val": "", "title": "自驾",
+            "key": "self", "val": "", "title": "B 自驾",
             "sub": [
               {
                 "key": "cars", "val": "", "title": "租车车型",
