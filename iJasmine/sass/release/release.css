@@ -2568,6 +2568,10 @@ body.ngdialog-open, html.ngdialog-open {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.questionnaire-body input[type='radio'],
+.questionnaire-body input[type='checkbox'] {
+  cursor: pointer;
+}
 .questionnaire-body input[type='number'],
 .questionnaire-body input[type='text'] {
   height: 28px;
@@ -2650,4 +2654,17 @@ body.ngdialog-open, html.ngdialog-open {
 .questionnaire-body .questionnaire-container .user .item-sub-title {
   width: 56px;
   text-align: right;
+}
+.questionnaire-body .questionnaire-opt {
+  text-align: center;
+}
+.questionnaire-body .questionnaire-opt .go {
+  color: rgba(255, 255, 255, 0.98);
+  border: 1px solid #f76459;
+  background-color: #f76459;
+}
+.questionnaire-body .questionnaire-opt .go:hover {
+  color: rgba(63, 63, 60, 0.7);
+  border: 1px solid rgba(63, 63, 60, 0.7);
+  background-color: transparent;
 }

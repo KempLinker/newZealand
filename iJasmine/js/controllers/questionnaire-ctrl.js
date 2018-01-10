@@ -8,7 +8,8 @@
 
         $scope.viewData = {
             init: false,
-            list: []
+            list: [],
+            submitFunc: submitFunc
         };
 
         $http.get(__Public+'/jsonData/questionnaireData.json').then(function (result) {
@@ -18,6 +19,10 @@
 
         function handleData( data ){
             $scope.viewData.list = data.questionnaireList;
+        }
+
+        function submitFunc() {
+            console.log($scope.viewData.list);
         }
 
     }

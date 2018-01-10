@@ -24,6 +24,10 @@
             background-color: rgba(0, 0, 0, .3);
         }
     }
+    input[type='radio'],
+    input[type='checkbox']{
+        cursor: pointer;
+    }
     input[type='number'],
     input[type='text']{
         height: 28px;
@@ -109,5 +113,18 @@
         }
 
 
+    }
+    .questionnaire-opt{
+        text-align: center;
+        .go{
+            color: $fontColLight;
+            border: 1px solid $bgColOrange;
+            background-color: $bgColOrange;
+            &:hover{
+                color: $fontColBaseOpacity;
+                border: 1px solid $borderColDarkOpacity;
+                background-color: transparent;
+            }
+        }
     }
 }

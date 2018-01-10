@@ -11,10 +11,10 @@
             "key": "sex", "val": "", "title": "性别",
             "sub": [
               {
-                "key": "male", "val": "", "title": "男"
+                "key": "male", "val": "male", "title": "男"
               },
               {
-                "key": "female", "val": "", "title": "女"
+                "key": "female", "val": "female", "title": "女"
               }
             ]
           },
@@ -65,24 +65,29 @@
         "key": "time", "val": "", "title": "旅行时间",
         "sub": [
           {
-            "key": "typeA", "val": "", "title": "A 往返航班已定",
+            "key": "total", "val": "", "title": "当前计划旅行天数",
             "sub": [
               {
-                "key": "flightDate", "val": "", "title": "航班日期"
+                "key": "typeA", "val": "A", "title": "A 往返航班已定",
+                "sub": [
+                  {
+                    "key": "flightDate", "val": "", "title": "航班日期"
+                  },
+                  {
+                    "key": "flightNumber", "val": "", "title": "航班号"
+                  }
+                ]
               },
               {
-                "key": "flightNumber", "val": "", "title": "航班号"
-              }
-            ]
-          },
-          {
-            "key": "typeB", "val": "", "title": "B 往返航班未定",
-            "sub": [
-              {
-                "key": "expectedDate", "val": "", "title": "预计抵达新西兰日期"
-              },
-              {
-                "key": "tripDays", "val": "", "title": "出行天数（不含国际航班时间）"
+                "key": "typeB", "val": "B", "title": "B 往返航班未定",
+                "sub": [
+                  {
+                    "key": "expectedDate", "val": "", "title": "预计抵达新西兰日期"
+                  },
+                  {
+                    "key": "tripDays", "val": "", "title": "出行天数（不含国际航班时间）"
+                  }
+                ]
               }
             ]
           }
@@ -94,25 +99,25 @@
         "key": "nature", "val": "", "title": "旅行性质",
         "sub": [
           {
-            "key": "lovers", "val": "", "title": "情侣或蜜月旅行"
+            "key": "lovers", "val": false, "title": "情侣或蜜月旅行"
           },
           {
-            "key": "family", "val": "", "title": "家庭或亲子出游"
+            "key": "family", "val": false, "title": "家庭或亲子出游"
           },
           {
-            "key": "friends", "val": "", "title": "朋友结伴"
+            "key": "friends", "val": false, "title": "朋友结伴"
           },
           {
-            "key": "conference", "val": "", "title": "公务会议"
+            "key": "conference", "val": false, "title": "公务会议"
           },
           {
-            "key": "building", "val": "", "title": "团队建设或奖励"
+            "key": "building", "val": false, "title": "团队建设或奖励"
           },
           {
-            "key": "clients", "val": "", "title": "款待客户"
+            "key": "clients", "val": false, "title": "款待客户"
           },
           {
-            "key": "visit", "val": "", "title": "探亲访友"
+            "key": "visit", "val": false, "title": "探亲访友"
           },
           {
             "key": "others", "val": "", "title": "其他"
@@ -128,31 +133,31 @@
             "key": "自然风光", "val": "", "title": "自然风光",
             "sub": [
               {
-                "key": "自然风光", "val": "", "title": "峡湾"
+                "key": "峡湾", "val": false, "title": "峡湾"
               },
               {
-                "key": "冰川", "val": "", "title": "冰川"
+                "key": "冰川", "val": false, "title": "冰川"
               },
               {
-                "key": "雪山", "val": "", "title": "雪山"
+                "key": "雪山", "val": false, "title": "雪山"
               },
               {
-                "key": "雨林", "val": "", "title": "雨林"
+                "key": "雨林", "val": false, "title": "雨林"
               },
               {
-                "key": "火山", "val": "", "title": "火山"
+                "key": "火山", "val": false, "title": "火山"
               },
               {
-                "key": "地热", "val": "", "title": "地热"
+                "key": "地热", "val": false, "title": "地热"
               },
               {
-                "key": "海景", "val": "", "title": "海景"
+                "key": "海景", "val": false, "title": "海景"
               },
               {
-                "key": "湖景", "val": "", "title": "湖景"
+                "key": "湖景", "val": false, "title": "湖景"
               },
               {
-                "key": "魔戒", "val": "", "title": "魔戒"
+                "key": "魔戒", "val": false, "title": "魔戒"
               }
             ]
           },
@@ -160,22 +165,22 @@
             "key": "野生动物", "val": "", "title": "野生动物",
             "sub": [
               {
-                "key": "观鲸", "val": "", "title": "观鲸"
+                "key": "观鲸", "val": false, "title": "观鲸"
               },
               {
-                "key": "企鹅", "val": "", "title": "企鹅"
+                "key": "企鹅", "val": false, "title": "企鹅"
               },
               {
-                "key": "海豚海狮", "val": "", "title": "海豚海狮"
+                "key": "海豚海狮", "val": false, "title": "海豚海狮"
               },
               {
-                "key": "海豹", "val": "", "title": "海豹"
+                "key": "海豹", "val": false, "title": "海豹"
               },
               {
-                "key": "信天翁", "val": "", "title": "信天翁"
+                "key": "信天翁", "val": false, "title": "信天翁"
               },
               {
-                "key": "萤火虫", "val": "", "title": "萤火虫"
+                "key": "萤火虫", "val": false, "title": "萤火虫"
               }
             ]
           },
@@ -183,28 +188,28 @@
             "key": "户外运动", "val": "", "title": "户外运动",
             "sub": [
               {
-                "key": "短程徒步", "val": "", "title": "短程徒步"
+                "key": "短程徒步", "val": false, "title": "短程徒步"
               },
               {
-                "key": "冰川徒步", "val": "", "title": "冰川徒步"
+                "key": "冰川徒步", "val": false, "title": "冰川徒步"
               },
               {
-                "key": "登山", "val": "", "title": "登山"
+                "key": "登山", "val": false, "title": "登山"
               },
               {
-                "key": "高尔夫", "val": "", "title": "高尔夫"
+                "key": "高尔夫", "val": false, "title": "高尔夫"
               },
               {
-                "key": "骑马", "val": "", "title": "骑马"
+                "key": "骑马", "val": false, "title": "骑马"
               },
               {
-                "key": "山地车", "val": "", "title": "山地车"
+                "key": "山地车", "val": false, "title": "山地车"
               },
               {
-                "key": "滑雪", "val": "", "title": "滑雪"
+                "key": "滑雪", "val": false, "title": "滑雪"
               },
               {
-                "key": "过夜徒步", "val": "", "title": "过夜徒步"
+                "key": "过夜徒步", "val": false, "title": "过夜徒步"
               }
             ]
           },
@@ -212,28 +217,28 @@
             "key": "水上活动", "val": "", "title": "水上活动",
             "sub": [
               {
-                "key": "帆船", "val": "", "title": "帆船"
+                "key": "帆船", "val": false, "title": "帆船"
               },
               {
-                "key": "皮划艇", "val": "", "title": "皮划艇"
+                "key": "皮划艇", "val": false, "title": "皮划艇"
               },
               {
-                "key": "潜水", "val": "", "title": "潜水"
+                "key": "潜水", "val": false, "title": "潜水"
               },
               {
-                "key": "漂流", "val": "", "title": "漂流"
+                "key": "漂流", "val": false, "title": "漂流"
               },
               {
-                "key": "喷射", "val": "", "title": "喷射"
+                "key": "喷射", "val": false, "title": "喷射"
               },
               {
-                "key": "快艇", "val": "", "title": "快艇"
+                "key": "快艇", "val": false, "title": "快艇"
               },
               {
-                "key": "淡水钓鱼", "val": "", "title": "淡水钓鱼"
+                "key": "淡水钓鱼", "val": false, "title": "淡水钓鱼"
               },
               {
-                "key": "海钓龙虾", "val": "", "title": "海钓龙虾"
+                "key": "海钓龙虾", "val": false, "title": "海钓龙虾"
               }
             ]
           },
@@ -241,22 +246,22 @@
             "key": "极限冒险", "val": "", "title": "极限冒险",
             "sub": [
               {
-                "key": "蹦极", "val": "", "title": "蹦极"
+                "key": "蹦极", "val": false, "title": "蹦极"
               },
               {
-                "key": "跳伞", "val": "", "title": "跳伞"
+                "key": "跳伞", "val": false, "title": "跳伞"
               },
               {
-                "key": "滑翔伞", "val": "", "title": "滑翔伞"
+                "key": "滑翔伞", "val": false, "title": "滑翔伞"
               },
               {
-                "key": "四驱越野", "val": "", "title": "四驱越野"
+                "key": "四驱越野", "val": false, "title": "四驱越野"
               },
               {
-                "key": "洞穴探险", "val": "", "title": "洞穴探险"
+                "key": "洞穴探险", "val": false, "title": "洞穴探险"
               },
               {
-                "key": "打猎", "val": "", "title": "打猎"
+                "key": "打猎", "val": false, "title": "打猎"
               }
             ]
           },
@@ -264,22 +269,22 @@
             "key": "观光", "val": "", "title": "观光",
             "sub": [
               {
-                "key": "游船", "val": "", "title": "游船"
+                "key": "游船", "val": false, "title": "游船"
               },
               {
-                "key": "观光飞机", "val": "", "title": "观光飞机"
+                "key": "观光飞机", "val": false, "title": "观光飞机"
               },
               {
-                "key": "观光直升机", "val": "", "title": "观光直升机"
+                "key": "观光直升机", "val": false, "title": "观光直升机"
               },
               {
-                "key": "观光火车", "val": "", "title": "观光火车"
+                "key": "观光火车", "val": false, "title": "观光火车"
               },
               {
-                "key": "热气球", "val": "", "title": "热气球"
+                "key": "热气球", "val": false, "title": "热气球"
               },
               {
-                "key": "摄影", "val": "", "title": "摄影"
+                "key": "摄影", "val": false, "title": "摄影"
               }
             ]
           },
@@ -287,19 +292,19 @@
             "key": "人文艺术", "val": "", "title": "人文艺术",
             "sub": [
               {
-                "key": "博物馆", "val": "", "title": "博物馆"
+                "key": "博物馆", "val": false, "title": "博物馆"
               },
               {
-                "key": "科普益智", "val": "", "title": "科普益智"
+                "key": "科普益智", "val": false, "title": "科普益智"
               },
               {
-                "key": "原住民文化", "val": "", "title": "原住民文化"
+                "key": "原住民文化", "val": false, "title": "原住民文化"
               },
               {
-                "key": "艺术与手工艺", "val": "", "title": "艺术与手工艺"
+                "key": "艺术与手工艺", "val": false, "title": "艺术与手工艺"
               },
               {
-                "key": "建筑历史遗迹", "val": "", "title": "建筑历史遗迹"
+                "key": "建筑历史遗迹", "val": false, "title": "建筑历史遗迹"
               }
             ]
           },
@@ -307,25 +312,25 @@
             "key": "休闲", "val": "", "title": "休闲",
             "sub": [
               {
-                "key": "品酒", "val": "", "title": "品酒"
+                "key": "品酒", "val": false, "title": "品酒"
               },
               {
-                "key": "牧场", "val": "", "title": "牧场"
+                "key": "牧场", "val": false, "title": "牧场"
               },
               {
-                "key": "园林", "val": "", "title": "园林"
+                "key": "园林", "val": false, "title": "园林"
               },
               {
-                "key": "温泉", "val": "", "title": "温泉"
+                "key": "温泉", "val": false, "title": "温泉"
               },
               {
-                "key": "赌场", "val": "", "title": "赌场"
+                "key": "赌场", "val": false, "title": "赌场"
               },
               {
-                "key": "酒吧", "val": "", "title": "酒吧"
+                "key": "酒吧", "val": false, "title": "酒吧"
               },
               {
-                "key": "购物", "val": "", "title": "购物"
+                "key": "购物", "val": false, "title": "购物"
               }
             ]
           },
@@ -343,16 +348,16 @@
             "key": "star", "val": "", "title": "星级要求",
             "sub": [
               {
-                "key": "three", "val": "", "title": "三星或准三星"
+                "key": "three", "val": false, "title": "三星或准三星"
               },
               {
-                "key": "four", "val": "", "title": "四星"
+                "key": "four", "val": false, "title": "四星"
               },
               {
-                "key": "five", "val": "", "title": "五星"
+                "key": "five", "val": false, "title": "五星"
               },
               {
-                "key": "superFive", "val": "", "title": "超五星"
+                "key": "superFive", "val": false, "title": "超五星"
               }
             ]
           },
@@ -360,13 +365,13 @@
             "key": "服务式", "val": "", "title": "服务式",
             "sub": [
               {
-                "key": "酒店", "val": "", "title": "酒店"
+                "key": "酒店", "val": false, "title": "酒店"
               },
               {
-                "key": "度假村", "val": "", "title": "度假村"
+                "key": "度假村", "val": false, "title": "度假村"
               },
               {
-                "key": "小型奢华庄园", "val": "", "title": "小型奢华庄园"
+                "key": "小型奢华庄园", "val": false, "title": "小型奢华庄园"
               }
             ]
           },
@@ -374,13 +379,13 @@
             "key": "寄宿式", "val": "", "title": "寄宿式",
             "sub": [
               {
-                "key": "B家庭寄宿", "val": "", "title": "B家庭寄宿"
+                "key": "B家庭寄宿", "val": false, "title": "B家庭寄宿"
               },
               {
-                "key": "农场寄宿", "val": "", "title": "农场寄宿"
+                "key": "农场寄宿", "val": false, "title": "农场寄宿"
               },
               {
-                "key": "酒庄", "val": "", "title": "酒庄"
+                "key": "酒庄", "val": false, "title": "酒庄"
               }
             ]
           },
@@ -388,10 +393,10 @@
             "key": "带厨房自助式", "val": "", "title": "带厨房自助式",
             "sub": [
               {
-                "key": "汽车旅馆", "val": "", "title": "汽车旅馆"
+                "key": "汽车旅馆", "val": false, "title": "汽车旅馆"
               },
               {
-                "key": "公寓", "val": "", "title": "公寓"
+                "key": "公寓", "val": false, "title": "公寓"
               }
             ]
           }
@@ -406,10 +411,10 @@
             "key": "breakfast", "val": "", "title": "酒店是否需要包早餐",
             "sub": [
               {
-                "key": "yes", "val": "", "title": "是"
+                "key": "yes", "val": true, "title": "是"
               },
               {
-                "key": "no", "val": "", "title": "否"
+                "key": "no", "val": false, "title": "否"
               }
             ]
           },
@@ -417,34 +422,34 @@
             "key": "dinner", "val": "", "title": "正餐",
             "sub": [
               {
-                "key": "A 包餐", "val": "", "title": "包餐",
+                "key": "A 包餐", "val": "A", "title": "包餐",
                 "sub": [
                   {
-                    "key": "中餐", "val": "", "title": "中餐"
+                    "key": "中餐", "val": false, "title": "中餐"
                   },
                   {
-                    "key": "西餐", "val": "", "title": "西餐"
+                    "key": "西餐", "val": false, "title": "西餐"
                   },
                   {
-                    "key": "亚洲口味", "val": "", "title": "亚洲口味"
+                    "key": "亚洲口味", "val": false, "title": "亚洲口味"
                   },
                   {
-                    "key": "快餐", "val": "", "title": "快餐"
+                    "key": "快餐", "val": false, "title": "快餐"
                   },
                   {
-                    "key": "自助餐", "val": "", "title": "自助餐"
+                    "key": "自助餐", "val": false, "title": "自助餐"
                   },
                   {
-                    "key": "本地特色餐", "val": "", "title": "本地特色餐"
+                    "key": "本地特色餐", "val": false, "title": "本地特色餐"
                   },
                   {
-                    "key": "special", "val": "", "title": "饮食禁忌和特别喜好"
+                    "key": "special", "val": false, "title": "饮食禁忌和特别喜好"
                   }
 
                 ]
               },
               {
-                "key": "B 自理", "val": "", "title": "自理"
+                "key": "B 自理", "val": "B", "title": "自理"
               }
             ]
           }
@@ -462,13 +467,13 @@
                 "key": "guide", "val": "", "title": "导游",
                 "sub": [
                   {
-                    "key": "不需要", "val": "", "title": "不需要"
+                    "key": "不需要", "val": false, "title": "不需要"
                   },
                   {
-                    "key": "司机兼导游", "val": "", "title": "司机兼导游"
+                    "key": "司机兼导游", "val": false, "title": "司机兼导游"
                   },
                   {
-                    "key": "独立导游", "val": "", "title": "独立导游"
+                    "key": "独立导游", "val": false, "title": "独立导游"
                   }
                 ]
               }
@@ -481,13 +486,13 @@
                 "key": "cars", "val": "", "title": "租车车型",
                 "sub": [
                   {
-                    "key": "轿车", "val": "", "title": "轿车"
+                    "key": "轿车", "val": false, "title": "轿车"
                   },
                   {
-                    "key": "四驱SUV", "val": "", "title": "四驱SUV"
+                    "key": "四驱SUV", "val": false, "title": "四驱SUV"
                   },
                   {
-                    "key": "旅行车", "val": "", "title": "旅行车"
+                    "key": "旅行车", "val": false, "title": "旅行车"
                   }
                 ]
               },
@@ -495,10 +500,10 @@
                 "key": "gps", "val": "", "title": "需要租用GPS",
                 "sub": [
                   {
-                    "key": "yes", "val": "", "title": "是"
+                    "key": "yes", "val": true, "title": "是"
                   },
                   {
-                    "key": "no", "val": "", "title": "否"
+                    "key": "no", "val": false, "title": "否"
                   }
                 ]
               },
@@ -506,10 +511,10 @@
                 "key": "follow", "val": "", "title": "需要跟车向导",
                 "sub": [
                   {
-                    "key": "yes", "val": "", "title": "是"
+                    "key": "yes", "val": true, "title": "是"
                   },
                   {
-                    "key": "no", "val": "", "title": "否"
+                    "key": "no", "val": false, "title": "否"
                   }
                 ]
               }
@@ -528,28 +533,28 @@
         "key": "service", "val": "", "title": "其他服务",
         "sub": [
           {
-            "key": "代订机票", "val": "", "title": "代订机票"
+            "key": "代订机票", "val": false, "title": "代订机票"
           },
           {
-            "key": "代办签证", "val": "", "title": "代办签证"
+            "key": "代办签证", "val": false, "title": "代办签证"
           },
           {
-            "key": "驾照翻译", "val": "", "title": "驾照翻译"
+            "key": "驾照翻译", "val": false, "title": "驾照翻译"
           },
           {
-            "key": "约见移民律师", "val": "", "title": "约见移民律师"
+            "key": "约见移民律师", "val": false, "title": "约见移民律师"
           },
           {
-            "key": "学校考察", "val": "", "title": "学校考察"
+            "key": "学校考察", "val": false, "title": "学校考察"
           },
           {
-            "key": "房产考察", "val": "", "title": "房产考察"
+            "key": "房产考察", "val": false, "title": "房产考察"
           },
           {
-            "key": "举办婚礼", "val": "", "title": "举办婚礼"
+            "key": "举办婚礼", "val": false, "title": "举办婚礼"
           },
           {
-            "key": "婚纱摄影", "val": "", "title": "婚纱摄影"
+            "key": "婚纱摄影", "val": false, "title": "婚纱摄影"
           }
         ]
       }

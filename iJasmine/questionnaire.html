@@ -49,18 +49,21 @@
                     <div class="item-detail" ng-repeat="item in viewData.list.travelTime">
                         <label class="display-inline-block">
                             <span class="item-title display-inline-block mr-8 ng-cloak">{{item.title}}：</span>
-                            <input type="number" ng-model="item.val"/>
                         </label>
                         <div ng-repeat="subItem in item.sub">
-                            <label class="display-inline-block cursor-pointer mr-48">
-                                <input type="radio" class="mr-8" ng-model="subItem.val" name="travel_time"/>
-                                <span class="display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
-                            </label>
-                            <div class="ml-24">
-                                <label class="display-inline-block" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-48': !$last}">
+                            <span class="display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                            <input type="number" ng-model="subItem.val"/>
+                            <div ng-repeat="nextSubItem in subItem.sub">
+                                <label class="display-inline-block cursor-pointer mr-48">
+                                    <input type="radio" class="mr-8" ng-model="item.val" name="travel_time" value="{{nextSubItem.val}}"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}：</span>
-                                    <input type="text" ng-model="nextSubItem.val"/>
                                 </label>
+                                <div class="ml-24">
+                                    <label class="display-inline-block" ng-repeat="deepSubItem in nextSubItem.sub" ng-class="{'mr-48': !$last}">
+                                        <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}：</span>
+                                        <input type="text" ng-model="deepSubItem.val"/>
+                                    </label>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,7 +125,7 @@
                         <div ng-repeat="subItem in item.sub" ng-if="subItem.key == 'breakfast'">
                             <span class="mr-32 ng-cloak">{{subItem.title}}</span>
                             <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
-                                <input type="radio" ng-model="nextSubItem.val" name="breakfast"/>
+                                <input type="radio" ng-model="subItem.val" name="breakfast" value="{{nextSubItem.val}}"/>
                                 <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                             </label>
                         </div>
@@ -130,7 +133,7 @@
                             <span class="display-block ng-cloak">{{subItem.title}}</span>
                             <div ng-repeat="nextSubItem in subItem.sub">
                                 <label class="display-block cursor-pointer">
-                                    <input type="radio" ng-model="nextSubItem.val" name="dinner"/>
+                                    <input type="radio" ng-model="subItem.val" name="dinner" value="{{nextSubItem.val}}"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                                 </label>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub" ng-class="{'mr-16': !$last}">
@@ -149,7 +152,7 @@
                         </label>
                         <div ng-repeat="subItem in item.sub">
                             <label class="display-inline-block cursor-pointer">
-                                <input type="radio" class="mr-8" ng-model="subItem.val" name="type"/>
+                                <input type="radio" class="mr-8" ng-model="item.val" name="type" value="{{subItem.key}}"/>
                                 <span class="item-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
                             </label>
                             <div ng-repeat="nextSubItem in subItem.sub">
@@ -163,7 +166,7 @@
                                 </label>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub"
                                        ng-if="['gps','follow'].indexOf(nextSubItem.key) >= 0" ng-class="{'mr-16': !$last}">
-                                    <input type="radio" ng-model="deepSubItem.val" name="{{nextSubItem.key}}"/>
+                                    <input type="radio" ng-model="nextSubItem.val" name="{{nextSubItem.key}}" value="{{deepSubItem.val}}"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
                                 </label>
                             </div>
@@ -178,7 +181,7 @@
                         </label>
                         <span class="display-block">
                             除机票签证外，您在新西兰旅游的人均预算约为人民币
-                            <input type="text" ng-model="item.val"/>
+                            <input type="number" ng-model="item.val"/>
                             元
                         </span>
                     </div>
@@ -218,15 +221,17 @@
                             <label class="display-inline-block" ng-if="subItem.key == 'sex'">
                                 <span class="item-sub-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="nextSubItem in subItem.sub" ng-class="{'mr-16': !$last}">
-                                    <input type="radio" ng-model="nextSubItem.val" name="sex"/>
+                                    <input type="radio" ng-model="subItem.val" name="sex" value="{{nextSubItem.val}}"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                                 </label>
                             </label>
                         </div>
                     </div>
                 </li>
-
             </ul>
+        </div>
+        <div class="questionnaire-opt">
+            <button class="go" ng-click="viewData.submitFunc()">提交</button>
         </div>
     </div>
 </div>
