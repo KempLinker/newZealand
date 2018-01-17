@@ -7,6 +7,14 @@
     function homeCtrl($rootScope, $scope, $http) {
 
         $scope.viewData = {
+            imgList: [
+                '/src/imgs/3.jpg',
+                '/src/imgs/9.jpg',
+                '/src/imgs/9.jpg',
+                '/src/imgs/3.jpg',
+                '/src/imgs/3.jpg',
+                '/src/imgs/9.jpg'
+            ],
             geoData: null,
             geoInfo: {
                 geoKey: "New Zealand",
