@@ -6,6 +6,13 @@
 
     function customCtrl($scope) {
 
+        $scope.viewData = {
+            imgList: [
+                '/src/imgs/11.jpg',
+                '/src/imgs/12.jpg'
+            ]
+        };
+
         $scope.toggleDetail = toggleDetail;
         function toggleDetail( ev ){
             var $tarDom = $(ev.target);

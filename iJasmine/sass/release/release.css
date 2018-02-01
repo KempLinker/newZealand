@@ -1958,11 +1958,12 @@ footer .copy-right-box {
   border: 1px solid rgba(63, 63, 60, 0.15);
   box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
 }
+.custom-body .step-img a,
 .custom-body .step-img span {
   float: left;
   display: inline-block;
   margin: 50px 24px 0 0;
-  text-decoration: underline;
+  text-decoration: underline !important;
   cursor: pointer;
   color: rgba(63, 63, 60, 0.7);
 }

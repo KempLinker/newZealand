@@ -100,11 +100,12 @@
             border: 1px solid $borderColDarkOpacity2;
             box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         }
+        a,
         span{
             float: left;
             display: inline-block;
             margin: 50px 24px 0 0;
-            text-decoration: underline;
+            text-decoration: underline !important;
             cursor: pointer;
             color: $fontColBaseOpacity;
         }

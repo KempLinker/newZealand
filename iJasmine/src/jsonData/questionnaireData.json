@@ -33,14 +33,6 @@
         ]
       }
     ],
-    "city": [
-      {
-        "key": "from", "val": "", "title": "出发地"
-      },
-      {
-        "key": "to", "val": "", "title": "目的地"
-      }
-    ],
     "numberOfPeople": [
       {
         "key": "number", "val": "", "title": "出行人数",
@@ -461,23 +453,7 @@
         "key": "transportation", "val": "", "title": "交通方式",
         "sub": [
           {
-            "key": "charter", "val": "", "title": "A 包车",
-            "sub": [
-              {
-                "key": "guide", "val": "", "title": "导游",
-                "sub": [
-                  {
-                    "key": "不需要", "val": false, "title": "不需要"
-                  },
-                  {
-                    "key": "司机兼导游", "val": false, "title": "司机兼导游"
-                  },
-                  {
-                    "key": "独立导游", "val": false, "title": "独立导游"
-                  }
-                ]
-              }
-            ]
+            "key": "charter", "val": "", "title": "A 包车"
           },
           {
             "key": "self", "val": "", "title": "B 自驾",
@@ -497,17 +473,6 @@
                 ]
               },
               {
-                "key": "gps", "val": "", "title": "需要租用GPS",
-                "sub": [
-                  {
-                    "key": "yes", "val": true, "title": "是"
-                  },
-                  {
-                    "key": "no", "val": false, "title": "否"
-                  }
-                ]
-              },
-              {
                 "key": "follow", "val": "", "title": "需要跟车向导",
                 "sub": [
                   {
@@ -521,11 +486,6 @@
             ]
           }
         ]
-      }
-    ],
-    "budget": [
-      {
-        "key": "budget", "val": "", "title": "预算"
       }
     ],
     "service": [
