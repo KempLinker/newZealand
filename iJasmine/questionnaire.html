@@ -52,7 +52,7 @@
                                 <div class="ml-24">
                                     <label class="display-inline-block" ng-repeat="deepSubItem in nextSubItem.sub" ng-class="{'mr-48': !$last}">
                                         <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}：</span>
-                                        <input type="text" ng-model="deepSubItem.val"/>
+                                        <input type="text" ng-model="deepSubItem.val" ng-disabled="item.val != nextSubItem.val"/>
                                     </label>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                     <span class="display-inline-block mr-8 ng-cloak">{{nextSubItem.title}}</span>
                                 </label>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub" ng-class="{'mr-16': !$last}">
-                                    <input type="checkbox" ng-model="deepSubItem.val"/>
+                                    <input type="checkbox" ng-model="deepSubItem.val" ng-disabled="subItem.val != nextSubItem.val"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
                                 </label>
                             </div>
@@ -152,12 +152,12 @@
                                 </label>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub"
                                        ng-if="['gps','follow'].indexOf(nextSubItem.key) < 0" ng-class="{'mr-16': !$last}">
-                                    <input type="checkbox" ng-model="deepSubItem.val"/>
+                                    <input type="checkbox" ng-model="deepSubItem.val" ng-disabled="item.val != subItem.key"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
                                 </label>
                                 <label class="display-inline-block cursor-pointer" ng-repeat="deepSubItem in nextSubItem.sub"
                                        ng-if="['gps','follow'].indexOf(nextSubItem.key) >= 0" ng-class="{'mr-16': !$last}">
-                                    <input type="radio" ng-model="nextSubItem.val" name="{{nextSubItem.key}}" value="{{deepSubItem.val}}"/>
+                                    <input type="radio" ng-model="nextSubItem.val" name="{{nextSubItem.key}}" value="{{deepSubItem.val}}" ng-disabled="item.val != subItem.key"/>
                                     <span class="display-inline-block mr-8 ng-cloak">{{deepSubItem.title}}</span>
                                 </label>
                             </div>

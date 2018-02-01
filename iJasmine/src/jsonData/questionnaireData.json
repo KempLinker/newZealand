@@ -371,7 +371,7 @@
             "key": "寄宿式", "val": "", "title": "寄宿式",
             "sub": [
               {
-                "key": "B家庭寄宿", "val": false, "title": "B家庭寄宿"
+                "key": "家庭寄宿", "val": false, "title": "家庭寄宿"
               },
               {
                 "key": "农场寄宿", "val": false, "title": "农场寄宿"

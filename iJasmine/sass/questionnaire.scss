@@ -86,6 +86,10 @@
         .item-title{
             min-width: 72px;
         }
+        input[disabled='disabled']{
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
         input[type='text'],input[type='number']{
             vertical-align: top;
         }

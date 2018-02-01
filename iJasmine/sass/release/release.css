@@ -2631,6 +2631,10 @@ body.ngdialog-open, html.ngdialog-open {
 .questionnaire-body .questionnaire-container .item-title {
   min-width: 72px;
 }
+.questionnaire-body .questionnaire-container input[disabled='disabled'] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
 .questionnaire-body .questionnaire-container input[type='text'], .questionnaire-body .questionnaire-container input[type='number'] {
   vertical-align: top;
 }
