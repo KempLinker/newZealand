@@ -118,6 +118,10 @@
         line-height: 32px;
         font-size: 18px;
         color: $fontColBase;
+        & > a:hover{
+            color: $fontColOrange;
+            text-decoration: underline !important;
+        }
     }
     .travels-summery{
         margin-top: 8px;

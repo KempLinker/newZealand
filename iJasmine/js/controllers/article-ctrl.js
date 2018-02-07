@@ -9,6 +9,7 @@
         var urlObj = new urlParam();
         $scope.viewData = {
             init: false,
+            type: urlObj.type,
             title: '',
             banner: {
                 src: [],

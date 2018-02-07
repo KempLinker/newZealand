@@ -23,6 +23,9 @@
 
         function handleData( data ){
             $scope.viewData.list = data.list;
+            $scope.viewData.list.forEach(function (item) {
+                item.href = item.href + '&type=travels';
+            })
         }
 
         function changeSort(){

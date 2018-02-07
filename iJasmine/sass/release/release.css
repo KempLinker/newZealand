@@ -2186,6 +2186,10 @@ footer .copy-right-box {
   font-size: 18px;
   color: #3f3f3c;
 }
+.travels-body .travels-note > a:hover {
+  color: #f76459;
+  text-decoration: underline !important;
+}
 .travels-body .travels-summery {
   margin-top: 8px;
   line-height: normal;

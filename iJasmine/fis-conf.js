@@ -29,6 +29,7 @@ fis.config.merge({
             '/js/controllers/destination-ctrl.js',
             '/js/controllers/custom-ctrl.js',
             '/js/controllers/travels-ctrl.js',
+            '/js/controllers/sample-ctrl.js',
             '/js/directives/new-zealand-map-directive.js',
         ]
     },
