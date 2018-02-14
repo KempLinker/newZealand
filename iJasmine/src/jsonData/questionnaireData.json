@@ -337,7 +337,7 @@
         "key": "stay", "val": "", "title": "住宿",
         "sub": [
           {
-            "key": "star", "val": "", "title": "星级要求",
+            "key": "星级要求", "val": "", "title": "星级要求",
             "sub": [
               {
                 "key": "three", "val": false, "title": "三星或准三星"

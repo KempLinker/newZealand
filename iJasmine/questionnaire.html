@@ -193,7 +193,7 @@
                         </label>
                         <div ng-repeat="subItem in item.sub">
                             <label class="display-inline-block" ng-if="subItem.key != 'sex'">
-                                <span class="item-sub-title display-inline-block mr-8 ng-cloak">{{subItem.title}}：</span>
+                                <span class="item-sub-title display-inline-block mr-8 ng-cloak" ng-class="{'need': ['name', 'mobile', 'email'].indexOf(subItem.key) >= 0}">{{subItem.title}}：</span>
                                 <input type="text" ng-model="subItem.val"/>
                             </label>
                             <label class="display-inline-block" ng-if="subItem.key == 'sex'">

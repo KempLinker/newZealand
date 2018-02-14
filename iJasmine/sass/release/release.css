@@ -1,7 +1,7 @@
 @charset "UTF-8";
-@import url(../dialog/ngDialog.min.css);
-@import url(../dialog/ngDialog-theme-default.min.css);
-@import url(../dialog/ngDialog-theme-plain.min.css);
+@import url(../../js/lib/angular-dialog/ngDialog.min.css);
+@import url(../../js/lib/angular-dialog/ngDialog-theme-default.min.css);
+@import url(../../js/lib/angular-dialog/ngDialog-theme-plain.min.css);
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -2663,6 +2663,13 @@ body.ngdialog-open, html.ngdialog-open {
 .questionnaire-body .questionnaire-container .user .item-sub-title {
   width: 56px;
   text-align: right;
+}
+.questionnaire-body .questionnaire-container .user .item-sub-title.need:before {
+  content: '*';
+  display: inline-block;
+  position: absolute;
+  margin-left: -16px;
+  color: #f76459;
 }
 .questionnaire-body .questionnaire-opt {
   text-align: center;
