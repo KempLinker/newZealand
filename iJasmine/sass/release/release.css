@@ -1862,7 +1862,7 @@ footer .copy-right-box {
   position: relative;
   height: 300px;
   overflow: hidden;
-  background-image: url(/src/imgs/10.jpg);
+  background-image: url("/src/imgs/custom-banner.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -2077,7 +2077,7 @@ footer .copy-right-box {
   position: relative;
   height: 300px;
   overflow: hidden;
-  background-image: url(/src/imgs/13.jpg);
+  background-image: url("/src/imgs/travel-banner.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -2097,6 +2097,9 @@ footer .copy-right-box {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
+}
+.travels-body.sample-body .first-screen {
+  background-image: url("/src/imgs/sample-banner.jpg");
 }
 .travels-body .main-body {
   margin: 32px auto 0;
@@ -2416,6 +2419,9 @@ footer .copy-right-box {
   box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
   color: rgba(63, 63, 60, 0.7);
 }
+.article-body .article-container.sample-article {
+  margin-top: 42px;
+}
 .article-body .article-container .article-content {
   width: 100%;
   margin: 0;
@@ -2552,7 +2558,7 @@ body.ngdialog-open, html.ngdialog-open {
   position: relative;
   height: 300px;
   overflow: hidden;
-  background-image: url(/src/imgs/13.jpg);
+  background-image: url("/src/imgs/questionnaire-banner.jpg");
   background-size: cover;
   background-position: center center;
 }

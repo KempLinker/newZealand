@@ -79,6 +79,9 @@
         background-color: $bgColBaseLight;
         box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         color: $fontColBaseOpacity;
+        &.sample-article{
+            margin-top: 42px;
+        }
         .article-content{
             width: 100%;
             margin: 0;

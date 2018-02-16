@@ -8,8 +8,8 @@
 
         $scope.viewData = {
             imgList: [
-                '/src/imgs/11.jpg',
-                '/src/imgs/12.jpg'
+                '/src/imgs/custom-pic-1.jpg',
+                '/src/imgs/custom-pic-2.jpg'
             ]
         };
 

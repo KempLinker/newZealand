@@ -1,9 +1,10 @@
+
 .travels-body{
     .first-screen{
         position: relative;
         height: 300px;
         overflow: hidden;
-        background-image: url(/src/imgs/13.jpg);
+        background-image: url('/src/imgs/travel-banner.jpg');
         background-size: cover;
         background-position: center center;
         .slogan{
@@ -23,6 +24,9 @@
             height: 100%;
             background-color: rgba(0,0,0,.3);
         }
+    }
+    &.sample-body .first-screen{
+        background-image: url('/src/imgs/sample-banner.jpg');
     }
     .base-icon{
 
