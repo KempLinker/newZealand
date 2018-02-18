@@ -922,11 +922,15 @@ header .logo:hover .logo-img {
   }
 
   .nav-list {
-    margin-left: 16px;
+    margin-left: 0;
   }
 
   .nav-list .nav-item {
     margin-right: 0;
+  }
+
+  .nav-list .nav-item > a {
+    padding: 0 12px;
   }
 
   .sub-nav-list {
@@ -938,7 +942,7 @@ header .logo:hover .logo-img {
   }
 
   header .logo {
-    margin-right: 16px;
+    margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1298,12 +1302,7 @@ footer .copy-right-box {
 .home-body .main-block {
   overflow: hidden;
 }
-.home-body .main-block.block-one {
-  padding-top: 0;
-  margin-bottom: 56px;
-  box-shadow: 0 1px 0 0 rgba(63, 63, 60, 0.1) inset;
-}
-.home-body .main-block.block-two, .home-body .main-block.block-three, .home-body .main-block.block-four {
+.home-body .main-block.block-travel, .home-body .main-block.block-custom, .home-body .main-block.block-about {
   height: 640px;
 }
 .home-body .main-block .block-img,
@@ -2689,4 +2688,136 @@ body.ngdialog-open, html.ngdialog-open {
   color: rgba(63, 63, 60, 0.7);
   border: 1px solid rgba(63, 63, 60, 0.7);
   background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .questionnaire-body .first-screen {
+    height: 200px;
+  }
+  .questionnaire-body .first-screen .slogan {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .questionnaire-body .questionnaire-container {
+    width: 95%;
+  }
+  .questionnaire-body textarea {
+    min-width: 320px;
+    max-width: 320px;
+  }
+}
+@media screen and (max-width: 459px) {
+  .questionnaire-body .first-screen {
+    height: 200px;
+  }
+  .questionnaire-body .first-screen .slogan {
+    margin-top: 100px;
+    font-size: 20px;
+  }
+  .questionnaire-body .questionnaire-container {
+    width: 100%;
+    padding: 16px;
+  }
+  .questionnaire-body textarea {
+    width: 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 80px;
+    min-height: 80px;
+    max-height: 80px;
+  }
+}
+.about-body .first-screen {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  background-image: url("/src/imgs/about-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.about-body .first-screen .slogan {
+  position: relative;
+  width: 100%;
+  margin-top: 150px;
+  font-size: 28px;
+  letter-spacing: 4px;
+  text-align: center;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.98);
+}
+.about-body .first-screen .cover {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.about-body .main-body {
+  width: 1080px;
+  margin: 32px auto;
+}
+.about-body .main-block {
+  float: left;
+  width: 33.33%;
+  padding: 16px 24px;
+}
+.about-body .about-box {
+  background-color: rgba(255, 255, 255, 0.98);
+  color: rgba(63, 63, 60, 0.7);
+  box-shadow: 0 0 4px 0 rgba(63, 63, 60, 0.15);
+}
+.about-body .about-box .about-title {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  line-height: 48px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.98);
+  background-color: #f76459;
+}
+.about-body .about-box .about-content {
+  height: 320px;
+  padding: 24px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 1080px) {
+  .about-body .main-body {
+    width: 960px;
+  }
+  .about-body .about-box .about-content {
+    height: 360px;
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1080px) {
+  .about-body .main-body {
+    width: 880px;
+  }
+  .about-body .main-block {
+    padding: 16px 8px;
+  }
+}
+@media screen and (max-width: 959px) {
+  .about-body .main-body {
+    width: 100%;
+  }
+  .about-body .main-block {
+    clear: both;
+    width: 100%;
+    overflow: hidden;
+  }
+  .about-body .about-box .about-content {
+    font-size: 14px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-body .first-screen {
+    height: 200px;
+  }
+  .about-body .first-screen .slogan {
+    margin-top: 100px;
+    font-size: 20px;
+  }
 }

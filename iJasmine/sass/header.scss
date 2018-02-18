@@ -192,10 +192,13 @@ header .logo{
         max-width: 768px;
     }
     .nav-list{
-        margin-left: 16px;
+        margin-left: 0;
     }
     .nav-list .nav-item{
         margin-right: 0;
+    }
+    .nav-list .nav-item > a{
+        padding: 0 12px;
     }
     .sub-nav-list{
         margin-left: 0;
@@ -205,7 +208,7 @@ header .logo{
         }
     }
     header .logo{
-        margin-right: 16px;
+        margin-right: 0;
     }
 
 }
