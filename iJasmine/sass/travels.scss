@@ -28,9 +28,6 @@
     &.sample-body .first-screen{
         background-image: url('/src/imgs/sample-banner.jpg');
     }
-    .base-icon{
-
-    }
     .main-body{
         margin: 32px auto 0;
     }
@@ -128,6 +125,7 @@
         }
     }
     .travels-summery{
+        min-height: 80px;
         margin-top: 8px;
         line-height: normal;
         font-size: 14px;

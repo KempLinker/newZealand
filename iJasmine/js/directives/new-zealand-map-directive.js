@@ -35,7 +35,7 @@
                                     label: {
                                         show: true,
                                         textStyle: {
-                                            color: 'rgba(63, 63, 60, .7)'
+                                            color: '#999'
                                         }
                                     },
                                     borderWidth: 1,
