@@ -9,6 +9,7 @@
         var urlObj = new urlParam();
         $scope.viewData = {
             init: false,
+            showMiniDestination: true,
             banner: {
                 src: [],
                 time: 1000,

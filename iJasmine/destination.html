@@ -10,7 +10,8 @@
 </head>
 <body class="destination-body gray-bg-col" ng-controller="destinationCtrl">
     <div ng-include="'/component/header.html'" onload="headerLoadReady()"></div>
-    <div class="first-screen">
+    <div mini-destination-list ng-if="viewData.showMiniDestination"></div>
+    <div class="first-screen" ng-class="{'show-mini-destination': viewData.showMiniDestination}">
         <div class="scroll-banner" id="scroll_banner"></div>
         <img class="banner-img" ng-if="viewData.banner.img" ng-src="{{viewData.banner.img}}" />
     </div>
@@ -52,6 +53,7 @@
     <script type="text/javascript" src="/js/lib/eCharts/echarts-all.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/controllers/destination-ctrl.js"></script>
+    <script type="text/javascript" src="/js/directives/mini-destination-list-directive.js"></script>
     <script type="text/javascript" src="/js/directives/new-zealand-map-directive.js"></script>
 
 </body>
