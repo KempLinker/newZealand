@@ -352,6 +352,7 @@
         }
         .main-body {
             width: 100%;
+            margin: 24px auto;
         }
         .destination-info {
             width: 100%;
@@ -413,6 +414,9 @@
             margin-top: 24px;
             .city-name{
                 padding: 0 24px;
+            }
+            .city-item{
+                margin-top: 24px;
             }
             .city-desc{
                 padding: 16px 24px;

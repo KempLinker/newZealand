@@ -13,7 +13,7 @@
     <div class="first-screen">
         <div class="home-banner-cover"></div>
         <div class="home-info">
-            <div class="home-map" new-zealand-map view-data="viewData"></div>
+            <div class="home-map" new-zealand-map view-data="viewData" ng-if="!viewData.isMiniWidth"></div>
 
             <div class="geo-info">
                 <p class="geo-name" ng-bind="viewData.geoInfo.geoName"></p>
