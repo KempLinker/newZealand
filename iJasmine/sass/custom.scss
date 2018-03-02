@@ -163,7 +163,21 @@
         .step-img{
             padding: 0 24px;
             img{
+                width: 160px;
+                height: 100px;
                 margin: 0 16px 16px 0;
+            }
+            a, span{
+                margin: 50px 24px 0;
+            }
+        }
+    }
+}
+@media screen and (min-width: 460px) and (max-width: 767px) {
+    .custom-body{
+        .step-img{
+            img {
+                clear: both;
             }
         }
     }
@@ -196,10 +210,13 @@
             font-size: 12px;
         }
         .step-img img{
-            width: 240px;
-            height: 180px;
+            width: 220px;
+            height: 140px;
             display: block;
             margin: 0 auto 24px;
+            a, span{
+                margin: 50px 24px 0;
+            }
         }
         .custom-step-arrow img{
             width: 42px;

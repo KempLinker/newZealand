@@ -205,16 +205,16 @@
             box-shadow: 0 0 4px 0 $borderColDarkOpacity2;
         }
         .travels-img{
-            width: 220px;
+            width: 200px;
             img{
-                width: 200px;
+                width: 180px;
                 height: 120px;
-                margin: -60px 0 0 -100px;
+                margin: -60px 0 0 -90px;
             }
         }
         .travels-info{
             padding: 16px 24px 8px 16px;
-            margin-left: 220px;
+            margin-left: 180px;
         }
     }
 }
@@ -223,6 +223,13 @@
         .travels-summery{
             max-height: 100px;
             overflow-y: auto;
+        }
+        .travels-msg .writer,
+        .travels-msg .date{
+            margin-right: 8px;
+        }
+        .read-detail{
+            margin-bottom: 8px;
         }
     }
 }

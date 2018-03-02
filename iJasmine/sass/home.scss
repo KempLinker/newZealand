@@ -20,7 +20,7 @@
     }
     .home-banner-cover{
         position: absolute;
-        background: rgba(0,0,0,.72);
+        background: rgba(0,0,0,.5);
         width: 100%;
         height: 100%;
         z-index: 0;
@@ -36,21 +36,46 @@
         left: 100px;
         .geo-name{
             width: 100%;
-            color: $fontColLightOpacity;
+            color: $fontColLight;
             font-size: 28px;
             letter-spacing: 4px;
             text-align: left;
         }
         .geo-sub-name{
             width: 100%;
-            color: $fontColLightOpacity;
+            color: $fontColLight;
             font-size: 18px;
             letter-spacing: 4px;
             text-align: left;
         }
         .go{
-            color: $fontColLightOpacity;
+            color: $fontColLight;
             border: 1px solid $borderColLightOpacity2;
+        }
+    }
+    .mini-slogan{
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        color: $fontColLight;
+        font-size: 24px;
+        letter-spacing: 4px;
+        display: none;
+        .mini-sub-slogan{
+            margin-top: 32px;
+            font-size: 32px;
+        }
+        .go{
+            width: 160px;
+            height: 42px;
+            line-height: 42px;
+            font-size: 16px;
+            margin-top: 54px;
+            color: $fontColLight;
+            border: 1px solid $borderColOrange;
+            background: $bgColOrange;
         }
     }
     .main-body{
@@ -193,6 +218,13 @@
 }
 @media screen and (max-width: 767px) {
     .home-body{
+        .first-screen{
+            min-height: auto;
+            max-height: none;
+        }
+        .home-info{
+            width: 100%;
+        }
         .home-map{
             padding-left: 70px;
         }
@@ -231,6 +263,17 @@
                     font-size: 16px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .home-body{
+        .geo-info{
+            display: none;
+        }
+        .mini-slogan{
+            display: block;
         }
     }
 }

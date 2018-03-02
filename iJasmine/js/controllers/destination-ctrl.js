@@ -6,10 +6,11 @@
 
     function destinationCtrl($timeout, $scope, $http) {
 
+        var windowWidth = document.documentElement.clientWidth || document.body.clientWidth;
         var urlObj = new urlParam();
         $scope.viewData = {
             init: false,
-            showMiniDestination: true,
+            showMiniDestination: false,
             banner: {
                 src: [],
                 time: 1000,
@@ -23,6 +24,19 @@
         $http.get(__Public+'/jsonData/destinationData.json').then(function (result) {
             handleData(result.data);
             $scope.viewData.init = true;
+        });
+
+        if( windowWidth <= 768 ){
+            $scope.viewData.showMiniDestination = true;
+        }
+
+        $(window).on('resize.home', function () {
+            var curWindowWidth = document.documentElement.clientWidth || document.body.clientWidth;
+            $timeout(function(){
+                $scope.viewData.showMiniDestination = (curWindowWidth <= 768);
+                console.log($scope.viewData.showMiniDestination)
+            });
+
         });
 
         function handleData(data){
